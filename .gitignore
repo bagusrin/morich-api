@@ -1,4 +1,5 @@
 sendgrid.env
+/build/
 /common/
 /node_modules/
 /config/development.local.js
