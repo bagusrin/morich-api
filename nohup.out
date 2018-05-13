@@ -1,0 +1,48 @@
+
+> morich-api@1.0.0 start /Users/admin/bagusrin/IKAB/MorichApp/morich-api
+> node scripts/run.js
+
+Starting 'run'...
+Starting 'build'...
+src/app.js -> build/app.js
+src/server.js -> build/server.js
+src/app/controllers/auth.js -> build/app/controllers/auth.js
+src/app/controllers/spiderman.js -> build/app/controllers/spiderman.js
+src/app/controllers/member.js -> build/app/controllers/member.js
+src/app/controllers/user.js -> build/app/controllers/user.js
+src/app/controllers/video.js -> build/app/controllers/video.js
+src/app/routes/auth.js -> build/app/routes/auth.js
+src/app/routes/spiderman.js -> build/app/routes/spiderman.js
+src/app/routes/member.js -> build/app/routes/member.js
+src/app/routes/user.js -> build/app/routes/user.js
+src/app/routes/video.js -> build/app/routes/video.js
+src/app/models/email.js -> build/app/models/email.js
+src/app/models/user.js -> build/app/models/user.js
+0
+ChildProcess {
+  domain: null,
+  _events: { exit: [Function: spawnServerProcess] },
+  _eventsCount: 1,
+  _maxListeners: undefined,
+  _closesNeeded: 1,
+  _closesGot: 0,
+  connected: false,
+  signalCode: null,
+  exitCode: null,
+  killed: true,
+  spawnfile: 'node',
+  _handle: Process { owner: [Circular], onexit: [Function], pid: 1563 },
+  spawnargs: [ 'node', 'server.js' ],
+  pid: 1563,
+  stdin: null,
+  stdout: null,
+  stderr: null,
+  stdio: [ null, null, null ] }
+Finished 'build' after 573ms
+Server listening on port 7003
+[0mGET /user/detail/21 [32m200 [0m30.471 ms - 461[0m
+[0mGET /user/detail/21 [32m200 [0m4.934 ms - 461[0m
+[0mGET /user/detail/21 [32m200 [0m2.707 ms - 461[0m
+[0mGET /user/detail/21 [32m200 [0m8.498 ms - 461[0m
+[0mGET /user/detail/21 [32m200 [0m7.858 ms - 461[0m
+[0mGET /user/detail/21 [32m200 [0m8.114 ms - 461[0m

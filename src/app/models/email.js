@@ -1,0 +1,54 @@
+'use strict';
+
+var cfg = require('../../../config');
+const sgMail = require('@sendgrid/mail');
+
+sgMail.setApiKey(cfg.apikey_sendgrid);
+
+var email = {
+	
+	sendEmailRegister: function(to,code) {
+		
+	    const msg = {
+	    	to: to,
+	        //from: 'hello@pixrom.com',
+	        from: {email: 'hello@pixrom.com',name: 'Hello from Morich'},
+	        subject: 'Morich | Complete Your Registration!!',
+	        //text: 'and easy to do anywhere, even with Node.js',
+	        html: '<p><strong>Thank you for registering in Morich.</strong></p><p>To complete your registration, please enter this code <b>'+code+'</b> in the field on Morich Mobile App (Android/IOS). ',
+	    };
+
+	    sgMail.send(msg);
+		
+		return sgMail;
+	},
+	sendEmailCompleteRegister: function(userName,userEmail,inviterName,inviterEmail) {
+
+	    const msg = {
+	    	to: userEmail,
+	        from: {email: 'hello@pixrom.com',name: 'Hello from Morich'},
+	        subject: 'Morich | Congrats for your registration',
+	        html: '<p><strong>Hai '+userName+', Your registration has been completed.</strong></p><p>Your Leader: <b>'+inviterName+'</b> ('+inviterEmail+'). ',
+	    };
+
+	    sgMail.send(msg);
+		
+		return sgMail;
+	},
+	sendEmailForgotPassword: function(email,token) {
+
+	    const msg = {
+	    	to: email,
+	        from: {email: 'hello@pixrom.com',name: 'Hello from Morich'},
+	        subject: 'Morich | Reset your password!!!',
+	        html: '<p>To reset your password, please click or copy paste this link https://morich.web/password-reset/'+token+' on your browser. ',
+	    };
+
+	    sgMail.send(msg);
+		
+		return sgMail;
+	}
+
+};
+
+module.exports = email;
