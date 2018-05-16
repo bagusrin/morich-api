@@ -1,3 +1,4 @@
 /build/
 /node_modules/
 /config/development.local.js
+/nohup.out
