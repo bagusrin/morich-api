@@ -16,7 +16,8 @@ function cAuth() {
         var email = req.body.email;
         var password = req.body.password;
 
-        var sql = "SELECT * FROM users WHERE user_email = '"+email+"' LIMIT 1";
+        var sql = "SELECT *, FIND_IN_SET( user_point, (SELECT GROUP_CONCAT( user_point ORDER BY user_point DESC ) FROM users )) \
+        AS rank FROM users WHERE user_email = '"+email+"' LIMIT 1";
 
         con.query(sql, function(err,data){
           con.release();
@@ -41,7 +42,7 @@ function cAuth() {
             var initialName = splitName[0].charAt(0);
           }
 
-          console.log(splitName.length);
+          //console.log(splitName.length);
           
 
           var isActive = (data[0].status == 1) ? true : false;
@@ -57,6 +58,7 @@ function cAuth() {
                                     "mobileNumber":data[0].user_mobile_number,
                                     "photoUrl": pp,
                                     "initialName": initialName,
+                                    "ranking": data[0].rank,
                                     "isActive": isActive
                                   }
                               });

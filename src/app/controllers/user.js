@@ -113,7 +113,8 @@ function cUser() {
   this.userDetail = function(req,res,next) {
      connection.acquire(function(err,con){
         if (err) throw err;
-          con.query('SELECT * FROM users WHERE user_id='+req.params.id+' LIMIT 1', function(err,data){
+          con.query('SELECT *, FIND_IN_SET( user_point, (SELECT GROUP_CONCAT( user_point ORDER BY user_point DESC ) FROM users )) \
+        AS rank FROM users WHERE user_id='+req.params.id+' LIMIT 1', function(err,data){
             con.release();
             if(err)
                 return res.status(500).json({statusCode:500,message: err.code});
@@ -121,6 +122,7 @@ function cUser() {
             if(data.length < 1){
               res.status(404).json({statusCode:404,message: "Data not found"});
             }else{
+              
               var dt = [];
               var pp = (data[0].user_photo) ? cfg.photoProfileUrl+''+data[0].user_photo : null;
 
@@ -141,7 +143,6 @@ function cUser() {
                 "lastName": data[0].user_lastname,
                 "initialName": initialName,
                 "photoUrl": pp,
-                "photoUrl": pp,
                 "mobileNumber": data[0].user_mobile_number,
                 "phoneNumber": data[0].user_phone_number,
                 "line": data[0].user_line,
@@ -152,7 +153,8 @@ function cUser() {
                 "country": data[0].user_country,
                 "address1": data[0].user_address1,
                 "address2": data[0].user_address2,
-                "language": data[0].user_language
+                "language": data[0].user_language,
+                "ranking": data[0].rank
               });
 
               return res.status(200).json({statusCode:200,success:true,data:dt[0]});
