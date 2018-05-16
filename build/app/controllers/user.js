@@ -119,11 +119,24 @@ function cUser() {
         } else {
           var dt = [];
           var pp = data[0].user_photo ? cfg.photoProfileUrl + '' + data[0].user_photo : null;
+
+          var fullName = data[0].user_firstname + ' ' + data[0].user_lastname;
+
+          var splitName = fullName.trim().split(" ");
+
+          if (splitName.length > 1) {
+            var initialName = splitName[0].charAt(0) + '' + splitName[1].charAt(0);
+          } else {
+            var initialName = splitName[0].charAt(0);
+          }
+
           dt.push({
             "userId": data[0].user_id,
             "email": data[0].user_email,
             "firstName": data[0].user_firstname,
             "lastName": data[0].user_lastname,
+            "initialName": initialName,
+            "photoUrl": pp,
             "photoUrl": pp,
             "mobileNumber": data[0].user_mobile_number,
             "phoneNumber": data[0].user_phone_number,

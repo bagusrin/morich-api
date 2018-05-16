@@ -5,6 +5,7 @@ var jwt = require('jsonwebtoken'),
     crypto = require('crypto'),
     userModel = require('../models/user'),
     emailModel = require('../models/email');
+    cfg = require('../../../config');
  
 function cAuth() {
 
@@ -29,6 +30,22 @@ function cAuth() {
                 return res.status(500).json({statusCode:500, message: 'Authentication failed. Invalid user or password.' });
           }
           
+          var pp = (data[0].user_photo) ? cfg.photoProfileUrl+''+data[0].user_photo : null;
+          var fullName = data[0].user_firstname+' '+data[0].user_lastname;
+
+          var splitName = fullName.trim().split(" ");
+
+          if(splitName.length > 1){
+            var initialName = splitName[0].charAt(0)+''+splitName[1].charAt(0);
+          }else{
+            var initialName = splitName[0].charAt(0);
+          }
+
+          console.log(splitName.length);
+          
+
+          var isActive = (data[0].status == 1) ? true : false;
+          
           return res.status(200).json({
                                   statusCode:200,
                                   success:true,
@@ -37,7 +54,10 @@ function cAuth() {
                                     "email":data[0].user_email,
                                     "firstName":data[0].user_firstname,
                                     "lastName":data[0].user_lastname,
-                                    "mobileNumber":data[0].user_mobile_number
+                                    "mobileNumber":data[0].user_mobile_number,
+                                    "photoUrl": pp,
+                                    "initialName": initialName,
+                                    "isActive": isActive
                                   }
                               });
  

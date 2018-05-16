@@ -47,17 +47,17 @@ module.exports = task('run', () => Promise.resolve()
     watch: true,
     onComplete() {
       if (server) {
-        console.log(1);
+        //console.log(1);
         server.removeListener('exit', spawnServerProcess);
         server.addListener('exit', spawnServerProcess);
         server.kill();
       } else {
-        console.log(0);
+        //console.log(0);
         spawnServerProcess();
         server.removeListener('exit', spawnServerProcess);
         server.addListener('exit', spawnServerProcess);
         server.kill();
-        console.log(server);
+        //console.log(server);
       }
     },
   }))
