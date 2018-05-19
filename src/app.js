@@ -7,6 +7,7 @@ var user = require('./app/routes/user');
 var auth = require('./app/routes/auth');
 var member = require('./app/routes/member');
 var video = require('./app/routes/video');
+var videoadmin = require('./app/routes/videoadmin');
 var connection = require('../config/db');
 var jsonwebtoken = require("jsonwebtoken");
 
@@ -42,6 +43,7 @@ user.configure(app);
 auth.configure(app);
 member.configure(app);
 video.configure(app);
+videoadmin.configure(app);
 
 app.use(express.static(publicDir));
 

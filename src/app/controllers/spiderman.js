@@ -105,6 +105,9 @@ function cSpiderman() {
             con.release();
             if(err)
                 return res.status(500).json({statusCode:500,message: err.code});
+
+            if(data.length < 1)
+              return res.status(500).json({statusCode:500, message: 'Authentication failed. Invalid admin or password.' });
                
             if (!userModel.comparePassword(password,data[0].spiderman_password)) {
                   return res.status(401).json({statusCode:500, message: 'Authentication failed. Invalid admin or password.' });
