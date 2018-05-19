@@ -130,5 +130,42 @@ function cSpiderman() {
         });
      });
   };
+
+  this.spidermanDashboard = function(req,res,next) {
+     connection.acquire(function(err,con){
+        if (err) throw err;
+
+          var email = req.body.email;
+          var password = req.body.password;
+
+          var sql = "SELECT (SELECT count(user_id) FROM users WHERE status <> 0) AS member_joined \
+                    ,(SELECT count(user_id) FROM users WHERE status = 2) AS member_potential \
+                    ,(SELECT count(user_id) FROM users WHERE status = 1) AS member_active \
+                    ,(SELECT count(video_id) FROM videos WHERE status = 1) AS video";
+
+          con.query(sql, function(err,data){
+            con.release();
+            if(err)
+                return res.status(500).json({statusCode:500,message: err.code});
+
+            
+
+            var dt = [];
+            dt.push({
+              "totalJoinedMember": data[0].member_joined,
+              "totalPotentialMember": data[0].member_potential,
+              "totalActiveMember": data[0].member_active,
+              "totalVideo": data[0].video
+            });
+            
+            return res.status(200).json({
+                                    statusCode:200,
+                                    success:true,
+                                    data:dt[0]
+                                });
+   
+        });
+     });
+  };
 }
 module.exports = new cSpiderman();

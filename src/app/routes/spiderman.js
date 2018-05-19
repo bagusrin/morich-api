@@ -6,5 +6,6 @@ module.exports = {
     app.route('/admin/detail/:id').get(spiderman.spidermanDetail);
     app.route('/admin/register').post(spiderman.spidermanRegister);
     app.route('/admin/login').post(spiderman.spidermanLogin);
+    app.route('/admin/dashboard').get(spiderman.spidermanDashboard);
   }
 };
