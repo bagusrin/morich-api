@@ -57,6 +57,7 @@ function cAuth() {
             "photoUrl": pp,
             "initialName": initialName,
             "ranking": data[0].rank,
+            "url": "http://morichweb.perihal.id/" + data[0].user_username,
             "isActive": isActive
           }
         });
