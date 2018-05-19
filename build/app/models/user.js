@@ -85,7 +85,7 @@ var methods = {
                 if (err) return res.status(500).json({ statusCode: 500, message: err.code });
 
                 var inviterId = data[0].user_invited_by;
-                var userName = data[0].user_firstname;
+                var userName = data[0].user_firstname + '' + data[0].user_lastname;
                 var userEmail = data[0].user_email;
                 var userId = data[0].user_id;
 

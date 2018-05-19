@@ -16,7 +16,8 @@ function cAuth() {
       var email = req.body.email;
       var password = req.body.password;
 
-      var sql = "SELECT *, FIND_IN_SET( user_point, (SELECT GROUP_CONCAT( user_point ORDER BY user_point DESC ) FROM users )) \
+      var sql = "SELECT *, user_id as id, (select count(user_id) from users WHERE user_invited_by = id) as total_invited, \
+            (select count(user_id) from users WHERE user_invited_by = id AND status <> '0') as member_joined, FIND_IN_SET( user_point, (SELECT GROUP_CONCAT( user_point ORDER BY user_point DESC ) FROM users )) \
         AS rank FROM users WHERE user_email = '" + email + "' LIMIT 1";
 
       con.query(sql, function (err, data) {
@@ -40,6 +41,8 @@ function cAuth() {
           var initialName = splitName[0].charAt(0);
         }
 
+        initialName = initialName.toUpperCase();
+
         //console.log(splitName.length);
 
 
@@ -58,6 +61,8 @@ function cAuth() {
             "initialName": initialName,
             "ranking": data[0].rank,
             "url": "http://morichweb.perihal.id/" + data[0].user_username,
+            "totalInvited": data[0].total_invited,
+            "memberJoined": data[0].member_joined,
             "isActive": isActive
           }
         });

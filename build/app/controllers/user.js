@@ -55,8 +55,8 @@ function cUser() {
           connection.acquire(function (err, con) {
             if (err) throw err;
 
-            var sql = "INSERT INTO users (user_email,user_firstname,user_mobile_number,user_invited_by,user_referal_code,status,post_date) \
-                      VALUES ('" + email + "', '" + name + "', '" + phone + "', '" + userId + "', '" + referalCode + "', '" + status + "', NOW())";
+            var sql = "INSERT INTO users (user_email,user_firstname,user_lastname,user_mobile_number,user_invited_by,user_referal_code,status,post_date) \
+                      VALUES ('" + email + "', '" + name + "', '', '" + phone + "', '" + userId + "', '" + referalCode + "', '" + status + "', NOW())";
 
             con.query(sql, function (err, data) {
 
@@ -89,10 +89,20 @@ function cUser() {
       var inviterEmail = result.inviterEmail;
       var userIdInvitedBy = result.inviterId;
 
+      var splitName = userName.trim().split(" ");
+
+      if (splitName.length > 1) {
+        var uname = splitName[0] + '' + userId;
+      } else {
+        var uname = splitName[0] + '' + userId;
+      }
+
+      uname = uname.toLowerCase();
+
       connection.acquire(function (err, con) {
         if (err) throw err;
 
-        var sql = "UPDATE users set user_password = '" + password + "', status = 2, update_date = NOW() WHERE user_email = '" + email + "'";
+        var sql = "UPDATE users set user_username = '" + uname + "', user_password = '" + password + "', status = 2, update_date = NOW() WHERE user_email = '" + email + "'";
 
         con.query(sql, function (err, data) {
 
@@ -110,8 +120,9 @@ function cUser() {
   this.userDetail = function (req, res, next) {
     connection.acquire(function (err, con) {
       if (err) throw err;
-      con.query('SELECT *, FIND_IN_SET( user_point, (SELECT GROUP_CONCAT( user_point ORDER BY user_point DESC ) FROM users )) \
-        AS rank FROM users WHERE user_id=' + req.params.id + ' LIMIT 1', function (err, data) {
+      con.query('SELECT *, user_id as id, (select count(user_id) from users WHERE user_invited_by = id) as total_invited, \
+            (select count(user_id) from users WHERE user_invited_by = id AND status <> "0") as member_joined, FIND_IN_SET( user_point, (SELECT GROUP_CONCAT( user_point ORDER BY user_point DESC ) FROM users )) \
+            AS rank FROM users WHERE user_id=' + req.params.id + ' LIMIT 1', function (err, data) {
         con.release();
         if (err) return res.status(500).json({ statusCode: 500, message: err.code });
 
@@ -132,6 +143,8 @@ function cUser() {
             var initialName = splitName[0].charAt(0);
           }
 
+          initialName = initialName.toUpperCase();
+
           dt.push({
             "userId": data[0].user_id,
             "email": data[0].user_email,
@@ -151,7 +164,9 @@ function cUser() {
             "address2": data[0].user_address2,
             "language": data[0].user_language,
             "ranking": data[0].rank,
-            "url": "http://morichweb.perihal.id/" + data[0].user_username
+            "url": "http://morichweb.perihal.id/" + data[0].user_username,
+            "totalInvited": data[0].total_invited,
+            "memberJoined": data[0].member_joined
           });
 
           return res.status(200).json({ statusCode: 200, success: true, data: dt[0] });
@@ -184,6 +199,8 @@ function cUser() {
           } else {
             var initialName = splitName[0].charAt(0);
           }
+
+          initialName = initialName.toUpperCase();
 
           dt.push({
             "userId": data[0].user_id,
