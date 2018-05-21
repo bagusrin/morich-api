@@ -78,23 +78,23 @@ var methods = {
 
             if (err) throw err;
 
-            var sql = "SELECT user_id, user_email, user_firstname, user_invited_by FROM users WHERE user_email = '" + email + "' AND user_referal_code = '" + referalCode + "' LIMIT 1";
+            var sql = "SELECT user_id, user_email, user_firstname, user_lastname, user_invited_by FROM users WHERE user_email = '" + email + "' AND user_referal_code = '" + referalCode + "' LIMIT 1";
 
             con.query(sql, function (err, data, fields) {
                 con.release();
                 if (err) return res.status(500).json({ statusCode: 500, message: err.code });
 
                 var inviterId = data[0].user_invited_by;
-                var userName = data[0].user_firstname + '' + data[0].user_lastname;
+                var userName = data[0].user_firstname + ' ' + data[0].user_lastname;
                 var userEmail = data[0].user_email;
                 var userId = data[0].user_id;
 
-                var sql2 = "SELECT user_email, user_firstname FROM users WHERE user_id = '" + inviterId + "' LIMIT 1";
+                var sql2 = "SELECT user_email, user_firstname, user_lastname FROM users WHERE user_id = '" + inviterId + "' LIMIT 1";
 
                 con.query(sql2, function (err, data, fields) {
                     if (err) return res.status(500).json({ statusCode: 500, message: err.code });
 
-                    var inviterName = data[0].user_firstname;
+                    var inviterName = data[0].user_firstname + ' ' + data[0].user_lastname;
                     var inviterEmail = data[0].user_email;
 
                     if (callback) {
@@ -122,6 +122,8 @@ var methods = {
             if (err) throw err;
 
             var sql = "update users set user_point = user_point+" + point + ", update_date = NOW() WHERE user_id = '" + userId + "'";
+
+            //console.log(sql);
 
             con.query(sql, function (err, data) {
                 con.release();

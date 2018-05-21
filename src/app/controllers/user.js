@@ -83,6 +83,7 @@ function cUser() {
       return res.status(500).json({statusCode:500,message: "Password doesn't match"});
 
     userModel.checkUserReferalCode(email,invitedBy,res,function(result){
+      //console.log(result);
 
       var userName = result.userName;
       var userEmail = result.userEmail;
