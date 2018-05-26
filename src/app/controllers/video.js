@@ -101,28 +101,81 @@ function cVideo() {
   };
 
   this.post = function(req,res,next) {
-    var youtubeLink = req.body.youtubeLink;
-    var title = req.body.title;
-    var desc = req.body.desc;
-    var youtubeId = youtubeLink.split("v=")[1];
-    var youtubeIframe = "https://youtube.com/embed/"+youtubeId;
-    var youtubeImg = "https://i.ytimg.com/vi/"+youtubeId+"/maxresdefault.jpg";
-    var type = req.body.type;
-    var status = 1;
-    var email = req.body.email;
 
-    userModel.getUserIdByEmail(email,res,function(result){
-      
-      var userId = result.userId;
+    try {
 
-      connection.acquire(function(err,con){
-        if (err) throw err;
+      var youtubeLink = req.body.youtubeLink;
+      var title = req.body.title;
+      var desc = req.body.desc;
+      var youtubeId = youtubeLink.split("v=")[1];
+      var youtubeIframe = "https://youtube.com/embed/"+youtubeId;
+      var youtubeImg = "https://i.ytimg.com/vi/"+youtubeId+"/maxresdefault.jpg";
+      var type = req.body.type;
+      var status = 1;
+      var email = req.body.email;
 
-          var sql = "INSERT INTO videos (user_id, video_youtube_id, video_youtube_link, video_youtube_iframe \
-          ,video_youtube_image,video_title,video_desc,video_type,status,post_date) \
-          VALUES ('"+userId+"','"+youtubeId+"','"+youtubeLink+"','"+youtubeIframe+"','"+youtubeImg+"','"+title+"', '"+desc+"', '"+type+"', '"+status+"', NOW())";
+      userModel.getUserIdByEmail(email,res,function(result){
+        
+        var userId = result.userId;
 
-          console.log(sql);
+        connection.acquire(function(err,con){
+          if (err) throw err;
+
+            var sql = "INSERT INTO videos (user_id, video_youtube_id, video_youtube_link, video_youtube_iframe \
+            ,video_youtube_image,video_title,video_desc,video_type,status,post_date) \
+            VALUES ('"+userId+"','"+youtubeId+"','"+youtubeLink+"','"+youtubeIframe+"','"+youtubeImg+"','"+title+"', '"+desc+"', '"+type+"', '"+status+"', NOW())";
+
+            console.log(sql);
+
+            con.query(sql, function(err,data){
+              con.release();
+              if(err)
+                  return res.status(500).json({statusCode:500,message: err.code});
+                 
+
+              return res.status(200).json({
+                                      statusCode:200,
+                                      success:true,
+                                      data:{"videoId":data.insertId}
+                                  });
+     
+          });
+        });
+      });
+    } catch (err){
+      return res.status(500).json({statusCode:500,message: "Please check your parameter or value required"});
+    }
+    
+     
+  };
+
+  this.update = function(req,res,next) {
+    try {
+
+      var videoId = req.body.videoId;
+      var youtubeLink = req.body.youtubeLink;
+      var title = req.body.title;
+      var desc = req.body.desc;
+      var youtubeId = youtubeLink.split("v=")[1];
+      var youtubeIframe = "https://youtube.com/embed/"+youtubeId;
+      var youtubeImg = "https://i.ytimg.com/vi/"+youtubeId+"/maxresdefault.jpg";
+      var type = req.body.type;
+      var status = 1;
+      var email = req.body.email;
+
+      userModel.getUserIdByEmail(email,res,function(result){
+        
+        var userId = result.userId;
+
+        connection.acquire(function(err,con){
+          if (err) throw err;
+
+          var sql = "UPDATE videos SET video_youtube_id = '"+youtubeId+"' \
+          ,video_youtube_link = '"+youtubeLink+"', video_youtube_link = '"+youtubeLink+"' \
+          ,video_youtube_iframe = '"+youtubeIframe+"',video_youtube_image = '"+youtubeImg+"', video_title = '"+title+"', video_type = '"+type+"', video_desc = '"+desc+"' \
+          ,update_date = NOW() WHERE video_id = '"+videoId+"' AND user_id = '"+userId+"'";
+
+            
 
           con.query(sql, function(err,data){
             con.release();
@@ -133,56 +186,16 @@ function cVideo() {
             return res.status(200).json({
                                     statusCode:200,
                                     success:true,
-                                    data:{"videoId":data.insertId}
+                                    data:{"videoId":videoId}
                                 });
-   
-        });
-      });
-    });
      
-  };
-
-  this.update = function(req,res,next) {
-    var videoId = req.body.videoId;
-    var youtubeLink = req.body.youtubeLink;
-    var title = req.body.title;
-    var desc = req.body.desc;
-    var youtubeId = youtubeLink.split("v=")[1];
-    var youtubeIframe = "https://youtube.com/embed/"+youtubeId;
-    var youtubeImg = "https://i.ytimg.com/vi/"+youtubeId+"/maxresdefault.jpg";
-    var type = req.body.type;
-    var status = 1;
-    var email = req.body.email;
-
-    userModel.getUserIdByEmail(email,res,function(result){
-      
-      var userId = result.userId;
-
-      connection.acquire(function(err,con){
-        if (err) throw err;
-
-        var sql = "UPDATE videos SET video_youtube_id = '"+youtubeId+"' \
-        ,video_youtube_link = '"+youtubeLink+"', video_youtube_link = '"+youtubeLink+"' \
-        ,video_youtube_iframe = '"+youtubeIframe+"',video_youtube_image = '"+youtubeImg+"', video_title = '"+title+"', video_type = '"+type+"', video_desc = '"+desc+"' \
-        ,update_date = NOW() WHERE video_id = '"+videoId+"' AND user_id = '"+userId+"'";
-
-          
-
-        con.query(sql, function(err,data){
-          con.release();
-          if(err)
-              return res.status(500).json({statusCode:500,message: err.code});
-             
-
-          return res.status(200).json({
-                                  statusCode:200,
-                                  success:true,
-                                  data:{"videoId":videoId}
-                              });
-   
+          });
         });
       });
-    });
+
+    } catch (err){
+      return res.status(500).json({statusCode:500,message: "Please check your parameter or value required"});
+    }
   };
 
   this.delete = function(req,res,next) {
