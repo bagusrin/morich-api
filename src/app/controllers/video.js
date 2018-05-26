@@ -40,6 +40,7 @@ function cVideo() {
                   "youtubeImg": data[i].video_youtube_image,
                   "title": data[i].video_title,
                   "description": data[i].video_desc,
+                  "type": data[i].video_type,
                   "author": data[i].user_firstname+' '+data[i].user_lastname,
                   "postDate": data[i].post_date
                 });
@@ -84,6 +85,7 @@ function cVideo() {
                 "youtubeImg": data[0].video_youtube_image,
                 "title": data[0].video_title,
                 "description": data[0].video_desc,
+                "type": data[0].video_type,
                 "author": data[0].user_firstname+' '+data[0].user_lastname,
                 "postDate": data[0].post_date
               });
@@ -105,6 +107,7 @@ function cVideo() {
     var youtubeId = youtubeLink.split("v=")[1];
     var youtubeIframe = "https://youtube.com/embed/"+youtubeId;
     var youtubeImg = "https://i.ytimg.com/vi/"+youtubeId+"/maxresdefault.jpg";
+    var type = req.body.type;
     var status = 1;
     var email = req.body.email;
 
@@ -116,8 +119,8 @@ function cVideo() {
         if (err) throw err;
 
           var sql = "INSERT INTO videos (user_id, video_youtube_id, video_youtube_link, video_youtube_iframe \
-          ,video_youtube_image,video_title,video_desc,status,post_date) \
-          VALUES ('"+userId+"','"+youtubeId+"','"+youtubeLink+"','"+youtubeIframe+"','"+youtubeImg+"','"+title+"', '"+desc+"', '"+status+"', NOW())";
+          ,video_youtube_image,video_title,video_desc,video_type,status,post_date) \
+          VALUES ('"+userId+"','"+youtubeId+"','"+youtubeLink+"','"+youtubeIframe+"','"+youtubeImg+"','"+title+"', '"+desc+"', '"+type+"', '"+status+"', NOW())";
 
           console.log(sql);
 
@@ -147,6 +150,7 @@ function cVideo() {
     var youtubeId = youtubeLink.split("v=")[1];
     var youtubeIframe = "https://youtube.com/embed/"+youtubeId;
     var youtubeImg = "https://i.ytimg.com/vi/"+youtubeId+"/maxresdefault.jpg";
+    var type = req.body.type;
     var status = 1;
     var email = req.body.email;
 
@@ -159,7 +163,7 @@ function cVideo() {
 
         var sql = "UPDATE videos SET video_youtube_id = '"+youtubeId+"' \
         ,video_youtube_link = '"+youtubeLink+"', video_youtube_link = '"+youtubeLink+"' \
-        ,video_youtube_iframe = '"+youtubeIframe+"',video_youtube_image = '"+youtubeImg+"', video_title = '"+title+"', video_desc = '"+desc+"' \
+        ,video_youtube_iframe = '"+youtubeIframe+"',video_youtube_image = '"+youtubeImg+"', video_title = '"+title+"', video_type = '"+type+"', video_desc = '"+desc+"' \
         ,update_date = NOW() WHERE video_id = '"+videoId+"' AND user_id = '"+userId+"'";
 
           
