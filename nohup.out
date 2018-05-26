@@ -1,5 +1,5 @@
 
-> morich-api@1.0.0 start /Users/admin/bagusrin/IKAB/MorichApp/morich-api
+> morich-api@1.0.0 start /var/www/morich-api
 > node scripts/run.js
 
 Starting 'run'...
@@ -7,42 +7,2795 @@ Starting 'build'...
 src/app.js -> build/app.js
 src/server.js -> build/server.js
 src/app/controllers/auth.js -> build/app/controllers/auth.js
-src/app/controllers/spiderman.js -> build/app/controllers/spiderman.js
 src/app/controllers/member.js -> build/app/controllers/member.js
+src/app/controllers/spiderman.js -> build/app/controllers/spiderman.js
 src/app/controllers/user.js -> build/app/controllers/user.js
 src/app/controllers/video.js -> build/app/controllers/video.js
-src/app/routes/auth.js -> build/app/routes/auth.js
-src/app/routes/spiderman.js -> build/app/routes/spiderman.js
-src/app/routes/member.js -> build/app/routes/member.js
-src/app/routes/user.js -> build/app/routes/user.js
-src/app/routes/video.js -> build/app/routes/video.js
 src/app/models/email.js -> build/app/models/email.js
 src/app/models/user.js -> build/app/models/user.js
-0
-ChildProcess {
-  domain: null,
-  _events: { exit: [Function: spawnServerProcess] },
-  _eventsCount: 1,
-  _maxListeners: undefined,
-  _closesNeeded: 1,
-  _closesGot: 0,
-  connected: false,
-  signalCode: null,
-  exitCode: null,
-  killed: true,
-  spawnfile: 'node',
-  _handle: Process { owner: [Circular], onexit: [Function], pid: 1563 },
-  spawnargs: [ 'node', 'server.js' ],
-  pid: 1563,
-  stdin: null,
-  stdout: null,
-  stderr: null,
-  stdio: [ null, null, null ] }
-Finished 'build' after 573ms
+src/app/routes/auth.js -> build/app/routes/auth.js
+src/app/routes/member.js -> build/app/routes/member.js
+src/app/routes/spiderman.js -> build/app/routes/spiderman.js
+src/app/routes/user.js -> build/app/routes/user.js
+src/app/routes/video.js -> build/app/routes/video.js
+Finished 'build' after 430ms
 Server listening on port 7003
-[0mGET /user/detail/21 [32m200 [0m30.471 ms - 461[0m
-[0mGET /user/detail/21 [32m200 [0m4.934 ms - 461[0m
-[0mGET /user/detail/21 [32m200 [0m2.707 ms - 461[0m
-[0mGET /user/detail/21 [32m200 [0m8.498 ms - 461[0m
-[0mGET /user/detail/21 [32m200 [0m7.858 ms - 461[0m
-[0mGET /user/detail/21 [32m200 [0m8.114 ms - 461[0m
+2
+[0mPOST /auth/login [32m200 [0m104.210 ms - 263[0m
+2
+[0mPOST /auth/login [32m200 [0m79.286 ms - 263[0m
+2
+[0mPOST /auth/login [32m200 [0m78.162 ms - 263[0m
+[0mGET /user/detail/21 [32m200 [0m2.838 ms - 483[0m
+[0mGET /user/detail/21 [32m200 [0m2.134 ms - 483[0m
+src/app/controllers/auth.js -> build/app/controllers/auth.js
+src/app/controllers/user.js -> build/app/controllers/user.js
+Server listening on port 7003
+[0mGET /user/detail/21 [32m200 [0m17.817 ms - 495[0m
+[0mGET /user/detail/21 [32m200 [0m3.114 ms - 495[0m
+[0mGET /user/detail/21 [32m200 [0m2.877 ms - 495[0m
+[0mPOST /auth/login [32m200 [0m92.822 ms - 275[0m
+[0mPOST /auth/login [32m200 [0m82.240 ms - 275[0m
+[0mPOST /auth/login [32m200 [0m79.657 ms - 275[0m
+[0mGET /uploads/users/1526206942783.jpeg%22,%22initialName%22:%22BR%22,%22ranking%22:1,%22isActive [33m404 [0m2.940 ms - 132[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m3.362 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.740 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.687 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.433 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.411 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.662 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.879 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.462 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.641 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.559 ms - -[0m
+[0mGET /favicon.ico [33m404 [0m0.923 ms - 53[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.588 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.461 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.458 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.433 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.402 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.438 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.394 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.588 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.607 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.415 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.626 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.609 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.463 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.542 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.415 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.578 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.482 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.418 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.440 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.440 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.477 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.490 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.626 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.669 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.061 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.723 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.460 ms - -[0m
+[0mGET /favicon.ico [33m404 [0m0.617 ms - 53[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.503 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.507 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.510 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.565 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.469 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.487 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.402 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.415 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.463 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.635 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.484 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.380 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.480 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.401 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.495 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.425 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.955 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.466 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.415 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.523 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.437 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.104 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.483 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.402 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.523 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.577 ms - -[0m
+[0mPOST /auth/login [31m500 [0m2.796 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m2.193 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m2.162 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m2.286 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m2.229 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m2.032 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m2.135 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m2.119 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m2.371 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m2.736 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m1.790 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m1.752 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m2.335 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m1.775 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m1.729 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m1.733 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m1.920 ms - 79[0m
+[0mPOST /auth/login [32m200 [0m78.472 ms - 275[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.844 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.507 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.479 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.425 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.409 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.448 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.430 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.510 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.448 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.503 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.453 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.427 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.407 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.403 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.193 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.657 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.481 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.360 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.412 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.414 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.385 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.458 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.516 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.491 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.488 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.386 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.512 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.405 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.434 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.384 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.435 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.356 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.480 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.854 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.746 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.477 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.507 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.451 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.432 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.438 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.405 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.473 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.433 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.583 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.412 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.321 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.400 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.400 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.402 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.407 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.517 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.427 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.399 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.428 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.462 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.408 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.448 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.442 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.385 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.878 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.395 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.503 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.440 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.434 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.424 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.418 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.353 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.446 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.402 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.393 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.479 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.551 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.579 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.440 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.357 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.357 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.378 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.400 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.319 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.320 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.417 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m4.535 ms - 495[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.406 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.467 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.413 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.448 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m2.944 ms - 495[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.537 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.494 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.419 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.502 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m2.216 ms - 495[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.505 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.563 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.406 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.507 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.470 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.413 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m2.038 ms - 495[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.410 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.428 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.373 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.325 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.500 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.404 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.707 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.417 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.453 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.909 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.855 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.414 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.397 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.081 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.470 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.399 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.979 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.438 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.415 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.838 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.466 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.419 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.940 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.469 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.469 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.927 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.394 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.382 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.322 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.403 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.409 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.531 ms - 87058[0m
+[0mGET /user/detail/21 [36m304 [0m1.905 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.403 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.402 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.426 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.006 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.433 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.490 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.984 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.395 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.485 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.948 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.465 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.427 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.418 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.453 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.423 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.946 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.360 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.715 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.380 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.326 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.379 ms - -[0m
+[0mPOST /auth/login [32m200 [0m77.861 ms - 275[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.752 ms - 87058[0m
+[0mPOST /auth/login [32m200 [0m77.883 ms - 275[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.505 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.353 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.501 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.367 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.421 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m1.899 ms - 495[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.387 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.434 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.425 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.380 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.446 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.883 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.401 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.437 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.580 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.527 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.326 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.812 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.325 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.392 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.592 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.329 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.653 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.679 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.402 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.324 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.533 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.311 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.297 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.539 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.326 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.377 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.482 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.321 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.607 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.317 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.326 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.574 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.334 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.364 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.390 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m1.809 ms - 495[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.377 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.362 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.364 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.395 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.363 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.420 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.381 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.431 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m1.848 ms - 495[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.416 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.057 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.395 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.425 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.415 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.397 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.367 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.424 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.420 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.687 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m3.978 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.353 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.477 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.063 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.387 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.475 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.862 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.410 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.436 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.919 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.433 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.510 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.387 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.000 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.443 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.394 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.913 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.379 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.394 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.404 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.417 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m2.767 ms - 495[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.430 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.391 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.428 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.363 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.523 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.294 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.309 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.320 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.345 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.319 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.306 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.902 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.298 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.335 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.344 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.468 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.400 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.356 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.679 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.566 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.417 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.761 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.371 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.823 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.671 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.322 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.399 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.615 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.330 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.406 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.699 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.418 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.407 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.063 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.374 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.319 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.343 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.815 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.377 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.419 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.867 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.366 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.316 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.644 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.297 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.342 ms - -[0m
+[0mPOST /auth/login [32m200 [0m77.564 ms - 275[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.495 ms - 87058[0m
+[0mGET /user/detail/21 [32m200 [0m1.596 ms - 495[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.300 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.337 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.289 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.324 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.333 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.650 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.307 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.295 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.297 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.628 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.298 ms - -[0m
+[0mPOST /auth/login [32m200 [0m77.575 ms - 275[0m
+[0mGET /user/detail/21 [32m200 [0m1.503 ms - 495[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.526 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.423 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.366 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.009 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.308 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.320 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.544 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.353 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.336 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.815 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.333 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.321 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.535 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.321 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.462 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.451 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.510 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.315 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.412 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.522 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.389 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.326 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.330 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.587 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.403 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.332 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.584 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.311 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.374 ms - -[0m
+[0mPOST /auth/login [32m200 [0m77.693 ms - 275[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.467 ms - 87058[0m
+[0mGET /user/detail/21 [32m200 [0m2.637 ms - 495[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.311 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.346 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.329 ms - -[0m
+[0mPOST /auth/login [32m200 [0m77.622 ms - 275[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.489 ms - 87058[0m
+[0mGET /user/detail/21 [32m200 [0m1.527 ms - 495[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.328 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.389 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.898 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.409 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.439 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.714 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.385 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.402 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.095 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.315 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.360 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.724 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.407 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.323 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.320 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.309 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.290 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.345 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.311 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.332 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.355 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.328 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.332 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.469 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.477 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.341 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.316 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.316 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.295 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.306 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.351 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.316 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.309 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.282 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.581 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.344 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.370 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.306 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.352 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.305 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.336 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.320 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.324 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.301 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.379 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.360 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.354 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.516 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.328 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.326 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.330 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.375 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.476 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.388 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.482 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.366 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.312 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.369 ms - -[0m
+[0mGET /video/list?email=bagusrinn@gmail.com&page=0&limit=4 [31m500 [0m19.124 ms - 45[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.482 ms - 87058[0m
+[0mGET /video/list?email=bagusrinn@gmail.com&page=0&limit=4 [31m500 [0m3.977 ms - 45[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.309 ms - -[0m
+[0mGET /video/list?email=bagusrinn@gmail.com&page=0&limit=4 [31m500 [0m3.212 ms - 45[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.327 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.493 ms - -[0m
+[0mGET /video/list?email=bagusrinn@gmail.com&page=0&limit=4 [31m500 [0m2.578 ms - 45[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.701 ms - -[0m
+[0mGET /video/list?email=bagusrinn@gmail.com&page=0&limit=4 [31m500 [0m2.554 ms - 45[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.337 ms - -[0m
+[0mGET /video/list?email=bagusrinn@gmail.com&page=0&limit=4 [31m500 [0m2.084 ms - 45[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.322 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.467 ms - -[0m
+[0mGET /video/list?email=bagusrinn@gmail.com&page=0&limit=4 [31m500 [0m2.567 ms - 45[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.434 ms - -[0m
+[0mGET /video/list?email=bagusrinn@gmail.com&page=0&limit=4 [31m500 [0m2.189 ms - 45[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.312 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.287 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.387 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.353 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.324 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.319 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.304 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.388 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.328 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.339 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.356 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.380 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.311 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.294 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.349 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.333 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.339 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.329 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.304 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.294 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.333 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.314 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m1.559 ms - 495[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.338 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.412 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.622 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.309 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.321 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.322 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.300 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.295 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.421 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.320 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.467 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.577 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.358 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.370 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.308 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.298 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.359 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.333 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.716 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.309 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.338 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.308 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.338 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.500 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.425 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.366 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.299 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.329 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.327 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.408 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.319 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.322 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.311 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.308 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.419 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.395 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.420 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.305 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.310 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.308 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.360 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.311 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.357 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.303 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.651 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.323 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.318 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.634 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.365 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.381 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.458 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.379 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.312 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.411 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.345 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.331 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.490 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.309 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.325 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m2.666 ms - 495[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.310 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.432 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.343 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.390 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.361 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.593 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.403 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.408 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.463 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.313 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.335 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.374 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.307 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.322 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.366 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.326 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.542 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.311 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.435 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.381 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.323 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.331 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.328 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.408 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.397 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.453 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.381 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.467 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.346 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.447 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.693 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.376 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.440 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.350 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.350 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.316 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.375 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.303 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.322 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.310 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.396 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.341 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.403 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.360 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.373 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m3.245 ms - 495[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.347 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.379 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.318 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.286 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.312 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.491 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.374 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.329 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.311 ms - -[0m
+src/app/controllers/auth.js -> build/app/controllers/auth.js
+src/app/controllers/user.js -> build/app/controllers/user.js
+src/app/routes/user.js -> build/app/routes/user.js
+Server listening on port 7003
+[0mGET /user/username/zia12 [32m200 [0m15.563 ms - 388[0m
+[0mGET /user/username/bagusrinn21 [32m200 [0m2.771 ms - 543[0m
+[0mGET /user/username/bagusrinn21 [32m200 [0m2.215 ms - 543[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m4.211 ms - 87058[0m
+[0mGET /user/username/zia12 [32m200 [0m1.842 ms - 388[0m
+[0mGET /user/username/zia12 [32m200 [0m1.703 ms - 388[0m
+[0mGET /user/username/zia12 [32m200 [0m1.852 ms - 388[0m
+[0mGET /user/username/zia12 [32m200 [0m1.841 ms - 388[0m
+[0mGET /user/username/zia12 [32m200 [0m1.846 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m1.645 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m1.720 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m1.647 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m1.813 ms - 395[0m
+[0mGET / [33m404 [0m1.499 ms - 42[0m
+[0mGET /user/username/zia12 [32m200 [0m2.446 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m1.830 ms - 395[0m
+[0mPOST /user/register [32m200 [0m22.722 ms - 54[0m
+[0mGET /user/username/zia12 [32m200 [0m3.280 ms - 395[0m
+[0mGET /user/username/bagusrinn21 [32m200 [0m2.121 ms - 543[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.811 ms - 87058[0m
+[0mGET /user/username/bagusrinn21 [32m200 [0m1.717 ms - 543[0m
+[0mGET /user/username/bagusrinn21 [32m200 [0m2.099 ms - 543[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m1.025 ms - 87058[0m
+[0mGET /user/username/zia12 [32m200 [0m1.770 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m1.874 ms - 395[0m
+[0mPOST /user/register [32m200 [0m5.356 ms - 54[0m
+[0mGET /user/username/zia12 [32m200 [0m3.145 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m1.900 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m1.995 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m1.956 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m1.885 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m1.782 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m1.961 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m2.040 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m2.411 ms - 395[0m
+[0mGET /user/username/bagusrinn21 [32m200 [0m1.977 ms - 543[0m
+[0mGET /user/username/bagusrinn21 [32m200 [0m1.756 ms - 543[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.070 ms - -[0m
+[0mGET /user/username/zia12 [32m200 [0m1.830 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m1.684 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m1.758 ms - 395[0m
+[0mGET /user/username/bagusrinn21 [32m200 [0m1.858 ms - 543[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.408 ms - -[0m
+[0mGET /user/username/bagusrinn21 [32m200 [0m2.039 ms - 543[0m
+[0mGET /user/username/bagusrinn21 [32m200 [0m1.756 ms - 543[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.474 ms - -[0m
+[0mGET /user/username/zia12 [32m200 [0m3.095 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m1.483 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m1.532 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m1.648 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m1.557 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m1.581 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m1.821 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m1.604 ms - 395[0m
+[0mGET /user/username/bagusrinn21 [32m200 [0m1.597 ms - 543[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.462 ms - -[0m
+[0mGET /user/username/bagusrinn21 [32m200 [0m1.524 ms - 543[0m
+[0mGET /user/username/zia12 [32m200 [0m1.668 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m1.565 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m3.191 ms - 395[0m
+[0mGET /user/username/zia12 [32m200 [0m4.857 ms - 388[0m
+[0mGET /user/username/zia12 [32m200 [0m1.545 ms - 388[0m
+[0mGET /user/username/riri4 [32m200 [0m1.554 ms - 458[0m
+[0mGET /uploads/users/1526223147100.jpeg [32m200 [0m0.619 ms - 53942[0m
+src/app/controllers/auth.js -> build/app/controllers/auth.js
+src/app/controllers/user.js -> build/app/controllers/user.js
+src/app/models/user.js -> build/app/models/user.js
+Server listening on port 7003
+[0mPOST /auth/login [31m500 [0m101.016 ms - 79[0m
+[0mPOST /auth/login [32m200 [0m79.549 ms - 357[0m
+[0mPOST /auth/login [31m500 [0m78.020 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m77.709 ms - 79[0m
+[0mPOST /auth/login [32m200 [0m78.109 ms - 357[0m
+[0mPOST /user/detail/21 [33m404 [0m1.266 ms - 56[0m
+[0mGET /user/detail/21 [32m200 [0m3.233 ms - 577[0m
+[0mGET /user/detail/12 [32m200 [0m2.215 ms - 422[0m
+[0mGET /user/detail/1 [32m200 [0m2.214 ms - 534[0m
+[0mGET /user/username/cms [33m404 [0m2.747 ms - 45[0m
+[0mGET /user/username/abcs [33m404 [0m1.898 ms - 45[0m
+[0mGET /user/username/lklo [33m404 [0m1.813 ms - 45[0m
+[0mGET /user/username/cms [33m404 [0m4.288 ms - 45[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m4.978 ms - 87058[0m
+[0mGET /user/detail/21 [32m200 [0m2.287 ms - 577[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.181 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.547 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.401 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.353 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.393 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.566 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.434 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.477 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.486 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.407 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.499 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.381 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m1.042 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.379 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.359 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.364 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.402 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.527 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.344 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.532 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.457 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.438 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.428 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.416 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.454 ms - -[0m
+src/app.js -> build/app.js
+src/app/controllers/spiderman.js -> build/app/controllers/spiderman.js
+src/app/controllers/videoadmin.js -> build/app/controllers/videoadmin.js
+src/app/routes/videoadmin.js -> build/app/routes/videoadmin.js
+Server listening on port 7003
+[0mPOST /admin/login [32m200 [0m101.352 ms - 108[0m
+[0mGET /video/admin/list [31m500 [0m18.395 ms - 47[0m
+[0mGET /admin/list [32m200 [0m2.075 ms - 110[0m
+[0mGET /user/username/bagusrinn21 [32m200 [0m4.897 ms - 543[0m
+[0mGET /user/username/bagusrinn21 [32m200 [0m1.822 ms - 543[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m2.804 ms - -[0m
+src/app/controllers/spiderman.js -> build/app/controllers/spiderman.js
+src/app/routes/spiderman.js -> build/app/routes/spiderman.js
+Server listening on port 7003
+[0mPOST /admin/login [32m200 [0m100.747 ms - 108[0m
+[0mGET /admin/dashboard [32m200 [0m3.107 ms - 126[0m
+[0mGET /video/admin/list [31m500 [0m17.310 ms - 47[0m
+[0mGET /admin/dashboard [32m200 [0m1.485 ms - 126[0m
+[0mGET /admin/dashboard [32m200 [0m1.314 ms - 126[0m
+[0mGET /admin/list [32m200 [0m1.649 ms - 110[0m
+[0mGET /admin/list [32m200 [0m1.275 ms - 110[0m
+[0mGET /user/list [33m404 [0m2.394 ms - 51[0m
+[0mGET /video/admin/list [31m500 [0m1.704 ms - 47[0m
+[0mGET /user/username/zia12 [32m200 [0m3.169 ms - 388[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m2.302 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.521 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.492 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.373 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.414 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m3.545 ms - 577[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.521 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.418 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.402 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.365 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.409 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m2.587 ms - 87058[0m
+[0mGET /user/detail/21 [36m304 [0m2.323 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.352 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.350 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.489 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.409 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.458 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.440 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.470 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.388 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.381 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.407 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.371 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.407 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.424 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.825 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.369 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.380 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.370 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.411 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.560 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.395 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.430 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.532 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.400 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.538 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.365 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.378 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.432 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.377 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.435 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.413 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.392 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.414 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.391 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.452 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.356 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.456 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.371 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.458 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.575 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.396 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.393 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.423 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.846 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.466 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.420 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.382 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.361 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.369 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.433 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.400 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.292 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.706 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.384 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.384 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.395 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.391 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.434 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.371 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.465 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.411 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.350 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.482 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.422 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.369 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.355 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.673 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.598 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.438 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.371 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.117 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.363 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.400 ms - -[0m
+[0mGET /member/potential?email=bagusrinn@gmail.com&page=0&limit=4 [31m500 [0m12.550 ms - 45[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.418 ms - -[0m
+[0mGET /member/potential?email=bagusrinn@gmail.com&page=0&limit=4 [31m500 [0m3.329 ms - 45[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.377 ms - -[0m
+[0mGET /member/potential?email=bagusrinn@gmail.com&page=0&limit=4 [31m500 [0m2.324 ms - 45[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.400 ms - -[0m
+[0mGET /member/potential?email=bagusrinn@gmail.com&page=1&limit=4 [32m200 [0m1.945 ms - 43[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.469 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.406 ms - -[0m
+[0mGET /member/potential?email=bagusrinn@gmail.com&page=1&limit=4 [36m304 [0m2.086 ms - -[0m
+[0mGET /member/potential?email=bagusrinn@gmail.com&page=1&limit=4 [36m304 [0m2.060 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m1.034 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.417 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m3.029 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.353 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.378 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.382 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.346 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.423 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.355 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.463 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.417 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.411 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.470 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.445 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.414 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.644 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.434 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.417 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.410 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.420 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.408 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.394 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.324 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.340 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.380 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.366 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m1.430 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.426 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.432 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.346 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.411 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.363 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.397 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.357 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.338 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.394 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.410 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.436 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.424 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.483 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.662 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.405 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.434 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.407 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.402 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.415 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.416 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.388 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.401 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.389 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.664 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.449 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.409 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.484 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.416 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.405 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.404 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.403 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.634 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.349 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.407 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.426 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.325 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.360 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.383 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.346 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.376 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.819 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.464 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.355 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.404 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.375 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.403 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.353 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.320 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.369 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m1.268 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.361 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.367 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.394 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.447 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.364 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.389 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.377 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.362 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.358 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.418 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.340 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.432 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.374 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.364 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.422 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.342 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.432 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.679 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.398 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.405 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.431 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.475 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.348 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.484 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.179 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m2.623 ms - 577[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.596 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.382 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.346 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.362 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.385 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.357 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.135 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.574 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.313 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.441 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.441 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.356 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.349 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.385 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.397 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.604 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.756 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.318 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.421 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.365 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.339 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.801 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.368 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.961 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.401 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.413 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.552 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.390 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.405 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.347 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.360 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.337 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.385 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.325 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.435 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.347 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m1.396 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.342 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.318 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.384 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.355 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.600 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.423 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.330 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.404 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.379 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.545 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.372 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.307 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.397 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.359 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.382 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.367 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.451 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.366 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.403 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.356 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.385 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.376 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.378 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.363 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.453 ms - -[0m
+[0mPOST /admin/login [33m401 [0m78.121 ms - 80[0m
+[0mGET /admin/dashboard [32m200 [0m1.543 ms - 126[0m
+[0mPOST /admin/login [33m401 [0m77.984 ms - 80[0m
+[0mGET /admin/dashboard [32m200 [0m1.478 ms - 126[0m
+[0mPOST /admin/login [33m401 [0m77.499 ms - 80[0m
+[0mGET /admin/dashboard [32m200 [0m1.431 ms - 126[0m
+[0mPOST /admin/login [32m200 [0m77.340 ms - 108[0m
+[0mGET /admin/dashboard [32m200 [0m1.784 ms - 126[0m
+[0mPOST /admin/login [32m200 [0m77.624 ms - 108[0m
+[0mGET /admin/dashboard [32m200 [0m1.477 ms - 126[0m
+[0mGET /admin/list [32m200 [0m1.624 ms - 110[0m
+[0mGET /user/list [33m404 [0m0.567 ms - 51[0m
+[0mGET /video/admin/list [31m500 [0m1.913 ms - 47[0m
+[0mGET /video/admin/list [31m500 [0m1.728 ms - 47[0m
+[0mGET /admin/list [32m200 [0m1.135 ms - 110[0m
+[0mGET /video/admin/list [31m500 [0m1.618 ms - 47[0m
+[0mGET /admin/list [32m200 [0m1.025 ms - 110[0m
+[0mGET /video/admin/list [31m500 [0m1.949 ms - 47[0m
+[0mGET /user/list [33m404 [0m0.589 ms - 51[0m
+[0mGET /admin/list [32m200 [0m1.165 ms - 110[0m
+[0mGET /admin/list [32m200 [0m1.115 ms - 110[0m
+[0mGET /admin/dashboard [32m200 [0m1.497 ms - 126[0m
+[0mGET /video/admin/list [31m500 [0m1.687 ms - 47[0m
+[0mGET /admin/dashboard [32m200 [0m1.452 ms - 126[0m
+[0mGET /user/list [33m404 [0m0.435 ms - 51[0m
+[0mGET /admin/list [32m200 [0m1.281 ms - 110[0m
+[0mGET /user/list [33m404 [0m0.528 ms - 51[0m
+[0mGET /admin/dashboard [32m200 [0m1.683 ms - 126[0m
+[0mGET /user/list [33m404 [0m0.554 ms - 51[0m
+[0mGET /video/admin/list [31m500 [0m1.889 ms - 47[0m
+[0mGET /user/list [33m404 [0m0.560 ms - 51[0m
+[0mGET /video/admin/list [31m500 [0m1.856 ms - 47[0m
+[0mGET /admin/dashboard [32m200 [0m1.527 ms - 126[0m
+[0mGET /admin/list [32m200 [0m1.228 ms - 110[0m
+[0mGET /user/list [33m404 [0m0.507 ms - 51[0m
+[0mGET /video/admin/list [31m500 [0m1.941 ms - 47[0m
+[0mGET /user/detail/21 [32m200 [0m2.396 ms - 577[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.410 ms - -[0m
+[0mPOST /admin/login [32m200 [0m77.513 ms - 108[0m
+[0mGET /admin/dashboard [32m200 [0m1.295 ms - 126[0m
+[0mGET /admin/list [32m200 [0m1.128 ms - 110[0m
+[0mGET /video/admin/list [31m500 [0m1.894 ms - 47[0m
+[0mGET /user/list [33m404 [0m0.516 ms - 51[0m
+[0mGET /admin/list [32m200 [0m1.425 ms - 110[0m
+[0mGET /admin/dashboard [32m200 [0m2.640 ms - 126[0m
+[0mGET /admin/list [32m200 [0m1.062 ms - 110[0m
+[0mGET /user/list [33m404 [0m0.445 ms - 51[0m
+[0mGET /video/admin/list [31m500 [0m2.064 ms - 47[0m
+[0mGET /user/list [33m404 [0m0.397 ms - 51[0m
+[0mGET /video/admin/list [31m500 [0m1.588 ms - 47[0m
+[0mGET /user/list [33m404 [0m0.410 ms - 51[0m
+[0mGET /admin/list [32m200 [0m1.235 ms - 110[0m
+[0mGET /admin/dashboard [32m200 [0m1.278 ms - 126[0m
+[0mGET /admin/list [32m200 [0m1.038 ms - 110[0m
+[0mGET /user/list [33m404 [0m0.468 ms - 51[0m
+[0mGET /video/admin/list [31m500 [0m1.625 ms - 47[0m
+[0mGET /user/username/bagusrinn21 [32m200 [0m1.902 ms - 543[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.602 ms - 87058[0m
+[0mGET /admin/dashboard [32m200 [0m1.734 ms - 126[0m
+[0mGET /video/admin/list [31m500 [0m1.950 ms - 47[0m
+[0mGET /user/list [33m404 [0m0.646 ms - 51[0m
+[0mGET /admin/dashboard [32m200 [0m1.577 ms - 126[0m
+[0mGET /user/list [33m404 [0m0.573 ms - 51[0m
+[0mGET /admin/list [32m200 [0m1.293 ms - 110[0m
+[0mGET /user/list [33m404 [0m0.494 ms - 51[0m
+[0mGET /admin/dashboard [32m200 [0m1.538 ms - 126[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.626 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.449 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.387 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.450 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.506 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.401 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.388 ms - -[0m
+[0mPOST /auth/login [32m200 [0m79.538 ms - 357[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.396 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.444 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.435 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.448 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.500 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.431 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.513 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.459 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.441 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.463 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.465 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.435 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.385 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.500 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.442 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m2.382 ms - 577[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.383 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.521 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.407 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.078 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.386 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.899 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.325 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.434 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.340 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.592 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.499 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m2.471 ms - 577[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.440 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.552 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.375 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.420 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.324 ms - -[0m
+[0mGET /user/username/bagusrinn21 [32m200 [0m1.652 ms - 543[0m
+[0mGET /user/username/bagusrinn21 [36m304 [0m1.731 ms - -[0m
+[0mGET /user/username/bagusrinn21 [36m304 [0m2.269 ms - -[0m
+[0mGET /user/username/bagusrinn21 [36m304 [0m1.620 ms - -[0m
+[0mGET /user/username/bagusrinn21 [36m304 [0m1.543 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.667 ms - 87058[0m
+[0mGET /user/username/bagusrinn21 [36m304 [0m1.681 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.345 ms - -[0m
+[0mGET /user/username/bagusrinn21 [36m304 [0m1.503 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.324 ms - -[0m
+[0mGET /user/username/bagusrinn21 [36m304 [0m1.822 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.337 ms - -[0m
+[0mGET /user/username/bagusrinn21 [36m304 [0m1.592 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.385 ms - -[0m
+[0mGET /user/username/bagusrinn21 [36m304 [0m1.764 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.314 ms - -[0m
+[0mGET /user/username/bagusrinn21 [36m304 [0m1.650 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.341 ms - -[0m
+[0mGET /user/username/bagusrinn21 [36m304 [0m1.857 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.518 ms - -[0m
+[0mGET /user/username/bagusrinn21 [36m304 [0m2.487 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.545 ms - -[0m
+[0mGET /user/username/bagusrinn21 [36m304 [0m1.930 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.483 ms - -[0m
+[0mGET /user/username/bagusrinn21 [32m200 [0m3.386 ms - 543[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.379 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.358 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.384 ms - -[0m
+[0mGET /user/username/bagusrinn21 [32m200 [0m1.726 ms - 543[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.341 ms - -[0m
+[0mGET /user/username/bagusrinn21 [32m200 [0m1.680 ms - 543[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.432 ms - -[0m
+[0mGET /user/username/bagusrinn21 [32m200 [0m1.757 ms - 543[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.343 ms - -[0m
+[0mGET /user/username/bagusrinn21 [32m200 [0m1.662 ms - 543[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.359 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.325 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.412 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.356 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.544 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.383 ms - -[0m
+[0mGET /user/username/bagusrinn21 [32m200 [0m1.829 ms - 543[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.449 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.378 ms - -[0m
+[0mPOST /user/join [31m500 [0m13.987 ms - 1149[0m
+Error: data and salt arguments required
+    at Object.hashSync (/var/www/morich-api/node_modules/bcrypt/bcrypt.js:71:15)
+    at userJoin (/var/www/morich-api/build/app/src/app/controllers/user.js:79:27)
+    at Layer.handle [as handle_request] (/var/www/morich-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/morich-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/var/www/morich-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/var/www/morich-api/node_modules/express/lib/router/layer.js:95:5)
+    at /var/www/morich-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/var/www/morich-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/var/www/morich-api/node_modules/express/lib/router/index.js:275:10)
+    at /var/www/morich-api/src/app.js:37:6
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.433 ms - -[0m
+[0mPOST /user/join [31m500 [0m0.909 ms - 1149[0m
+Error: data and salt arguments required
+    at Object.hashSync (/var/www/morich-api/node_modules/bcrypt/bcrypt.js:71:15)
+    at userJoin (/var/www/morich-api/build/app/src/app/controllers/user.js:79:27)
+    at Layer.handle [as handle_request] (/var/www/morich-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/morich-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/var/www/morich-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/var/www/morich-api/node_modules/express/lib/router/layer.js:95:5)
+    at /var/www/morich-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/var/www/morich-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/var/www/morich-api/node_modules/express/lib/router/index.js:275:10)
+    at /var/www/morich-api/src/app.js:37:6
+[0mGET /user/username/bagusrinn21 [32m200 [0m1.783 ms - 543[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.450 ms - -[0m
+[0mPOST /user/join [31m500 [0m0.840 ms - 1149[0m
+Error: data and salt arguments required
+    at Object.hashSync (/var/www/morich-api/node_modules/bcrypt/bcrypt.js:71:15)
+    at userJoin (/var/www/morich-api/build/app/src/app/controllers/user.js:79:27)
+    at Layer.handle [as handle_request] (/var/www/morich-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/morich-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/var/www/morich-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/var/www/morich-api/node_modules/express/lib/router/layer.js:95:5)
+    at /var/www/morich-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/var/www/morich-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/var/www/morich-api/node_modules/express/lib/router/index.js:275:10)
+    at /var/www/morich-api/src/app.js:37:6
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.462 ms - -[0m
+[0mPOST /user/join [31m500 [0m0.838 ms - 1149[0m
+Error: data and salt arguments required
+    at Object.hashSync (/var/www/morich-api/node_modules/bcrypt/bcrypt.js:71:15)
+    at userJoin (/var/www/morich-api/build/app/src/app/controllers/user.js:79:27)
+    at Layer.handle [as handle_request] (/var/www/morich-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/morich-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/var/www/morich-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/var/www/morich-api/node_modules/express/lib/router/layer.js:95:5)
+    at /var/www/morich-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/var/www/morich-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/var/www/morich-api/node_modules/express/lib/router/index.js:275:10)
+    at /var/www/morich-api/src/app.js:37:6
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.394 ms - -[0m
+[0mPOST /user/join [31m500 [0m0.828 ms - 1149[0m
+Error: data and salt arguments required
+    at Object.hashSync (/var/www/morich-api/node_modules/bcrypt/bcrypt.js:71:15)
+    at userJoin (/var/www/morich-api/build/app/src/app/controllers/user.js:79:27)
+    at Layer.handle [as handle_request] (/var/www/morich-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/morich-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/var/www/morich-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/var/www/morich-api/node_modules/express/lib/router/layer.js:95:5)
+    at /var/www/morich-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/var/www/morich-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/var/www/morich-api/node_modules/express/lib/router/index.js:275:10)
+    at /var/www/morich-api/src/app.js:37:6
+[0mPOST /user/join [31m500 [0m1.689 ms - 1149[0m
+Error: data and salt arguments required
+    at Object.hashSync (/var/www/morich-api/node_modules/bcrypt/bcrypt.js:71:15)
+    at userJoin (/var/www/morich-api/build/app/src/app/controllers/user.js:79:27)
+    at Layer.handle [as handle_request] (/var/www/morich-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/morich-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/var/www/morich-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/var/www/morich-api/node_modules/express/lib/router/layer.js:95:5)
+    at /var/www/morich-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/var/www/morich-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/var/www/morich-api/node_modules/express/lib/router/index.js:275:10)
+    at /var/www/morich-api/src/app.js:37:6
+[0mPOST /user/join [31m500 [0m0.862 ms - 1149[0m
+Error: data and salt arguments required
+    at Object.hashSync (/var/www/morich-api/node_modules/bcrypt/bcrypt.js:71:15)
+    at userJoin (/var/www/morich-api/build/app/src/app/controllers/user.js:79:27)
+    at Layer.handle [as handle_request] (/var/www/morich-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/morich-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/var/www/morich-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/var/www/morich-api/node_modules/express/lib/router/layer.js:95:5)
+    at /var/www/morich-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/var/www/morich-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/var/www/morich-api/node_modules/express/lib/router/index.js:275:10)
+    at /var/www/morich-api/src/app.js:37:6
+[0mPOST /user/join [31m500 [0m0.779 ms - 1149[0m
+Error: data and salt arguments required
+    at Object.hashSync (/var/www/morich-api/node_modules/bcrypt/bcrypt.js:71:15)
+    at userJoin (/var/www/morich-api/build/app/src/app/controllers/user.js:79:27)
+    at Layer.handle [as handle_request] (/var/www/morich-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/morich-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/var/www/morich-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/var/www/morich-api/node_modules/express/lib/router/layer.js:95:5)
+    at /var/www/morich-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/var/www/morich-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/var/www/morich-api/node_modules/express/lib/router/index.js:275:10)
+    at /var/www/morich-api/src/app.js:37:6
+[0mPOST /user/join [31m500 [0m0.842 ms - 1149[0m
+Error: data and salt arguments required
+    at Object.hashSync (/var/www/morich-api/node_modules/bcrypt/bcrypt.js:71:15)
+    at userJoin (/var/www/morich-api/build/app/src/app/controllers/user.js:79:27)
+    at Layer.handle [as handle_request] (/var/www/morich-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/morich-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/var/www/morich-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/var/www/morich-api/node_modules/express/lib/router/layer.js:95:5)
+    at /var/www/morich-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/var/www/morich-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/var/www/morich-api/node_modules/express/lib/router/index.js:275:10)
+    at /var/www/morich-api/src/app.js:37:6
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.414 ms - -[0m
+[0mPOST /user/join [31m500 [0m0.875 ms - 1149[0m
+Error: data and salt arguments required
+    at Object.hashSync (/var/www/morich-api/node_modules/bcrypt/bcrypt.js:71:15)
+    at userJoin (/var/www/morich-api/build/app/src/app/controllers/user.js:79:27)
+    at Layer.handle [as handle_request] (/var/www/morich-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/morich-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/var/www/morich-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/var/www/morich-api/node_modules/express/lib/router/layer.js:95:5)
+    at /var/www/morich-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/var/www/morich-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/var/www/morich-api/node_modules/express/lib/router/index.js:275:10)
+    at /var/www/morich-api/src/app.js:37:6
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.336 ms - -[0m
+[0mPOST /user/join [31m500 [0m0.798 ms - 1149[0m
+Error: data and salt arguments required
+    at Object.hashSync (/var/www/morich-api/node_modules/bcrypt/bcrypt.js:71:15)
+    at userJoin (/var/www/morich-api/build/app/src/app/controllers/user.js:79:27)
+    at Layer.handle [as handle_request] (/var/www/morich-api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/morich-api/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/var/www/morich-api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/var/www/morich-api/node_modules/express/lib/router/layer.js:95:5)
+    at /var/www/morich-api/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/var/www/morich-api/node_modules/express/lib/router/index.js:335:12)
+    at next (/var/www/morich-api/node_modules/express/lib/router/index.js:275:10)
+    at /var/www/morich-api/src/app.js:37:6
+[0mGET /user/username/bagusrinn21 [32m200 [0m1.670 ms - 543[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.436 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.395 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.541 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.412 ms - -[0m
+[0mGET /user/username/bagusrinn21 [32m200 [0m1.742 ms - 543[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.349 ms - -[0m
+
+/var/www/morich-api/build/app/src/app/models/user.js:94
+                	var inviterId = data[0].user_invited_by;
+                                         ^
+TypeError: Cannot read property 'user_invited_by' of undefined
+    at Query._callback (/var/www/morich-api/build/app/src/app/models/user.js:94:42)
+    at Query.Sequence.end (/var/www/morich-api/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Query._handleFinalResultPacket (/var/www/morich-api/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.EofPacket (/var/www/morich-api/node_modules/mysql/lib/protocol/sequences/Query.js:123:8)
+    at Protocol._parsePacket (/var/www/morich-api/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/var/www/morich-api/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/var/www/morich-api/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/var/www/morich-api/node_modules/mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+
+> morich-api@1.0.0 start /var/www/morich-api
+> node scripts/run.js
+
+Starting 'run'...
+Starting 'build'...
+src/app.js -> build/app.js
+src/server.js -> build/server.js
+src/app/routes/auth.js -> build/app/routes/auth.js
+src/app/routes/member.js -> build/app/routes/member.js
+src/app/routes/spiderman.js -> build/app/routes/spiderman.js
+src/app/routes/user.js -> build/app/routes/user.js
+src/app/routes/video.js -> build/app/routes/video.js
+src/app/routes/videoadmin.js -> build/app/routes/videoadmin.js
+src/app/controllers/auth.js -> build/app/controllers/auth.js
+src/app/controllers/member.js -> build/app/controllers/member.js
+src/app/controllers/spiderman.js -> build/app/controllers/spiderman.js
+src/app/controllers/user.js -> build/app/controllers/user.js
+src/app/controllers/video.js -> build/app/controllers/video.js
+src/app/controllers/videoadmin.js -> build/app/controllers/videoadmin.js
+src/app/models/email.js -> build/app/models/email.js
+src/app/models/user.js -> build/app/models/user.js
+Finished 'build' after 450ms
+Server listening on port 7003
+[0mGET /user/detail/21 [32m200 [0m16.361 ms - 577[0m
+[0mGET /user/detail/21 [32m200 [0m3.198 ms - 577[0m
+[0mGET /user/detail/21 [32m200 [0m2.288 ms - 577[0m
+[0mGET /user/detail/21 [32m200 [0m2.039 ms - 577[0m
+[0mGET /user/detail/21 [32m200 [0m1.915 ms - 577[0m
+[0mGET /user/username/bagus1 [32m200 [0m2.576 ms - 500[0m
+[0mGET /uploads/users/1526217224359.jpeg [32m200 [0m4.112 ms - 64220[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m1.279 ms - -[0m
+[0mPOST /user/join [32m200 [0m101.394 ms - 54[0m
+[0mGET /user/username/bagus1 [32m200 [0m2.359 ms - 500[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.618 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.452 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.368 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.374 ms - -[0m
+[0mGET /user/username/bagus1 [32m200 [0m4.232 ms - 500[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.509 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.508 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.348 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.403 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.444 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.505 ms - -[0m
+[0mGET /user/username/bagus1 [32m200 [0m2.245 ms - 500[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.452 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.420 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.541 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.468 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.484 ms - -[0m
+[0mGET /user/username/bagus1 [32m200 [0m2.206 ms - 500[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.444 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.561 ms - -[0m
+src/app/controllers/user.js -> build/app/controllers/user.js
+src/app/controllers/user.js -> build/app/controllers/user.js
+src/app/models/user.js -> build/app/models/user.js
+src/app/models/user.js -> build/app/models/user.js
+Server listening on port 7003
+[0mGET /user/username/bagus1 [32m200 [0m16.504 ms - 500[0m
+[0mGET /user/username/bagus1 [32m200 [0m3.680 ms - 500[0m
+[0mGET /user/username/bagus1 [32m200 [0m3.116 ms - 500[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m3.189 ms - -[0m
+[0mGET /user/username/bagus1 [32m200 [0m2.319 ms - 500[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.845 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.500 ms - -[0m
+[0mGET /user/username/zia12 [33m404 [0m2.055 ms - 45[0m
+[0mPOST /auth/login [31m500 [0m16.187 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m2.481 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m2.046 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m2.142 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m2.238 ms - 79[0m
+[0mGET /user/username/bagus1 [36m304 [0m1.739 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.484 ms - -[0m
+[0mGET /user/username/undefined [33m404 [0m1.788 ms - 45[0m
+[0mGET /user/username/bagus1 [32m200 [0m1.983 ms - 500[0m
+[0mGET /uploads/users/1526217224359.jpeg [32m200 [0m2.433 ms - 64220[0m
+[0mGET /user/username/bagus1 [36m304 [0m2.208 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.447 ms - -[0m
+[0mGET /user/username/bagus1 [36m304 [0m1.962 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.367 ms - -[0m
+[0mGET /user/username/bagus1 [36m304 [0m1.857 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.372 ms - -[0m
+[0mGET /user/username/bagus1 [36m304 [0m1.884 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.388 ms - -[0m
+[0mGET /user/username/undefined [33m404 [0m2.409 ms - 45[0m
+[0mGET /user/username/undefined [33m404 [0m2.492 ms - 45[0m
+[0mGET /user/username/undefined [33m404 [0m1.441 ms - 45[0m
+[0mGET /user/username/bagus1 [36m304 [0m2.042 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.381 ms - -[0m
+[0mPOST /auth/login [31m500 [0m2.235 ms - 79[0m
+[0mGET /user/username/undefined [33m404 [0m1.650 ms - 45[0m
+[0mGET /user/username/undefined [33m404 [0m1.396 ms - 45[0m
+[0mGET /user/username/undefined [33m404 [0m1.454 ms - 45[0m
+[0mGET /user/username/undefined [33m404 [0m1.407 ms - 45[0m
+[0mGET /user/username/undefined [33m404 [0m1.535 ms - 45[0m
+[0mGET /user/username/undefined [33m404 [0m1.597 ms - 45[0m
+[0mGET /user/username/undefined [33m404 [0m1.423 ms - 45[0m
+[0mGET /user/username/undefined [33m404 [0m2.376 ms - 45[0m
+[0mGET /user/username/undefined [33m404 [0m1.403 ms - 45[0m
+[0mGET /user/username/undefined [33m404 [0m2.117 ms - 45[0m
+[0mGET /user/username/undefined [33m404 [0m1.484 ms - 45[0m
+[0mGET /user/username/undefined [33m404 [0m1.457 ms - 45[0m
+[0mGET /user/username/undefined [33m404 [0m1.557 ms - 45[0m
+[0mGET /user/username/undefined [33m404 [0m1.532 ms - 45[0m
+[0mGET /user/username/undefined [33m404 [0m1.610 ms - 45[0m
+[0mGET /user/username/undefined [33m404 [0m1.342 ms - 45[0m
+[0mGET /user/username/undefined [33m404 [0m1.414 ms - 45[0m
+[0mGET /user/username/undefined [33m404 [0m1.421 ms - 45[0m
+[0mGET /user/username/bagus1 [36m304 [0m1.724 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.434 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.379 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.398 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.356 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.378 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.406 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.337 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.338 ms - -[0m
+[0mGET /user/username/bagus1 [36m304 [0m2.368 ms - -[0m
+[0mGET /user/username/bagus1 [36m304 [0m1.677 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.396 ms - -[0m
+[0mGET /user/username/undefined [33m404 [0m1.541 ms - 45[0m
+[0mGET /user/username/bagus1 [36m304 [0m1.495 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.380 ms - -[0m
+[0mGET /user/username/undefined [33m404 [0m1.462 ms - 45[0m
+[0mGET /user/username/undefined [33m404 [0m1.490 ms - 45[0m
+[0mGET /user/username/undefined [33m404 [0m1.410 ms - 45[0m
+[0mPOST /auth/login [31m500 [0m1.938 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m1.702 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m3.503 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m1.734 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m1.714 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m1.770 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m1.828 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m2.892 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m1.655 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m1.666 ms - 79[0m
+[0mGET /user/username/zia12 [33m404 [0m3.128 ms - 45[0m
+[0mGET /user/detail/21 [32m200 [0m2.856 ms - 577[0m
+[0mGET /user/username/bagus1 [36m304 [0m1.670 ms - -[0m
+[0mGET /uploads/users/1526217224359.jpeg [36m304 [0m0.422 ms - -[0m
+[0mPOST /user/join [32m200 [0m91.754 ms - 54[0m
+[0mPOST /auth/login [32m200 [0m78.368 ms - 295[0m
+[0mPOST /auth/login [32m200 [0m79.362 ms - 295[0m
+[0mPOST /auth/login [32m200 [0m77.846 ms - 295[0m
+[0mPOST /auth/login [32m200 [0m77.810 ms - 295[0m
+[0mPOST /auth/login [32m200 [0m78.109 ms - 295[0m
+[0mPOST /auth/login [32m200 [0m78.570 ms - 295[0m
+[0mPOST /auth/login [32m200 [0m78.189 ms - 295[0m
+[0mPOST /auth/login [32m200 [0m77.942 ms - 295[0m
+[0mPOST /admin/login [32m200 [0m77.748 ms - 108[0m
+[0mGET /admin/dashboard [32m200 [0m1.885 ms - 126[0m
+[0mGET /video/admin/list [31m500 [0m16.884 ms - 47[0m
+[0mGET /admin/dashboard [32m200 [0m1.347 ms - 126[0m
+[0mGET /user/list [33m404 [0m1.274 ms - 51[0m
+[0mGET /admin/list [32m200 [0m1.482 ms - 110[0m
+[0mGET /user/list [33m404 [0m0.985 ms - 51[0m
+[0mPOST /auth/login [31m500 [0m1.867 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m1.682 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m1.867 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m1.655 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m1.755 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m1.840 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m1.752 ms - 79[0m
+[0mPOST /auth/login [31m500 [0m1.873 ms - 79[0m
+[0mPOST /auth/login [32m200 [0m78.096 ms - 357[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.702 ms - 87058[0m
+[0mGET /user/detail/21 [32m200 [0m2.082 ms - 577[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.388 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.591 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.368 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.447 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.340 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.350 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.429 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.444 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.383 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.390 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.948 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.374 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.457 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.082 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.375 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.460 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.837 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.609 ms - 87058[0m
+[0mGET /user/detail/21 [36m304 [0m1.785 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.331 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.365 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.370 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.797 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.382 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.416 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.258 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.349 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.494 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.392 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.354 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.409 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.375 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.584 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.505 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.419 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.466 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.041 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.364 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.373 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.816 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.398 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.386 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.906 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.372 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.353 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.481 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.033 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.607 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.380 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.392 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.368 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.403 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.373 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.367 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.476 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.364 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.378 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.369 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.400 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.417 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.402 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.363 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.374 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.399 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.380 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.384 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.381 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.390 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.422 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.411 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.374 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.386 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.361 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.439 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.439 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.328 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.404 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.328 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.362 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.912 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.495 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.418 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.374 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.358 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.357 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m1.189 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.409 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.348 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.361 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.377 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.366 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.355 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.329 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.433 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.424 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.376 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.374 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.360 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.345 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.372 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.881 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.397 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.364 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.343 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.407 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.435 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.529 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.509 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.445 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.648 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.495 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.436 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.449 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.495 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.478 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.517 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.408 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.331 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.357 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.434 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.587 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.303 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.357 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.334 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.413 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.425 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.422 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.329 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.387 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.373 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.417 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.549 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.612 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.449 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.483 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.386 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.786 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.433 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.404 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.393 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.391 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.537 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.390 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.421 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.544 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.660 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.374 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.551 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.487 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.548 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.513 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.480 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.592 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.530 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.457 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.539 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.776 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.584 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.560 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.459 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.502 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.596 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.534 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.485 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m5.823 ms - 577[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.507 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.506 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.393 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.623 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.509 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.501 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.493 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.525 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.470 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.491 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.591 ms - -[0m
+[0mGET /user/username/zia12 [33m404 [0m1.994 ms - 45[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.631 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.478 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.253 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.490 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.566 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.375 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.457 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.490 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m2.543 ms - 577[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.535 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.614 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.554 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.434 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.494 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.405 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.577 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.543 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m3.321 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.551 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.494 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.294 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.592 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.507 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.963 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.370 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.405 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.235 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.476 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.466 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.574 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.345 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.400 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.243 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.353 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.410 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.027 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.723 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.449 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.087 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.374 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.517 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.301 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.434 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.446 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m5.422 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.351 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.579 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.517 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.541 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.471 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.795 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.515 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.478 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m4.847 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.403 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.441 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.328 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.655 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.520 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m3.887 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.606 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.547 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m3.050 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.574 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.496 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m3.510 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.439 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.566 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m4.180 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.513 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.400 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.080 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.464 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.580 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.749 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.611 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.514 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.811 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.444 ms - -[0m
+[0mGET /user/username/undefined [33m404 [0m1.947 ms - 45[0m
+[0mGET /user/username/undefined [33m404 [0m1.877 ms - 45[0m
+[0mGET /user/username/undefined [33m404 [0m2.079 ms - 45[0m
+[0mPOST /auth/login [32m200 [0m80.831 ms - 357[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.969 ms - 87058[0m
+[0mGET /user/detail/21 [32m200 [0m3.172 ms - 577[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.649 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m4.345 ms - 577[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.480 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.421 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.551 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.496 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.517 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.403 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.431 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.458 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m2.262 ms - 577[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.425 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.466 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.407 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.533 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.606 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.519 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.526 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.447 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.523 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.531 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.470 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.434 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.451 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.494 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.520 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m4.097 ms - 577[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.477 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.438 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.511 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.428 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.463 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.760 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.507 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.417 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.465 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.207 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.465 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.501 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.387 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m2.741 ms - 577[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.438 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.383 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m3.500 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.526 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.418 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.445 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.968 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.300 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.411 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.757 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.494 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.646 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.492 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.487 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.450 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.480 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.396 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.635 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.416 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.756 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.403 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.909 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.361 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.347 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.713 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.441 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.364 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.757 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.383 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.353 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.473 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.501 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.998 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.401 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.759 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.690 ms - 87058[0m
+[0mGET /user/detail/21 [36m304 [0m1.713 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.504 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.800 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.424 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.841 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.342 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.444 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.475 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.464 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.211 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.453 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.328 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.646 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.211 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.483 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.147 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.445 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.891 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.382 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.465 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.440 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.506 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.453 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.410 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.194 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.503 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.497 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.834 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.522 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.516 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.547 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.450 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.560 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.144 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.633 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.445 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.950 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.508 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.485 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.132 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.411 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.394 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.999 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.468 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.440 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.523 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.947 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.411 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.526 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.172 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.409 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.477 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.421 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.959 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.332 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.372 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.707 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.315 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.628 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.325 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.474 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.592 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.553 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.401 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.856 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.416 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.432 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.784 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.482 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.513 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.146 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.462 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.480 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.995 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.371 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.412 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.459 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.231 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.419 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.520 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.221 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.553 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.454 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.976 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.649 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.505 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.382 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.425 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.811 ms - 87058[0m
+[0mGET /user/detail/21 [36m304 [0m2.256 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.485 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.623 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.467 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.341 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.053 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.338 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.358 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.374 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.392 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.422 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.301 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.346 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.375 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.387 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.382 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.542 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.393 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.636 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.412 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.969 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.412 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.388 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.791 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.422 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.445 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.826 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.456 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.520 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.097 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.461 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.401 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.159 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.337 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.432 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.508 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.992 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.431 ms - -[0m
+src/app.js -> build/app.js
+src/app/controllers/general.js -> build/app/controllers/general.js
+src/app/routes/general.js -> build/app/routes/general.js
+src/app.js -> build/app.js
+src/app/controllers/general.js -> build/app/controllers/general.js
+src/app/routes/general.js -> build/app/routes/general.js
+Server listening on port 7003
+[0mGET /language/list [32m200 [0m16.063 ms - 136[0m
+[0mGET /country/list [32m200 [0m4.561 ms - 12317[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m3.063 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m3.173 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.524 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.473 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m4.751 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.433 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.451 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.433 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.494 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.557 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.516 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.892 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.555 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.533 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.552 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.518 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.552 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.417 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m2.767 ms - 577[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.646 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.565 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.393 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.409 ms - -[0m
+[0mGET /language/list [32m200 [0m1.376 ms - 136[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.447 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.534 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.432 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.460 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.526 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.590 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.584 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.463 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.394 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.457 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.550 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.465 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.486 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.941 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.517 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.479 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.438 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.550 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.430 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.537 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.402 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.426 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.272 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.417 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.554 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.380 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.491 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.526 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.379 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.453 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.429 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.401 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.450 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.422 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.677 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m3.002 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.459 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.801 ms - 87058[0m
+[0mGET /user/detail/21 [36m304 [0m2.210 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.529 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.552 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.439 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.447 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.434 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.946 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.409 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.183 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.309 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.468 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.679 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.508 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.478 ms - -[0m
+[0mPOST /user/update [32m200 [0m19.030 ms - 54[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.832 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m3.806 ms - 586[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.795 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.444 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.373 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.435 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.548 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.480 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.302 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.919 ms - 87058[0m
+[0mPOST /user/update [32m200 [0m5.759 ms - 54[0m
+[0mPOST /user/update [32m200 [0m4.604 ms - 54[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.521 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m2.934 ms - 597[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.444 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.468 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.585 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.496 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.497 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.475 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.349 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.485 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.529 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.422 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.519 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.442 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.494 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.556 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.414 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.649 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.531 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.435 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.449 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.392 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.336 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.528 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.508 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.477 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.423 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.894 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.272 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.516 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.415 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.086 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.507 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.303 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.449 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.861 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.453 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.537 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.507 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.531 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.476 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.441 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.293 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.503 ms - -[0m
+[0mPOST /user/update [32m200 [0m5.269 ms - 54[0m
+[0mGET /user/detail/21 [36m304 [0m2.482 ms - -[0m
+[0mPOST /user/update [32m200 [0m4.819 ms - 54[0m
+[0mGET /user/detail/21 [32m200 [0m2.226 ms - 586[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.455 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.340 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.431 ms - -[0m
+[0mPOST /user/update [32m200 [0m5.550 ms - 54[0m
+[0mGET /user/detail/21 [36m304 [0m2.080 ms - -[0m
+[0mPOST /user/update [32m200 [0m5.201 ms - 54[0m
+[0mGET /user/detail/21 [36m304 [0m2.189 ms - -[0m
+[0mPOST /user/update [32m200 [0m5.695 ms - 54[0m
+[0mGET /user/detail/21 [36m304 [0m2.287 ms - -[0m
+[0mPOST /user/update [32m200 [0m5.092 ms - 54[0m
+[0mGET /user/detail/21 [36m304 [0m2.393 ms - -[0m
+[0mPOST /user/update [0m- [0m- ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.489 ms - -[0m
+[0mGET /user/detail/21 [0m- [0m- ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m1.842 ms - 87058[0m
+[0mGET /user/detail/21 [0m- [0m- ms - -[0m
+[0mPOST /user/update [0m- [0m- ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.420 ms - -[0m
+[0mGET /user/detail/21 [0m- [0m- ms - -[0m
+[0mPOST /user/update [0m- [0m- ms - -[0m
+[0mPOST /user/update [0m- [0m- ms - -[0m
+[0mPOST /user/update [0m- [0m- ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.373 ms - -[0m
+[0mGET /user/detail/21 [0m- [0m- ms - -[0m
+[0mPOST /user/update [0m- [0m- ms - -[0m
+[0mPOST /user/update [0m- [0m- ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.422 ms - -[0m
+[0mGET /user/detail/21 [0m- [0m- ms - -[0m
+[0mPOST /user/update [0m- [0m- ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.449 ms - -[0m
+[0mGET /user/detail/21 [0m- [0m- ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.603 ms - -[0m
+[0mGET /user/detail/21 [0m- [0m- ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.372 ms - -[0m
+[0mGET /user/detail/21 [0m- [0m- ms - -[0m
+[0mGET /country/list [0m- [0m- ms - -[0m
+[0mGET /country/list [0m- [0m- ms - -[0m
+[0mGET /user/detail/21 [0m- [0m- ms - -[0m
+[0mGET /user/username/bagusrinn21 [0m- [0m- ms - -[0m
+[0mGET /user/detail/21 [0m- [0m- ms - -[0m
+[0mGET /user/username/bagusrinn21 [0m- [0m- ms - -[0m
+Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object._errnoException (util.js:992:11)
+    at _exceptionWithHostPort (util.js:1014:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1186:14)
+    --------------------
+    at Protocol._enqueue (/var/www/morich-api/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at Protocol.handshake (/var/www/morich-api/node_modules/mysql/lib/protocol/Protocol.js:52:23)
+    at PoolConnection.connect (/var/www/morich-api/node_modules/mysql/lib/Connection.js:130:18)
+    at Pool.getConnection (/var/www/morich-api/node_modules/mysql/lib/Pool.js:48:16)
+    at Pool.releaseConnection (/var/www/morich-api/node_modules/mysql/lib/Pool.js:157:10)
+    at Pool._removeConnection (/var/www/morich-api/node_modules/mysql/lib/Pool.js:277:8)
+    at Pool._purgeConnection (/var/www/morich-api/node_modules/mysql/lib/Pool.js:258:8)
+    at PoolConnection._removeFromPool (/var/www/morich-api/node_modules/mysql/lib/PoolConnection.js:64:8)
+    at PoolConnection.<anonymous> (/var/www/morich-api/node_modules/mysql/lib/PoolConnection.js:23:12)
+    at emitOne (events.js:116:13)
+
+> morich-api@1.0.0 start /var/www/morich-api
+> node scripts/run.js
+
+Starting 'run'...
+Starting 'build'...
+src/app.js -> build/app.js
+src/server.js -> build/server.js
+src/app/controllers/auth.js -> build/app/controllers/auth.js
+src/app/controllers/general.js -> build/app/controllers/general.js
+src/app/controllers/member.js -> build/app/controllers/member.js
+src/app/controllers/spiderman.js -> build/app/controllers/spiderman.js
+src/app/controllers/user.js -> build/app/controllers/user.js
+src/app/controllers/video.js -> build/app/controllers/video.js
+src/app/controllers/videoadmin.js -> build/app/controllers/videoadmin.js
+src/app/models/email.js -> build/app/models/email.js
+src/app/models/user.js -> build/app/models/user.js
+src/app/routes/auth.js -> build/app/routes/auth.js
+src/app/routes/general.js -> build/app/routes/general.js
+src/app/routes/member.js -> build/app/routes/member.js
+src/app/routes/spiderman.js -> build/app/routes/spiderman.js
+src/app/routes/user.js -> build/app/routes/user.js
+src/app/routes/video.js -> build/app/routes/video.js
+src/app/routes/videoadmin.js -> build/app/routes/videoadmin.js
+Finished 'build' after 484ms
+Server listening on port 7003
+[0mGET /user/detail/21 [32m200 [0m18.841 ms - 586[0m
+[0mGET /country/list [32m200 [0m4.905 ms - 12317[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m3.303 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m3.299 ms - 586[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.676 ms - -[0m
+[0mPOST /user/update [32m200 [0m20.908 ms - 54[0m
+[0mGET /user/detail/21 [36m304 [0m2.471 ms - -[0m
+[0mPOST /user/update [32m200 [0m5.072 ms - 54[0m
+[0mGET /user/detail/21 [36m304 [0m2.199 ms - -[0m
+[0mPOST /user/update [32m200 [0m4.569 ms - 54[0m
+[0mGET /user/detail/21 [36m304 [0m2.285 ms - -[0m
+[0mPOST /user/update [32m200 [0m6.056 ms - 54[0m
+[0mGET /user/detail/21 [36m304 [0m2.343 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.524 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.361 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.477 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.475 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.410 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.407 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.490 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.440 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.272 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.420 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.390 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m2.353 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.396 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.393 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.438 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.398 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.331 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.488 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.489 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.524 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.426 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.410 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.437 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.208 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.443 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.397 ms - -[0m
+[0mPOST /auth/login [32m200 [0m79.878 ms - 357[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.811 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.425 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.488 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.485 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.363 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.477 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.568 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.555 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.516 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.568 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.510 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.430 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.473 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.488 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.538 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.517 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.395 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.479 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.394 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.474 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.484 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.488 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.445 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.424 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.399 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.456 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.627 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.402 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.404 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.392 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.432 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.513 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.374 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.492 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.066 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.448 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.095 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.394 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.468 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.422 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.513 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.362 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.418 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.471 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.434 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.459 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.443 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.460 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.379 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.439 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.536 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.452 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.519 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.525 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.414 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.500 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.460 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.437 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.409 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.469 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.438 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.575 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m1.141 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.481 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.524 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.423 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.395 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.988 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.442 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.430 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.439 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.402 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.628 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.356 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.394 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.498 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.378 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.629 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.485 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.414 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.390 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.508 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m2.097 ms - 586[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.370 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.405 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.431 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.388 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.322 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.475 ms - -[0m
+[0mPOST /user/update [32m200 [0m4.846 ms - 54[0m
+[0mGET /user/detail/21 [36m304 [0m2.217 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.586 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.388 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.415 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.494 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m4.017 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.446 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.496 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.495 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.530 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.424 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.379 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.402 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.532 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.543 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.428 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.858 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.419 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.453 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.504 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.539 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.414 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.399 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.374 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.341 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.500 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.449 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.563 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.761 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.419 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.532 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.455 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.509 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.500 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.415 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.830 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.121 ms - -[0m
+[0mPOST /user/update [32m200 [0m4.604 ms - 54[0m
+[0mGET /user/detail/21 [36m304 [0m2.251 ms - -[0m
+[0mPOST /user/update [32m200 [0m4.809 ms - 54[0m
+[0mGET /user/detail/21 [36m304 [0m2.328 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.434 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.479 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.215 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.733 ms - 87058[0m
+[0mPOST /user/update [32m200 [0m4.725 ms - 54[0m
+[0mGET /user/detail/21 [36m304 [0m2.043 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.401 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.427 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.448 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.399 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.438 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.422 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.516 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.440 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.493 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.464 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.471 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.508 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.541 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.485 ms - -[0m
+[0mPOST /user/update [32m200 [0m4.937 ms - 54[0m
+[0mGET /user/detail/21 [36m304 [0m2.089 ms - -[0m
+[0mPOST /user/update [32m200 [0m4.560 ms - 54[0m
+[0mGET /user/detail/21 [36m304 [0m2.115 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.468 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m4.646 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.757 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.465 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.418 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.091 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.461 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.333 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.435 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.003 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.340 ms - -[0m
+[0mPOST /user/update [32m200 [0m3.918 ms - 54[0m
+[0mGET /user/detail/21 [36m304 [0m1.886 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.419 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.453 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.018 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.426 ms - -[0m
+[0mPOST /user/update [32m200 [0m4.196 ms - 54[0m
+[0mGET /user/detail/21 [36m304 [0m1.974 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.457 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.389 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.934 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.422 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.402 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.686 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.355 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.401 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.898 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.346 ms - -[0m
+[0mPOST /user/update [32m200 [0m4.543 ms - 54[0m
+[0mGET /user/detail/21 [36m304 [0m1.967 ms - -[0m
+[0mPOST /user/update [32m200 [0m3.944 ms - 54[0m
+[0mGET /user/detail/21 [36m304 [0m1.858 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.386 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m1.880 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.446 ms - -[0m
+[0mPOST /user/update [0m- [0m- ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.448 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.424 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.359 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.445 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.346 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.417 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.382 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.446 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.327 ms - -[0m
+[0mGET /user/detail/21 [0m- [0m- ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.288 ms - -[0m
+[0mGET /user/detail/21 [0m- [0m- ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.581 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.593 ms - -[0m
+[0mGET /user/detail/21 [0m- [0m- ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.517 ms - -[0m
+[0mPOST /video/post [0m- [0m- ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.511 ms - -[0m
+[0mPOST /video/post [0m- [0m- ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.748 ms - 87058[0m
+[0mPOST /video/post [0m- [0m- ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.468 ms - -[0m
+[0mGET /user/detail/21 [0m- [0m- ms - -[0m
+[0mPOST /video/post [0m- [0m- ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.451 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.492 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.539 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.622 ms - -[0m
+[0mGET /user/detail/21 [0m- [0m- ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.836 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.422 ms - -[0m
+[0mGET /user/detail/21 [0m- [0m- ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.447 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.513 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.454 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.458 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.527 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.420 ms - -[0m
+INSERT INTO videos (user_id, video_youtube_id, video_youtube_link, video_youtube_iframe           ,video_youtube_image,video_title,video_desc,status,post_date)           VALUES ('21','undefined','','https://youtube.com/embed/undefined','https://i.ytimg.com/vi/undefined/maxresdefault.jpg','', '', '1', NOW())
+INSERT INTO videos (user_id, video_youtube_id, video_youtube_link, video_youtube_iframe           ,video_youtube_image,video_title,video_desc,status,post_date)           VALUES ('21','undefined','','https://youtube.com/embed/undefined','https://i.ytimg.com/vi/undefined/maxresdefault.jpg','', '', '1', NOW())
+INSERT INTO videos (user_id, video_youtube_id, video_youtube_link, video_youtube_iframe           ,video_youtube_image,video_title,video_desc,status,post_date)           VALUES ('21','undefined','','https://youtube.com/embed/undefined','https://i.ytimg.com/vi/undefined/maxresdefault.jpg','', '', '1', NOW())
+INSERT INTO videos (user_id, video_youtube_id, video_youtube_link, video_youtube_iframe           ,video_youtube_image,video_title,video_desc,status,post_date)           VALUES ('21','undefined','','https://youtube.com/embed/undefined','https://i.ytimg.com/vi/undefined/maxresdefault.jpg','', '', '1', NOW())
+[0mGET /user/detail/21 [32m200 [0m3.990 ms - 586[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.948 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m5.514 ms - 586[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.467 ms - -[0m
+INSERT INTO videos (user_id, video_youtube_id, video_youtube_link, video_youtube_iframe           ,video_youtube_image,video_title,video_desc,status,post_date)           VALUES ('21','undefined','','https://youtube.com/embed/undefined','https://i.ytimg.com/vi/undefined/maxresdefault.jpg','', '', '1', NOW())
+[0mPOST /video/post [32m200 [0m4.460 ms - 54[0m
+INSERT INTO videos (user_id, video_youtube_id, video_youtube_link, video_youtube_iframe           ,video_youtube_image,video_title,video_desc,status,post_date)           VALUES ('21','undefined','','https://youtube.com/embed/undefined','https://i.ytimg.com/vi/undefined/maxresdefault.jpg','', '', '1', NOW())
+[0mPOST /video/post [32m200 [0m2.052 ms - 54[0m
+INSERT INTO videos (user_id, video_youtube_id, video_youtube_link, video_youtube_iframe           ,video_youtube_image,video_title,video_desc,status,post_date)           VALUES ('21','undefined','','https://youtube.com/embed/undefined','https://i.ytimg.com/vi/undefined/maxresdefault.jpg','', '', '1', NOW())
+[0mPOST /video/post [32m200 [0m2.121 ms - 54[0m
+INSERT INTO videos (user_id, video_youtube_id, video_youtube_link, video_youtube_iframe           ,video_youtube_image,video_title,video_desc,status,post_date)           VALUES ('21','undefined','','https://youtube.com/embed/undefined','https://i.ytimg.com/vi/undefined/maxresdefault.jpg','', '', '1', NOW())
+[0mPOST /video/post [32m200 [0m3.993 ms - 55[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.829 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.442 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.281 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.513 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.508 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.119 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.446 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.462 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.094 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.380 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.538 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.834 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.403 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.446 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.076 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.397 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.489 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.153 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.469 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.498 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.887 ms - 87058[0m
+[0mGET /user/detail/21 [36m304 [0m2.211 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.415 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.640 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m3.779 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.504 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.499 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.487 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.459 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.452 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.440 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.386 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.441 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.521 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.463 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.411 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.614 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.512 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.698 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.437 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.412 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.493 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.452 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.421 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.518 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.467 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.395 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.535 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.639 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.404 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.723 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.398 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.541 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.501 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.433 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.627 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.484 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.443 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.395 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.529 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.404 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.499 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.381 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.423 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.483 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.459 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.392 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.454 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.518 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.492 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.438 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.407 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.414 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.403 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.383 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.406 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.644 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.446 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.498 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.396 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.438 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.471 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.518 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.469 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.549 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.407 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.188 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.379 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.467 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.616 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.269 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.478 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.389 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.437 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.387 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.418 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.430 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.505 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.446 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.394 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.536 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.431 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.430 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.672 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.563 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.604 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.459 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.426 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.508 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.425 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.447 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.497 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.397 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.700 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.421 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.447 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.395 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.477 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.405 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.482 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.458 ms - -[0m
+INSERT INTO videos (user_id, video_youtube_id, video_youtube_link, video_youtube_iframe           ,video_youtube_image,video_title,video_desc,status,post_date)           VALUES ('21','undefined','','https://youtube.com/embed/undefined','https://i.ytimg.com/vi/undefined/maxresdefault.jpg','', '
+
+
+
+', '1', NOW())
+[0mPOST /video/post [32m200 [0m2.714 ms - 55[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.926 ms - -[0m
+[0mGET /user/detail/21 [32m200 [0m3.644 ms - 586[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.388 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.450 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.199 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.482 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.483 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.487 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.441 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.400 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.625 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.424 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.454 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.398 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.369 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.471 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.483 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.452 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.377 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.547 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.374 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.473 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.491 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.411 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.419 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m2.649 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.359 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.396 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.576 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.449 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.500 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.361 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.630 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.538 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.517 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.425 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.470 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.464 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.480 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.424 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.452 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.483 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.593 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.421 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.427 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.383 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.440 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.399 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.421 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.486 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.381 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.533 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.518 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.483 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.435 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.682 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.459 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.455 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.402 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.473 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.465 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.387 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.461 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.422 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.494 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.451 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.666 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.495 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.442 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.411 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.398 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.416 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.482 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.435 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.394 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m0.729 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.402 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.507 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.384 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.491 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.463 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.482 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.410 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.417 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.455 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.465 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.532 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.460 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.482 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.464 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.398 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.561 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.399 ms - -[0m
+src/app/controllers/video.js -> build/app/controllers/video.js
+src/app/controllers/videoadmin.js -> build/app/controllers/videoadmin.js
+src/app/controllers/video.js -> build/app/controllers/video.js
+src/app/controllers/video.js -> build/app/controllers/video.js
+src/app/controllers/videoadmin.js -> build/app/controllers/videoadmin.js
+src/app/controllers/videoadmin.js -> build/app/controllers/videoadmin.js
+Server listening on port 7003
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m7.365 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m1.363 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.637 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.426 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.484 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m14.006 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.424 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.766 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.516 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.578 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.709 ms - -[0m
+[0mGET /user/detail/21 [36m304 [0m3.665 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.471 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.485 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.552 ms - -[0m
+src/app/controllers/video.js -> build/app/controllers/video.js
+src/app/controllers/video.js -> build/app/controllers/video.js
+src/app/controllers/video.js -> build/app/controllers/video.js
+src/app/controllers/videoadmin.js -> build/app/controllers/videoadmin.js
+src/app/controllers/videoadmin.js -> build/app/controllers/videoadmin.js
+src/app/controllers/videoadmin.js -> build/app/controllers/videoadmin.js
+Server listening on port 7003
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m5.762 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.776 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [32m200 [0m3.005 ms - 87058[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.544 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.507 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.461 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.511 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.486 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.564 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.474 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.550 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.451 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.472 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.510 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.512 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.451 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.473 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.445 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.479 ms - -[0m
+[0mGET /uploads/users/1526206942783.jpeg [36m304 [0m0.399 ms - -[0m
