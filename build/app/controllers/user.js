@@ -4,7 +4,8 @@ var jwt = require('jsonwebtoken'),
     bcrypt = require('bcrypt'),
     userModel = require('../models/user'),
     emailModel = require('../models/email'),
-    cfg = require('../../../config');
+    cfg = require('../../../config'),
+    empty = require('is-empty');
 
 var multer = require('multer');
 
@@ -35,6 +36,8 @@ var upload = multer({ storage: storage });
 function cUser() {
 
   this.userRegister = function (req, res, next) {
+
+    if (empty(req.body.invitedBy) || empty(req.body.email) || empty(req.body.fullName) || empty(req.body.phoneNumber)) return res.status(500).json({ statusCode: 500, message: "Please check your parameter or value required" });
 
     var invitedBy = req.body.invitedBy,
         email = req.body.email,
@@ -72,6 +75,8 @@ function cUser() {
   };
 
   this.userJoin = function (req, res, next) {
+
+    if (empty(req.body.invitedBy) || empty(req.body.email) || empty(req.body.password) || empty(req.body.retypePassword)) return res.status(500).json({ statusCode: 500, message: "Please check your parameter or value required" });
 
     var invitedBy = req.body.invitedBy,
         email = req.body.email,
@@ -243,6 +248,8 @@ function cUser() {
 
   this.userUpdate = function (req, res, next) {
 
+    if (empty(req.body.firstName) && empty(req.body.email) && empty(req.body.mobileNumber) && empty(req.body.address1)) return res.status(500).json({ statusCode: 500, message: "Please check your parameter or value required" });
+
     var firstName = req.body.firstName,
         lastName = req.body.lastName,
         language = req.body.language,
@@ -286,6 +293,8 @@ function cUser() {
   };
 
   this.userUploadPhoto = function (req, res, next) {
+
+    if (empty(req.body.email)) return res.status(500).json({ statusCode: 500, message: "Please check your parameter or value required" });
 
     var photoProfile = req.file.filename;
     var email = req.body.email;
