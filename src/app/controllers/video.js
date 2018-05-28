@@ -2,7 +2,8 @@ var connection = require('../../../config/db');
 
 var jwt = require('jsonwebtoken'),
     bcrypt = require('bcrypt'),
-    userModel = require('../models/user');
+    userModel = require('../models/user'),
+    empty = require('is-empty');
  
 function cVideo() {
  
@@ -11,6 +12,7 @@ function cVideo() {
     var email = req.query.email;
     var page = (req.query.page == undefined) ? 1 : req.query.page;
     var limit = (req.query.limit == undefined) ? 20 : req.query.limit;
+    var type = req.query.type;
     
     userModel.getUserIdByEmail(email,res,function(result){
       
@@ -18,11 +20,19 @@ function cVideo() {
       var offset = (page - 1) * limit;
       var count = " LIMIT "+offset+","+limit;
 
+      var search = "";
+
+      if(!empty(type)){
+        search += " AND v.video_type = '"+type+"'";
+      }
+
       connection.acquire(function(err,con){
         if (err) throw err;
 
           var sql = "SELECT v.*, u.user_firstname, u.user_lastname from videos v LEFT JOIN \
-          users u ON v.user_id = u.user_id WHERE v.status = 1 AND u.user_id = '"+userId+"' ORDER BY video_id DESC "+count
+          users u ON v.user_id = u.user_id WHERE v.status = 1 AND u.user_id = '"+userId+"' "+search+" ORDER BY video_id DESC "+count
+
+          console.log(sql);
           
           con.query(sql, function(err,data){
             con.release();
