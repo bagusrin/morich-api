@@ -2,7 +2,8 @@ var connection = require('../../../config/db');
 
 var jwt = require('jsonwebtoken'),
     bcrypt = require('bcrypt'),
-    userModel = require('../models/user');
+    userModel = require('../models/user'),
+    empty = require('is-empty');
 
 function cVideoAdmin() {
 
@@ -10,14 +11,21 @@ function cVideoAdmin() {
 
     var page = req.query.page == undefined ? 1 : req.query.page;
     var limit = req.query.limit == undefined ? 20 : req.query.limit;
+    var type = req.query.type;
 
     var offset = (page - 1) * limit;
     var count = " LIMIT " + offset + "," + limit;
 
+    var search = "";
+
+    if (!empty(type)) {
+      search += " AND video_type = '" + type + "'";
+    }
+
     connection.acquire(function (err, con) {
       if (err) throw err;
 
-      var sql = "SELECT * from videos_admin WHERE status = 1 ORDER BY video_id DESC " + count;
+      var sql = "SELECT * from videos_admin WHERE status = 1 " + search + " ORDER BY video_id DESC " + count;
 
       con.query(sql, function (err, data) {
         con.release();
