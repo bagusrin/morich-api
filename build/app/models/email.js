@@ -12,8 +12,8 @@ var email = {
 		const msg = {
 			to: to,
 			//from: 'hello@pixrom.com',
-			from: { email: 'hello@pixrom.com', name: 'Hello from Morich' },
-			subject: 'Morich | Complete Your Registration!!',
+			from: { email: 'hello@morichworldwide.com', name: 'MorichWorldWide' },
+			subject: 'Complete Your Registration!!',
 			//text: 'and easy to do anywhere, even with Node.js',
 			html: '<p><strong>Thank you for registering in Morich.</strong></p><p>To complete your registration, please enter this code <b>' + code + '</b> in the field on Morich Mobile App (Android/IOS). '
 		};
@@ -26,8 +26,8 @@ var email = {
 
 		const msg = {
 			to: userEmail,
-			from: { email: 'hello@pixrom.com', name: 'Hello from Morich' },
-			subject: 'Morich | Congrats for your registration',
+			from: { email: 'hello@morichworldwide.com', name: 'MorichWorldWide' },
+			subject: 'Congrats for your registration',
 			html: '<p><strong>Hai ' + userName + ', Your registration has been completed.</strong></p><p>Your Leader: <b>' + inviterName + '</b> (' + inviterEmail + '). '
 		};
 
@@ -39,8 +39,8 @@ var email = {
 
 		const msg = {
 			to: email,
-			from: { email: 'hello@pixrom.com', name: 'Hello from Morich' },
-			subject: 'Morich | Reset your password!!!',
+			from: { email: 'hello@morichworldwide.com', name: 'MorichWorldWide' },
+			subject: 'Reset your password!!!',
 			html: '<p>To reset your password, please click or copy paste this link https://morich.web/password-reset/' + token + ' on your browser. '
 		};
 
