@@ -301,7 +301,7 @@ function cUser() {
           });
       });
 
-      con.release();
+      con.end();
 
     });
     
