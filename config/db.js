@@ -7,7 +7,7 @@ function Connection() {
   this.pool = null;
  
   var konek = {
-    connectionLimit: 1000000,
+    //connectionLimit: 1000000,
     host     : cfg.dbhost,
     user     : cfg.dbuser,
     password : cfg.dbpassword,
