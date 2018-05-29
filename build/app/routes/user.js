@@ -22,6 +22,7 @@ module.exports = {
     app.route('/user/id/get').get(user.userGetIdByEmail);
     app.route('/user/statistic').get(user.userStatisticByEmail);
     app.route('/user/uploadphoto').post(user.uploadAction, user.userUploadPhoto);
+    app.route('/user/submission').post(user.userSubmission);
   }
 };
 //# sourceMappingURL=user.js.map
