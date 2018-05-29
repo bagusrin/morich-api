@@ -290,7 +290,7 @@ function cUser() {
       ,update_date = NOW() WHERE user_email = '"+email+"'";
         
       con.query(sql, function(err,data){
-          //con.release();
+          con.release();
           
           if(err)
             return res.status(500).json({statusCode:500,message: err.code});
@@ -301,7 +301,7 @@ function cUser() {
           });
       });
 
-      con.end();
+      //con.end();
 
     });
     
