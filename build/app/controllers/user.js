@@ -246,6 +246,37 @@ function cUser() {
     });
   };
 
+  this.userStatisticByEmail = function (req, res, next) {
+    var email = req.query.email;
+
+    if (empty(email)) return res.status(500).json({ statusCode: 500, message: "Parameter email is required" });
+
+    connection.acquire(function (err, con) {
+      if (err) throw err;
+      con.query('SELECT user_id as id, (select count(user_id) from users WHERE user_invited_by = id) as total_invited, \
+          (select count(user_id) from users WHERE user_invited_by = id AND status <> 0) as member_joined, FIND_IN_SET( user_point, (SELECT GROUP_CONCAT( user_point ORDER BY user_point DESC ) FROM users )) \
+          AS rank FROM users WHERE user_email="' + req.query.email + '" LIMIT 1', function (err, data) {
+        con.release();
+        if (err) return res.status(500).json({ statusCode: 500, message: err.code });
+
+        if (data.length < 1) {
+          res.status(404).json({ statusCode: 404, message: "Data not found" });
+        } else {
+
+          var dt = [];
+
+          dt.push({
+            "ranking": data[0].rank,
+            "totalInvited": data[0].total_invited,
+            "memberJoined": data[0].member_joined
+          });
+
+          return res.status(200).json({ statusCode: 200, success: true, data: dt[0] });
+        }
+      });
+    });
+  };
+
   this.userUpdate = function (req, res, next) {
 
     if (empty(req.body.firstName) && empty(req.body.email) && empty(req.body.mobileNumber) && empty(req.body.address1)) return res.status(500).json({ statusCode: 500, message: "Please check your parameter or value required" });
