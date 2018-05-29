@@ -11,6 +11,7 @@ var methods = {
     getUserIdByEmail: function (email, res, callback) {
 
         connection.acquire(function (err, con) {
+            con.release();
 
             if (err) throw err;
 
