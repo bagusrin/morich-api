@@ -20,6 +20,7 @@ module.exports = {
     app.route('/user/detail/:id').get(user.userDetail);
     app.route('/user/username/:username').get(user.userDetailByUsername);
     app.route('/user/id/get').get(user.userGetIdByEmail);
+    app.route('/user/statistic').get(user.userStatisticByEmail);
     app.route('/user/uploadphoto').post(user.uploadAction,user.userUploadPhoto);
   }
 };
