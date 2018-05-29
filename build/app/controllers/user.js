@@ -170,7 +170,7 @@ function cUser() {
             "address2": data[0].user_address2,
             "language": data[0].user_language,
             "ranking": data[0].rank,
-            "url": "http://morichweb.perihal.id/" + data[0].user_username,
+            "url": "https://morichworldwide.com/" + data[0].user_username,
             "totalInvited": data[0].total_invited,
             "memberJoined": data[0].member_joined
           });
@@ -227,7 +227,7 @@ function cUser() {
             "address2": data[0].user_address2,
             "language": data[0].user_language,
             "ranking": data[0].rank,
-            "url": "http://morichweb.perihal.id/" + data[0].user_username
+            "url": "https://morichworldwide.com/" + data[0].user_username
           });
 
           return res.status(200).json({ statusCode: 200, success: true, data: dt[0] });
@@ -354,6 +354,50 @@ function cUser() {
   };
 
   this.uploadAction = upload.single('image');
+
+  this.userSubmission = function (req, res, next) {
+
+    var userId = req.body.userId,
+        fullName = req.body.fullName,
+        email = req.body.email,
+        phoneNumber = req.body.phoneNumber,
+        mobileNumber = req.body.mobileNumber,
+        city = req.body.city,
+        age = req.body.age,
+        currentOccupation = req.body.currentOccupation,
+        isExperienceInMobileBusiness = req.body.isExperienceInMobileBusiness,
+        targetMobileBusiness180Days = req.body.targetMobileBusiness180Days,
+        reason = req.body.reason,
+        urgencyLevel = req.body.urgencyLevel,
+        seriousLevel = req.body.seriousLevel,
+        capitalInvestment = req.body.capitalInvestment,
+        readyToJoin = req.body.readyToJoin,
+        isAvailableContactToMobile = req.body.isAvailableContactToMobile;
+
+    if (empty(userId) || empty(fullName) || empty(email) || empty(mobileNumber) || empty(mobileNumber) || empty(mobileNumber) || empty(mobileNumber) || empty(mobileNumber) || empty(mobileNumber) || empty(mobileNumber) || empty(mobileNumber) || empty(mobileNumber) || empty(mobileNumber) || empty(mobileNumber) || empty(mobileNumber)) {
+      return res.status(500).json({ statusCode: 500, message: "Please check your parameter or value required" });
+    }
+
+    connection.acquire(function (err, con) {
+      if (err) throw err;
+
+      var sql = "INSERT INTO application_submission (user_id,fullname,email,phone_number,mobile_number,city,age,\
+                current_occupation, is_experience_mobile_business, target_mobile_business_180_days,\
+                reason,urgency_level,serious_level,capital_investment,ready_to_join,is_available_contact_to_mobile,post_date)\
+                VALUES ('" + userId + "', '" + fullName + "', '" + email + "', '" + phoneNumber + "', '" + mobileNumber + "', '" + city + "', '" + age + "', \
+                '" + currentOccupation + "', '" + isExperienceInMobileBusiness + "', '" + targetMobileBusiness180Days + "', '" + reason + "', '" + urgencyLevel + "', '" + seriousLevel + "', '" + capitalInvestment + "', \
+                '" + readyToJoin + "', '" + isAvailableContactToMobile + "', NOW())";
+
+      console.log(sql);
+
+      con.query(sql, function (err, data) {
+
+        if (err) return res.status(500).json({ statusCode: 500, message: err.code });
+
+        return res.status(200).json({ statusCode: 200, success: true, data: { "submissionId": data.insertId, "userId": userId } });
+      });
+    });
+  };
 }
 module.exports = new cUser();
 //# sourceMappingURL=user.js.map
