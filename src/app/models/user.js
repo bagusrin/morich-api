@@ -15,7 +15,7 @@ var methods = {
         	if (err) throw err;
         	
         		con.query('SELECT user_id FROM users WHERE user_email = "'+email+'" LIMIT 1', function (err, data, fields){
-            		//con.release();
+            		con.release();
             		if(err)
                 		return res.status(500).json({statusCode:500,message: err.code});
 
