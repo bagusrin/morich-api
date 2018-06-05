@@ -106,6 +106,60 @@ function cVideoAdmin() {
     });
   }
 
+  this.listAdmin = function(req,res,next) {
+
+    var page = (req.query.page == undefined) ? 1 : req.query.page;
+    var limit = (req.query.limit == undefined) ? 20 : req.query.limit;
+    var type = req.query.type;
+    
+  
+    var offset = (page - 1) * limit;
+    var count = " LIMIT "+offset+","+limit;
+
+    var search = "";
+
+    if(!empty(type)){
+      search += " AND video_type = '"+type+"'";
+    }
+
+    connection.acquire(function(err,con){
+      if (err) throw err;
+
+        var sql = "SELECT * from videos_admin WHERE 1 "+search+" ORDER BY video_id DESC "+count
+        
+        con.query(sql, function(err,data){
+          con.release();
+          if(err)
+              return res.status(500).json({statusCode:500,message: err.code});
+             
+
+          var dt = [];
+          for (var i = 0; i < data.length; i++) {
+              dt.push({
+                "videoId": data[i].video_id,
+                "youtubeId": data[i].video_youtube_id,
+                "youtubeLink": data[i].video_youtube_link,
+                "youtubeIframe": data[i].video_youtube_iframe,
+                "youtubeImg": data[i].video_youtube_image,
+                "title": data[i].video_title,
+                "description": data[i].video_desc,
+                "type": data[i].video_type,
+                "position": data[i].video_position,
+                "status": data[i].status,
+                "postDate": data[i].post_date
+              });
+          }
+
+          return res.status(200).json({
+                                  statusCode:200,
+                                  success:true,
+                                  data:dt
+                              });
+ 
+      });
+    });
+  }
+
   this.detail = function(req,res,next) {
 
       var videoId = req.params.id;
