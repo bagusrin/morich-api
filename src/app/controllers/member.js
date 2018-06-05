@@ -29,13 +29,28 @@ function cMember() {
                  
 
               var dt = [];
+
               for (var i = 0; i < data.length; i++) {
                   var pp = (data[i].user_photo) ? cfg.photoProfileUrl+''+data[i].user_photo : null;
+
+                  var fullName = data[i].user_firstname+' '+data[i].user_lastname;
+
+                  var splitName = fullName.trim().split(" ");
+
+                  if(splitName.length > 1){
+                    var initialName = splitName[0].charAt(0)+''+splitName[1].charAt(0);
+                  }else{
+                    var initialName = splitName[0].charAt(0);
+                  }
+
+                  initialName = initialName.toUpperCase();
+
                   dt.push({
                     "userId": data[i].user_id,
                     "email": data[i].user_email,
                     "firstName": data[i].user_firstname,
                     "lastName": data[i].user_lastname,
+                    "initialName": initialName,
                     "photoUrl": pp,
                     "mobileNumber": data[i].user_mobile_number,
                     "phoneNumber": data[i].user_phone_number,
@@ -84,11 +99,24 @@ function cMember() {
               var dt = [];
               for (var i = 0; i < data.length; i++) {
                   var pp = (data[i].user_photo) ? cfg.photoProfileUrl+''+data[i].user_photo : null;
+                  var fullName = data[i].user_firstname+' '+data[i].user_lastname;
+
+                  var splitName = fullName.trim().split(" ");
+
+                  if(splitName.length > 1){
+                    var initialName = splitName[0].charAt(0)+''+splitName[1].charAt(0);
+                  }else{
+                    var initialName = splitName[0].charAt(0);
+                  }
+
+                  initialName = initialName.toUpperCase();
+
                   dt.push({
                     "userId": data[i].user_id,
                     "email": data[i].user_email,
                     "firstName": data[i].user_firstname,
                     "lastName": data[i].user_lastname,
+                    "initialName": initialName,
                     "photoUrl": pp,
                     "mobileNumber": data[i].user_mobile_number,
                     "phoneNumber": data[i].user_phone_number,
