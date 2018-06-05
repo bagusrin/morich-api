@@ -233,7 +233,7 @@ function cVideoAdmin() {
 
           var sql = "INSERT INTO videos_admin (video_youtube_id, video_youtube_link, video_youtube_iframe \
           ,video_youtube_image,video_title,video_desc,video_marketing,video_type,video_position,created_by,status,post_date) \
-          VALUES ('"+youtubeId+"','"+youtubeLink+"','"+youtubeIframe+"','"+youtubeImg+"','"+title+"','"+createdBy+"', '"+desc+"','"+contentMarketing+"','"+type+"','"+position+"', '"+status+"', NOW())";
+          VALUES ('"+youtubeId+"','"+youtubeLink+"','"+youtubeIframe+"','"+youtubeImg+"','"+title+"', '"+desc+"','"+contentMarketing+"','"+type+"','"+position+"','"+createdBy+"', '"+status+"', NOW())";
 
           console.log(sql);
 
