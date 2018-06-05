@@ -141,7 +141,7 @@ function cSpiderman() {
           var sql = "SELECT (SELECT count(user_id) FROM users WHERE status <> 0) AS member_joined \
                     ,(SELECT count(user_id) FROM users WHERE status = 2) AS member_potential \
                     ,(SELECT count(user_id) FROM users WHERE status = 1) AS member_active \
-                    ,(SELECT count(video_id) FROM videos WHERE status = 1) AS video";
+                    ,(SELECT count(video_id) FROM videos_admin WHERE status = 1) AS video";
 
           con.query(sql, function(err,data){
             con.release();
