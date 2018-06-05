@@ -12,6 +12,7 @@ function cVideoAdmin() {
     var page = (req.query.page == undefined) ? 1 : req.query.page;
     var limit = (req.query.limit == undefined) ? 20 : req.query.limit;
     var type = req.query.type;
+    var email = req.query.email;
     
   
     var offset = (page - 1) * limit;
@@ -21,6 +22,12 @@ function cVideoAdmin() {
 
     if(!empty(type)){
       search += " AND video_type = '"+type+"'";
+    }
+
+    if(!empty(email)){
+      search += " AND created_by = '"+email+"'";
+    }else{
+      search += " AND created_by = 'admin' ";  
     }
 
     connection.acquire(function(err,con){
@@ -44,6 +51,7 @@ function cVideoAdmin() {
                 "youtubeImg": data[i].video_youtube_image,
                 "title": data[i].video_title,
                 "description": data[i].video_desc,
+                "contentMarketing": data[i].video_marketing,
                 "type": data[i].video_type,
                 "position": data[i].video_position,
                 "postDate": data[i].post_date
@@ -90,6 +98,7 @@ function cVideoAdmin() {
                 "youtubeImg": data[i].video_youtube_image,
                 "title": data[i].video_title,
                 "description": data[i].video_desc,
+                "contentMarketing": data[i].video_marketing,
                 "type": data[i].video_type,
                 "position": data[i].video_position,
                 "postDate": data[i].post_date
@@ -125,7 +134,7 @@ function cVideoAdmin() {
     connection.acquire(function(err,con){
       if (err) throw err;
 
-        var sql = "SELECT * from videos_admin WHERE 1 "+search+" ORDER BY video_id DESC "+count
+        var sql = "SELECT * from videos_admin WHERE status <> 2 "+search+" ORDER BY video_id DESC "+count
         
         con.query(sql, function(err,data){
           con.release();
@@ -143,8 +152,10 @@ function cVideoAdmin() {
                 "youtubeImg": data[i].video_youtube_image,
                 "title": data[i].video_title,
                 "description": data[i].video_desc,
+                "contentMarketing": data[i].video_marketing,
                 "type": data[i].video_type,
                 "position": data[i].video_position,
+                "createdBy": data[i].created_by,
                 "status": data[i].status,
                 "postDate": data[i].post_date
               });
@@ -186,6 +197,7 @@ function cVideoAdmin() {
                 "youtubeImg": data[0].video_youtube_image,
                 "title": data[0].video_title,
                 "description": data[0].video_desc,
+                "contentMarketing": data[0].video_marketing,
                 "type": data[0].video_type,
                 "position": data[0].video_position,
                 "postDate": data[0].post_date
@@ -207,19 +219,21 @@ function cVideoAdmin() {
       var youtubeLink = req.body.youtubeLink;
       var title = req.body.title;
       var desc = req.body.desc;
+      var contentMarketing = req.body.contentMarketing;
       var youtubeId = youtubeLink.split("v=")[1];
       var youtubeIframe = "https://youtube.com/embed/"+youtubeId;
       var youtubeImg = "https://i.ytimg.com/vi/"+youtubeId+"/maxresdefault.jpg";
       var type = req.body.type;
       var position = (req.body.position == undefined) ? 0 : req.body.position;
-      var status = 1;
+      var createdBy = (!empty(req.body.email)) ? req.body.email : "admin";
+      var status = (!empty(req.body.email)) ? 0 : 1;
 
       connection.acquire(function(err,con){
         if (err) throw err;
 
           var sql = "INSERT INTO videos_admin (video_youtube_id, video_youtube_link, video_youtube_iframe \
-          ,video_youtube_image,video_title,video_desc,video_type,video_position,status,post_date) \
-          VALUES ('"+youtubeId+"','"+youtubeLink+"','"+youtubeIframe+"','"+youtubeImg+"','"+title+"', '"+desc+"','"+type+"','"+position+"', '"+status+"', NOW())";
+          ,video_youtube_image,video_title,video_desc,video_marketing,video_type,video_position,created_by,status,post_date) \
+          VALUES ('"+youtubeId+"','"+youtubeLink+"','"+youtubeIframe+"','"+youtubeImg+"','"+title+"','"+createdBy+"', '"+desc+"','"+contentMarketing+"','"+type+"','"+position+"', '"+status+"', NOW())";
 
           console.log(sql);
 
@@ -250,12 +264,12 @@ function cVideoAdmin() {
       var youtubeLink = req.body.youtubeLink;
       var title = req.body.title;
       var desc = req.body.desc;
+      var contentMarketing = req.body.contentMarketing;
       var youtubeId = youtubeLink.split("v=")[1];
       var youtubeIframe = "https://youtube.com/embed/"+youtubeId;
       var youtubeImg = "https://i.ytimg.com/vi/"+youtubeId+"/maxresdefault.jpg";
       var type = req.body.type;
       var position = (req.body.position == undefined) ? 0 : req.body.position;
-      var status = 1;
 
       connection.acquire(function(err,con){
         if (err) throw err;
@@ -263,7 +277,7 @@ function cVideoAdmin() {
         var sql = "UPDATE videos_admin SET video_youtube_id = '"+youtubeId+"' \
         ,video_youtube_link = '"+youtubeLink+"' \
         ,video_youtube_iframe = '"+youtubeIframe+"',video_youtube_image = '"+youtubeImg+"', video_title = '"+title+"', video_desc = '"+desc+"' \
-        ,video_type = '"+type+"',video_position = '"+position+"',update_date = NOW() WHERE video_id = '"+videoId+"'";
+        ,video_marketing = '"+contentMarketing+"',video_type = '"+type+"',video_position = '"+position+"',update_date = NOW() WHERE video_id = '"+videoId+"'";
 
         con.query(sql, function(err,data){
           con.release();
@@ -291,7 +305,7 @@ function cVideoAdmin() {
     connection.acquire(function(err,con){
       if (err) throw err;
 
-      var sql = "UPDATE videos_admin SET status = 0 \
+      var sql = "UPDATE videos_admin SET status = 2 \
       ,update_date = NOW() WHERE video_id = '"+videoId+"'";
 
       //console.log(sql);
