@@ -13,6 +13,7 @@ function cVideoAdmin() {
     var limit = req.query.limit == undefined ? 20 : req.query.limit;
     var type = req.query.type;
     var email = req.query.email;
+    var show = req.query.show;
 
     var offset = (page - 1) * limit;
     var count = " LIMIT " + offset + "," + limit;
@@ -27,10 +28,21 @@ function cVideoAdmin() {
       search += " AND created_by = '" + email + "'";
     }
 
+    if (!empty(show)) {
+
+      if (show == "all") {
+        search += "";
+      } else {
+        search += " AND status = 1";
+      }
+    } else {
+      search += " AND status = 1";
+    }
+
     connection.acquire(function (err, con) {
       if (err) throw err;
 
-      var sql = "SELECT * from videos_admin WHERE status = 1 AND video_position = 0 " + search + " ORDER BY video_id DESC " + count;
+      var sql = "SELECT * from videos_admin WHERE video_position = 0 " + search + " ORDER BY video_id DESC " + count;
 
       con.query(sql, function (err, data) {
         con.release();
