@@ -217,7 +217,7 @@ function cVideoAdmin() {
       var youtubeLink = req.body.youtubeLink;
       var title = req.body.title;
       var desc = req.body.desc;
-      var contentMarketing = req.body.contentMarketing;
+      var contentMarketing = (!empty(req.body.contentMarketing)) ? req.body.contentMarketing : '';
       var youtubeId = youtubeLink.split("v=")[1];
       var youtubeIframe = "https://youtube.com/embed/"+youtubeId;
       var youtubeImg = "https://i.ytimg.com/vi/"+youtubeId+"/maxresdefault.jpg";
@@ -262,7 +262,7 @@ function cVideoAdmin() {
       var youtubeLink = req.body.youtubeLink;
       var title = req.body.title;
       var desc = req.body.desc;
-      var contentMarketing = req.body.contentMarketing;
+      var contentMarketing = (!empty(req.body.contentMarketing)) ? req.body.contentMarketing : '';
       var youtubeId = youtubeLink.split("v=")[1];
       var youtubeIframe = "https://youtube.com/embed/"+youtubeId;
       var youtubeImg = "https://i.ytimg.com/vi/"+youtubeId+"/maxresdefault.jpg";
