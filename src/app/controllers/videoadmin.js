@@ -189,7 +189,7 @@ function cVideoAdmin() {
       connection.acquire(function(err,con){
         if (err) throw err;
 
-          var sql = "SELECT * from videos_admin WHERE status = 1 AND video_id = '"+videoId+"' LIMIT 1";
+          var sql = "SELECT * from videos_admin WHERE video_id = '"+videoId+"' LIMIT 1";
           
           con.query(sql, function(err,data){
             con.release();
