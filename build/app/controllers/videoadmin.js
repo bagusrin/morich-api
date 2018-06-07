@@ -25,8 +25,6 @@ function cVideoAdmin() {
 
     if (!empty(email)) {
       search += " AND created_by = '" + email + "'";
-    } else {
-      search += " AND created_by = 'admin' ";
     }
 
     connection.acquire(function (err, con) {
