@@ -126,9 +126,13 @@ function cUser() {
   this.userDetail = function (req, res, next) {
     connection.acquire(function (err, con) {
       if (err) throw err;
-      con.query('SELECT *, user_id as id, (select count(user_id) from users WHERE user_invited_by = id) as total_invited, \
+
+      var sql = 'SELECT *, user_id as id, user_invited_by as invited_id, (select count(user_id) from users WHERE user_invited_by = id) as total_invited, (select user_email FROM users WHERE user_id = invited_id) as inviter_email, \
             (select count(user_id) from users WHERE user_invited_by = id AND status <> "0") as member_joined, FIND_IN_SET( user_point, (SELECT GROUP_CONCAT( user_point ORDER BY user_point DESC ) FROM users )) \
-            AS rank FROM users WHERE user_id=' + req.params.id + ' LIMIT 1', function (err, data) {
+            AS rank FROM users WHERE user_id=' + req.params.id + ' LIMIT 1';
+
+      //console.log(sql);
+      con.query(sql, function (err, data) {
         con.release();
         if (err) return res.status(500).json({ statusCode: 500, message: err.code });
 
@@ -172,7 +176,8 @@ function cUser() {
             "ranking": data[0].rank,
             "url": "https://morichworldwide.com/" + data[0].user_username,
             "totalInvited": data[0].total_invited,
-            "memberJoined": data[0].member_joined
+            "memberJoined": data[0].member_joined,
+            "emailInviter": data[0].inviter_email
           });
 
           return res.status(200).json({ statusCode: 200, success: true, data: dt[0] });
