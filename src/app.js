@@ -13,6 +13,9 @@ var chat = require('./app/routes/chat');
 var connection = require('../config/db');
 var jsonwebtoken = require("jsonwebtoken");
 var cors = require("cors");
+var moment = require('moment-timezone');
+
+moment().tz("Asia/Jakarta").format();
 
 var app = express();
 
