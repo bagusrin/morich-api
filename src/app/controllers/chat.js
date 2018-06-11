@@ -30,7 +30,7 @@ function cChat() {
                             c.UserID_Two, m2.user_firstname as UserTwoFirstname, m2.user_lastname as UserTwoLastname, \
                             m2.user_id as uidTwo, m2.user_photo As UserTwoImage, \
                             (SELECT count(*) from replies where status = 1 AND UserID <> '"+email+"' AND ConversationID = c.ConversationID) AS NewMessage, \
-                            (SELECT Reply FROM replies WHERE ConversationID = c.ConversationID ORDER BY TransactTime DESC LIMIT 1) As LastMessage, \
+                            (SELECT Reply FROM replies WHERE ConversationID = c.ConversationID ORDER BY ReplyID DESC LIMIT 1) As LastMessage, \
                             (SELECT UserID FROM replies WHERE UserID <> '"+email+"' AND ConversationID = c.ConversationID ORDER BY TransactTime DESC LIMIT 1) As UserID, \
                             (SELECT TransactTime FROM replies WHERE ConversationID = c.ConversationID ORDER BY TransactTime DESC LIMIT 1) As ReplyTransactTime, \
                             (SELECT Status FROM replies WHERE ConversationID = c.ConversationID ORDER BY TransactTime DESC LIMIT 1) As ReplyStatus \
