@@ -150,7 +150,7 @@ function cChat() {
                   inner join users m1 on m1.user_email = r.UserID \
                   inner join users m2 on m2.user_email = r.UserRecepient \
                   where ConversationID = '"+conversationId+"' \
-                  ORDER BY TransactTime DESC "+count;
+                  ORDER BY ReplyID DESC "+count;
         
         con.query(sql, function(err,data){
           con.release();
