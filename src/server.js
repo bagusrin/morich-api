@@ -1,10 +1,10 @@
-var http = require('http');
-var app = require('./app');
-var port = '3000';
+var app = require('./app'),
+	server = require('http').Server(app),
+	io = require('socket.io')(server),
+	config = require('../config');
 
-var config = require('../config');
- 
-var server = http.createServer(app);
+var IO 		= require('../config/io');
+exports.IO 	= new IO(app, io, server);
  
 server.listen(config.port, function() {
   console.log('Server listening on port ' + config.port);

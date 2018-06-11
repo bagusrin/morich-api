@@ -9,8 +9,10 @@ var member = require('./app/routes/member');
 var video = require('./app/routes/video');
 var videoadmin = require('./app/routes/videoadmin');
 var general = require('./app/routes/general');
+var chat = require('./app/routes/chat');
 var connection = require('../config/db');
 var jsonwebtoken = require("jsonwebtoken");
+var cors = require("cors");
 
 var app = express();
 
@@ -19,6 +21,7 @@ var publicDir = require('path').join(__dirname,'/../public');
 connection.init();
 
 app.use(logger('dev'));
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -46,9 +49,11 @@ member.configure(app);
 video.configure(app);
 videoadmin.configure(app);
 general.configure(app);
+chat.configure(app);
 
 app.use(express.static(publicDir));
 
+app.options('*', cors());
 app.use(function(req, res) {
   res.status(404).send({statusCode:404, message: req.originalUrl + ' not found' })
 });
