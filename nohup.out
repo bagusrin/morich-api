@@ -6220,3 +6220,1154 @@ Error: Cannot find module 'cors'
     at Module.load (module.js:565:32)
     at tryModuleLoad (module.js:505:12)
     at Function.Module._load (module.js:497:3)
+
+> morich-api@1.0.0 start /var/www/morich-api
+> node scripts/run.js
+
+Starting 'run'...
+Starting 'build'...
+src/app.js -> build/app.js
+src/server.js -> build/server.js
+src/app/controllers/auth.js -> build/app/controllers/auth.js
+src/app/controllers/chat.js -> build/app/controllers/chat.js
+src/app/controllers/general.js -> build/app/controllers/general.js
+src/app/controllers/member.js -> build/app/controllers/member.js
+src/app/controllers/spiderman.js -> build/app/controllers/spiderman.js
+src/app/controllers/user.js -> build/app/controllers/user.js
+src/app/controllers/video.js -> build/app/controllers/video.js
+src/app/controllers/videoadmin.js -> build/app/controllers/videoadmin.js
+src/app/io/chat.js -> build/app/io/chat.js
+src/app/models/email.js -> build/app/models/email.js
+src/app/models/user.js -> build/app/models/user.js
+src/app/routes/auth.js -> build/app/routes/auth.js
+src/app/routes/chat.js -> build/app/routes/chat.js
+src/app/routes/general.js -> build/app/routes/general.js
+src/app/routes/member.js -> build/app/routes/member.js
+src/app/routes/spiderman.js -> build/app/routes/spiderman.js
+src/app/routes/user.js -> build/app/routes/user.js
+src/app/routes/video.js -> build/app/routes/video.js
+src/app/routes/videoadmin.js -> build/app/routes/videoadmin.js
+Finished 'build' after 580ms
+Server listening on port 7003
+[0mGET /user/detail/21 [32m200 [0m16.498 ms - 640[0m
+[0mGET /user/detail/21 [32m200 [0m3.773 ms - 640[0m
+[0mGET /user/detail/21 [32m200 [0m2.628 ms - 640[0m
+[0mGET /?email=bagus.rinaldhi10@gmail.com [33m404 [0m2.700 ms - 75[0m
+[0mGET /favicon.ico [33m404 [0m1.130 ms - 53[0m
+[0mGET /favicon.ico [33m404 [0m0.676 ms - 53[0m
+[0mGET /user/detail/21 [32m200 [0m2.390 ms - 640[0m
+socket.io connected
+[0mGET /chat/list?email=bagus.rinaldhi10@gmail.com [31m500 [0m21.433 ms - 47[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mGET /user/detail/21 [32m200 [0m2.479 ms - 640[0m
+[0mGET /user/detail/21 [32m200 [0m2.355 ms - 640[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mGET /chat/list?email=bagus.rinaldhi10@gmail.com [31m500 [0m1.959 ms - 47[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mGET /user/detail/21 [32m200 [0m2.350 ms - 640[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mGET /chat/list?email=bagus.rinaldhi10@gmail.com [31m500 [0m1.950 ms - 47[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mGET /user/detail/21 [32m200 [0m2.403 ms - 640[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mGET /chat/list?email=bagus.rinaldhi10@gmail.com [31m500 [0m2.736 ms - 47[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mOPTIONS /chat/detail?conversationId=2&requestBy=bagus.rinaldhi10%40gmail.com&receiver=sriasma.wanti%40gmail.com [32m204 [0m0.654 ms - 0[0m
+[0mGET /chat/detail?conversationId=2&requestBy=bagus.rinaldhi10%40gmail.com&receiver=sriasma.wanti%40gmail.com [32m200 [0m4.680 ms - 9914[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mOPTIONS /chat/detail?conversationId=1&requestBy=bagus.rinaldhi10%40gmail.com&receiver=bagusrinn%40gmail.com [32m204 [0m0.183 ms - 0[0m
+[0mGET /chat/detail?conversationId=1&requestBy=bagus.rinaldhi10%40gmail.com&receiver=bagusrinn%40gmail.com [32m200 [0m3.870 ms - 11163[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mGET /chat/list?email=bagus.rinaldhi10@gmail.com [31m500 [0m2.055 ms - 47[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mGET /chat/list?email=bagus.rinaldhi10@gmail.com [31m500 [0m1.950 ms - 47[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mGET /chat/list?email=bagus.rinaldhi10@gmail.com [31m500 [0m2.694 ms - 47[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mGET /chat/list?email=bagus.rinaldhi10@gmail.com [31m500 [0m2.529 ms - 47[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mOPTIONS /chat/detail?conversationId=2&requestBy=bagus.rinaldhi10%40gmail.com&receiver=sriasma.wanti%40gmail.com [32m204 [0m0.104 ms - 0[0m
+[0mGET /chat/detail?conversationId=2&requestBy=bagus.rinaldhi10%40gmail.com&receiver=sriasma.wanti%40gmail.com [36m304 [0m3.529 ms - -[0m
+[0mOPTIONS /chat/detail?conversationId=1&requestBy=bagus.rinaldhi10%40gmail.com&receiver=bagusrinn%40gmail.com [32m204 [0m0.098 ms - 0[0m
+[0mGET /chat/detail?conversationId=1&requestBy=bagus.rinaldhi10%40gmail.com&receiver=bagusrinn%40gmail.com [36m304 [0m3.064 ms - -[0m
+[0mOPTIONS /chat/detail?conversationId=2&requestBy=bagus.rinaldhi10%40gmail.com&receiver=sriasma.wanti%40gmail.com [32m204 [0m0.161 ms - 0[0m
+[0mGET /chat/detail?conversationId=2&requestBy=bagus.rinaldhi10%40gmail.com&receiver=sriasma.wanti%40gmail.com [36m304 [0m3.682 ms - -[0m
+[0mOPTIONS /chat/detail?conversationId=1&requestBy=bagus.rinaldhi10%40gmail.com&receiver=bagusrinn%40gmail.com [32m204 [0m0.159 ms - 0[0m
+[0mGET /chat/detail?conversationId=1&requestBy=bagus.rinaldhi10%40gmail.com&receiver=bagusrinn%40gmail.com [36m304 [0m3.242 ms - -[0m
+[0mOPTIONS /chat/detail?conversationId=2&requestBy=sriasma.wanti%40gmail.com&receiver=bagus.rinaldhi10%40gmail.com [32m204 [0m0.138 ms - 0[0m
+[0mGET /chat/detail?conversationId=2&requestBy=sriasma.wanti%40gmail.com&receiver=bagus.rinaldhi10%40gmail.com [32m200 [0m4.269 ms - 9914[0m
+socket.io connected
+[0mGET /chat/list?email=sriasma.wanti@gmail.com [31m500 [0m2.484 ms - 47[0m
+socket.io connected
+socket.io connected
+socket.io connected
+[0mGET /chat/list?email=sriasma.wanti@gmail.com [31m500 [0m1.897 ms - 47[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mOPTIONS /chat/detail?conversationId=2&requestBy=sriasma.wanti%40gmail.com&receiver=bagus.rinaldhi10%40gmail.com [32m204 [0m0.199 ms - 0[0m
+[0mGET /chat/detail?conversationId=2&requestBy=sriasma.wanti%40gmail.com&receiver=bagus.rinaldhi10%40gmail.com [32m200 [0m3.418 ms - 9914[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mGET /chat/list?email=sriasma.wanti@gmail.com [31m500 [0m2.024 ms - 47[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mGET /chat/list?email=sriasma.wanti@gmail.com [31m500 [0m1.837 ms - 47[0m
+socket.io connected
+[0mGET /chat/list?email=sriasma.wanti@gmail.com [31m500 [0m2.947 ms - 47[0m
+socket.io connected
+[0mGET /chat/list?email=sriasma.wanti@gmail.com [31m500 [0m1.855 ms - 47[0m
+socket.io connected
+[0mGET /chat/list?email=sriasma.wanti@gmail.com [31m500 [0m1.831 ms - 47[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mGET /chat/list?email=sriasma.wanti@gmail.com [31m500 [0m2.061 ms - 47[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mGET /chat/list?email=sriasma.wanti@gmail.com [31m500 [0m1.962 ms - 47[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mOPTIONS /chat/detail?conversationId=2&requestBy=bagus.rinaldhi10%40gmail.com&receiver=sriasma.wanti%40gmail.com [32m204 [0m0.113 ms - 0[0m
+[0mGET /chat/detail?conversationId=2&requestBy=bagus.rinaldhi10%40gmail.com&receiver=sriasma.wanti%40gmail.com [32m200 [0m3.394 ms - 9914[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mOPTIONS /chat/detail?conversationId=2&requestBy=bagus.rinaldhi10%40gmail.com&receiver=sriasma.wanti%40gmail.com [32m204 [0m0.187 ms - 0[0m
+[0mGET /chat/detail?conversationId=2&requestBy=bagus.rinaldhi10%40gmail.com&receiver=sriasma.wanti%40gmail.com [36m304 [0m3.964 ms - -[0m
+socket.io connected
+socket.io connected
+socket.io connected
+[0mOPTIONS /chat/detail?conversationId=1&requestBy=bagus.rinaldhi10%40gmail.com&receiver=bagusrinn%40gmail.com [32m204 [0m0.117 ms - 0[0m
+[0mGET /chat/detail?conversationId=1&requestBy=bagus.rinaldhi10%40gmail.com&receiver=bagusrinn%40gmail.com [36m304 [0m3.087 ms - -[0m
+socket.io connected
+[0mOPTIONS /chat/detail?conversationId=2&requestBy=bagus.rinaldhi10%40gmail.com&receiver=sriasma.wanti%40gmail.com [32m204 [0m0.115 ms - 0[0m
+[0mGET /chat/detail?conversationId=2&requestBy=bagus.rinaldhi10%40gmail.com&receiver=sriasma.wanti%40gmail.com [36m304 [0m3.243 ms - -[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mOPTIONS /chat/detail?conversationId=2&requestBy=bagus.rinaldhi10%40gmail.com&receiver=sriasma.wanti%40gmail.com [32m204 [0m0.118 ms - 0[0m
+[0mGET /chat/detail?conversationId=2&requestBy=bagus.rinaldhi10%40gmail.com&receiver=sriasma.wanti%40gmail.com [36m304 [0m3.018 ms - -[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mGET /chat/list?email=bagus.rinaldhi10@gmail.com [31m500 [0m1.861 ms - 47[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mGET /chat/list?email=bagus.rinaldhi10@gmail.com [31m500 [0m1.904 ms - 47[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+src/app/io/chat.js -> build/app/io/chat.js
+socket.io connected
+src/app/io/chat.js -> build/app/io/chat.js
+src/app/io/chat.js -> build/app/io/chat.js
+src/app/io/chat.js -> build/app/io/chat.js
+src/app/io/chat.js -> build/app/io/chat.js
+src/app/io/chat.js -> build/app/io/chat.js
+src/app/io/chat.js -> build/app/io/chat.js
+Server listening on port 7003
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+test
+[0mGET /chat/list?email=bagus.rinaldhi10@gmail.com [31m500 [0m28.664 ms - 47[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+test
+[0mGET /chat/list?email=bagus.rinaldhi10@gmail.com [31m500 [0m2.866 ms - 47[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+src/app/controllers/chat.js -> build/app/controllers/chat.js
+src/app/controllers/chat.js -> build/app/controllers/chat.js
+src/app/controllers/chat.js -> build/app/controllers/chat.js
+src/app/controllers/chat.js -> build/app/controllers/chat.js
+src/app/controllers/chat.js -> build/app/controllers/chat.js
+src/app/controllers/chat.js -> build/app/controllers/chat.js
+src/app/controllers/chat.js -> build/app/controllers/chat.js
+src/app/controllers/chat.js -> build/app/controllers/chat.js
+Server listening on port 7003
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+test
+SELECT   distinct c.ConversationID,                             c.UserID_One,                             m1.user_id as uidOne, m1.user_firstname as UserOneFirstname, m1.user_lastname as UserOneLastname,                             m1.user_photo As UserOneImage,                             c.UserID_Two, m2.user_firstname as UserTwoFirstname, m2.user_lastname as UserTwoLastname,                             m2.user_id as uidTwo, m2.user_photo As UserTwoImage,                             (SELECT count(*) from replies where status = 1 AND UserID <> 'bagus.rinaldhi10@gmail.com' AND ConversationID = c.ConversationID) AS NewMessage,                             (SELECT Reply FROM replies WHERE ConversationID = c.ConversationID ORDER BY TransactTime DESC LIMIT 1) As LastMessage,                             (SELECT UserID FROM replies WHERE UserID <> 'bagus.rinaldhi10@gmail.com' AND ConversationID = c.ConversationID ORDER BY TransactTime DESC LIMIT 1) As UserID,                             (SELECT TransactTime FROM replies WHERE ConversationID = c.ConversationID ORDER BY TransactTime DESC LIMIT 1) As ReplyTransactTime,                             (SELECT Status FROM replies WHERE ConversationID = c.ConversationID ORDER BY TransactTime DESC LIMIT 1) As ReplyStatus                   FROM Conversations c                   inner join users m1 on m1.user_email = c.UserID_One                   inner join users m2 on m2.user_email = c.UserID_Two                   where (c.UserID_One = 'bagus.rinaldhi10@gmail.com' and c.UserOneStatus <= 4) or (c.UserID_Two = 'bagus.rinaldhi10@gmail.com' and c.UserTwoStatus <= 4)                   ORDER BY ReplyTransactTime DESC  LIMIT 0,20
+[0mGET /chat/list?email=bagus.rinaldhi10@gmail.com [31m500 [0m29.589 ms - 47[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+src/app/controllers/chat.js -> build/app/controllers/chat.js
+socket.io connected
+src/app/controllers/chat.js -> build/app/controllers/chat.js
+src/app/controllers/chat.js -> build/app/controllers/chat.js
+src/app/controllers/chat.js -> build/app/controllers/chat.js
+src/app/controllers/chat.js -> build/app/controllers/chat.js
+src/app/controllers/chat.js -> build/app/controllers/chat.js
+src/app/controllers/chat.js -> build/app/controllers/chat.js
+src/app/controllers/chat.js -> build/app/controllers/chat.js
+Server listening on port 7003
+socket.io connected
+socket.io connected
+socket.io connected
+test
+[0mGET /chat/list?email=bagus.rinaldhi10@gmail.com [32m200 [0m14.352 ms - 597[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+test
+[0mGET /chat/list?email=bagus.rinaldhi10@gmail.com [32m200 [0m4.567 ms - 597[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mOPTIONS /chat/detail?conversationId=2&requestBy=bagus.rinaldhi10%40gmail.com&receiver=sriasma.wanti%40gmail.com [32m204 [0m0.785 ms - 0[0m
+[0mGET /chat/detail?conversationId=2&requestBy=bagus.rinaldhi10%40gmail.com&receiver=sriasma.wanti%40gmail.com [36m304 [0m4.786 ms - -[0m
+socket.io connected
+socket.io connected
+[0mPOST /chat/send [32m200 [0m12.523 ms - 97[0m
+[0mGET /chat/list?email=bagus.rinaldhi10@gmail.com [32m200 [0m4.208 ms - 597[0m
+[0mGET /chat/list?email=sriasma.wanti@gmail.com [32m200 [0m6.020 ms - 364[0m
+[0mGET /chat/user-info?email=bagus.rinaldhi10@gmail.com [32m200 [0m1.735 ms - 231[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mOPTIONS /chat/detail?conversationId=1&requestBy=bagus.rinaldhi10%40gmail.com&receiver=bagusrinn%40gmail.com [32m204 [0m0.170 ms - 0[0m
+[0mGET /chat/detail?conversationId=1&requestBy=bagus.rinaldhi10%40gmail.com&receiver=bagusrinn%40gmail.com [36m304 [0m3.433 ms - -[0m
+socket.io connected
+[0mPOST /chat/send [32m200 [0m1.822 ms - 97[0m
+[0mGET /chat/list?email=bagus.rinaldhi10@gmail.com [32m200 [0m3.120 ms - 597[0m
+[0mGET /chat/list?email=bagusrinn@gmail.com [32m200 [0m4.160 ms - 355[0m
+[0mGET /chat/user-info?email=bagus.rinaldhi10@gmail.com [32m200 [0m1.149 ms - 231[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+test
+socket.io connected
+[0mGET /chat/list?email=bagus.rinaldhi10@gmail.com [32m200 [0m2.849 ms - 597[0m
+[0mOPTIONS /chat/detail?conversationId=2&requestBy=bagus.rinaldhi10%40gmail.com&receiver=sriasma.wanti%40gmail.com [32m204 [0m0.098 ms - 0[0m
+[0mGET /chat/detail?conversationId=2&requestBy=bagus.rinaldhi10%40gmail.com&receiver=sriasma.wanti%40gmail.com [36m304 [0m3.178 ms - -[0m
+socket.io connected
+socket.io connected
+[0mPOST /chat/send [32m200 [0m1.789 ms - 97[0m
+[0mGET /chat/list?email=bagus.rinaldhi10@gmail.com [32m200 [0m3.587 ms - 597[0m
+[0mGET /chat/list?email=sriasma.wanti@gmail.com [32m200 [0m3.876 ms - 364[0m
+[0mGET /chat/user-info?email=bagus.rinaldhi10@gmail.com [32m200 [0m1.128 ms - 231[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+test
+[0mGET /chat/list?email=bagus.rinaldhi10@gmail.com [32m200 [0m3.282 ms - 597[0m
+socket.io connected
+[0mOPTIONS /chat/detail?conversationId=2&requestBy=bagus.rinaldhi10%40gmail.com&receiver=sriasma.wanti%40gmail.com [32m204 [0m0.119 ms - 0[0m
+[0mGET /chat/detail?conversationId=2&requestBy=bagus.rinaldhi10%40gmail.com&receiver=sriasma.wanti%40gmail.com [36m304 [0m3.056 ms - -[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+[0mOPTIONS /chat/detail?conversationId=1&requestBy=bagus.rinaldhi10%40gmail.com&receiver=bagusrinn%40gmail.com [32m204 [0m0.098 ms - 0[0m
+[0mGET /chat/detail?conversationId=1&requestBy=bagus.rinaldhi10%40gmail.com&receiver=bagusrinn%40gmail.com [36m304 [0m3.303 ms - -[0m
+socket.io connected
+socket.io connected
+[0mPOST /chat/send [32m200 [0m1.585 ms - 97[0m
+[0mGET /chat/list?email=bagus.rinaldhi10@gmail.com [32m200 [0m2.727 ms - 597[0m
+[0mGET /chat/user-info?email=bagus.rinaldhi10@gmail.com [32m200 [0m1.095 ms - 231[0m
+[0mGET /chat/list?email=bagusrinn@gmail.com [32m200 [0m5.847 ms - 355[0m
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+src/app/io/chat.js -> build/app/io/chat.js
+src/app/io/chat.js -> build/app/io/chat.js
+src/app/io/chat.js -> build/app/io/chat.js
+src/app/io/chat.js -> build/app/io/chat.js
+src/app/io/chat.js -> build/app/io/chat.js
+src/app/io/chat.js -> build/app/io/chat.js
+src/app/io/chat.js -> build/app/io/chat.js
+src/app/io/chat.js -> build/app/io/chat.js
+Server listening on port 7003
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+src/app/controllers/chat.js -> build/app/controllers/chat.js
+src/app/controllers/chat.js -> build/app/controllers/chat.js
+src/app/controllers/chat.js -> build/app/controllers/chat.js
+src/app/controllers/chat.js -> build/app/controllers/chat.js
+src/app/controllers/chat.js -> build/app/controllers/chat.js
+src/app/controllers/chat.js -> build/app/controllers/chat.js
+src/app/controllers/chat.js -> build/app/controllers/chat.js
+src/app/controllers/chat.js -> build/app/controllers/chat.js
+Server listening on port 7003
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected
+socket.io connected

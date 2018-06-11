@@ -9,7 +9,6 @@ module.exports.io 	= function (app, io, http, socket) {
 	socket.join(socket.room); // create socket room ID.
 
 	socket.on('chatList', function (data) {
-
 		axios.get(cfg.localhost+'chat/list?email='+data.email)
 			.then(response => {
 				

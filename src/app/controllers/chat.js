@@ -34,12 +34,12 @@ function cChat() {
                             (SELECT UserID FROM replies WHERE UserID <> '"+email+"' AND ConversationID = c.ConversationID ORDER BY TransactTime DESC LIMIT 1) As UserID, \
                             (SELECT TransactTime FROM replies WHERE ConversationID = c.ConversationID ORDER BY TransactTime DESC LIMIT 1) As ReplyTransactTime, \
                             (SELECT Status FROM replies WHERE ConversationID = c.ConversationID ORDER BY TransactTime DESC LIMIT 1) As ReplyStatus \
-                  FROM Conversations c \
+                  FROM conversations c \
                   inner join users m1 on m1.user_email = c.UserID_One \
                   inner join users m2 on m2.user_email = c.UserID_Two \
                   where (c.UserID_One = '"+email+"' and c.UserOneStatus <= 4) or (c.UserID_Two = '"+email+"' and c.UserTwoStatus <= 4) \
                   ORDER BY ReplyTransactTime DESC "+count;
-        
+
         con.query(sql, function(err,data){
           con.release();
           if(err)
