@@ -3,6 +3,8 @@ var app = require('./app'),
 	io = require('socket.io')(server),
 	config = require('../config');
 
+io.origins('*:*') // for latest version
+
 var IO 		= require('../config/io');
 exports.IO 	= new IO(app, io, server);
  

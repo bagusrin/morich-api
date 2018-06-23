@@ -142,9 +142,9 @@ function cChat() {
       if (err) throw err;
 
         var sql = "SELECT   r.*,  \
-                            m1.user_firstname as senderFirstname, m1.user_lastname as senderLastname, \
+                            m1.user_id as senderId, m1.user_firstname as senderFirstname, m1.user_lastname as senderLastname, \
                             m1.user_photo As senderPhoto, \
-                            m2.user_firstname as receiverFirstname, m2.user_lastname as receiverLastname, \
+                            m2.user_id as receiverId, m2.user_firstname as receiverFirstname, m2.user_lastname as receiverLastname, \
                             m2.user_photo As receiverPhoto \
                   FROM replies r \
                   inner join users m1 on m1.user_email = r.UserID \
@@ -192,6 +192,8 @@ function cChat() {
                   "replyId": data[i].ReplyID,
                   "conversationId": data[i].ConversationID,
                   "message": data[i].Reply,
+                  "senderId": data[i].senderId,
+                  "reciverId": data[i].receiverId,
                   "senderEmail": data[i].UserID,
                   "senderFirstname": data[i].senderFirstname,
                   "senderLastname": data[i].senderLastname,
@@ -214,6 +216,8 @@ function cChat() {
                   "replyId": data[i].ReplyID,
                   "conversationId": data[i].ConversationID,
                   "message": data[i].Reply,
+                  "senderId": data[i].senderId,
+                  "reciverId": data[i].receiverId,
                   "senderEmail": data[i].UserID,
                   "senderFirstname": data[i].senderFirstname,
                   "senderLastname": data[i].senderLastname,
