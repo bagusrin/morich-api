@@ -12,7 +12,7 @@ var general = require('./app/routes/general');
 var chat = require('./app/routes/chat');
 var connection = require('../config/db');
 var jsonwebtoken = require("jsonwebtoken");
-//var cors = require("cors");
+var cors = require("cors");
 var moment = require('moment-timezone');
 
 moment().tz("Asia/Jakarta").format();
@@ -24,7 +24,7 @@ var publicDir = require('path').join(__dirname, '/../public');
 connection.init();
 
 app.use(logger('dev'));
-//app.use(cors());
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -54,8 +54,7 @@ chat.configure(app);
 
 app.use(express.static(publicDir));
 
-//app.options('*', cors());
-
+app.options('*', cors());
 
 module.exports = app;
 //# sourceMappingURL=app.js.map
