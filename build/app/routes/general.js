@@ -4,6 +4,7 @@ module.exports = {
   configure: function (app) {
     app.route('/language/list').get(general.languageList);
     app.route('/country/list').get(general.countryList);
+    app.route('/apps/version').get(general.appsVersion);
   }
 };
 //# sourceMappingURL=general.js.map

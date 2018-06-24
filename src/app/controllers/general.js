@@ -51,6 +51,32 @@ function cGeneral() {
     });
   };
 
+  this.appsVersion = function(req,res,next) {
+    connection.acquire(function(err,con){
+      if (err) throw err;
+        var sql = 'SELECT * FROM apps_version LIMIT 1';
+        con.query(sql, function(err,data){
+          con.release();
+          if(err)
+              return res.status(500).json({statusCode:500,message: err.code});
+
+          if(data.length < 1){
+            res.status(404).json({statusCode:404,message: "Data not found"});
+          }else{
+            var dt = [];
+
+            dt.push({
+              "androidVersion": data[0].android_version,
+              "iosVersion": data[0].ios_version,
+            });
+
+            return res.status(200).json({statusCode:200,success:true,data:dt[0]});
+          }
+ 
+      });
+    });
+  };
+
   
 }
 module.exports = new cGeneral();
