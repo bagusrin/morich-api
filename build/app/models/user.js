@@ -92,6 +92,7 @@ var methods = {
                 var sql2 = "SELECT user_email, user_firstname, user_lastname FROM users WHERE user_id = '" + inviterId + "' LIMIT 1";
 
                 con.query(sql2, function (err, data, fields) {
+                    con.release(); //24Jun18
                     if (err) return res.status(500).json({ statusCode: 500, message: err.code });
 
                     var inviterName = data[0].user_firstname + ' ' + data[0].user_lastname;
