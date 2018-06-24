@@ -93,7 +93,7 @@ function cChat() {
             "photoURL": pp,
             "initialName": initialName,
             "newMessage": data[i].NewMessage,
-            "lastMessage": data[i].LastMessage,
+            "lastMessage": empty(data[i].LastMessage) ? '' : data[i].LastMessage,
             "replyTransactTime": data[i].ReplyTransactTime,
             "replyStatus": data[i].ReplyStatus
           });
