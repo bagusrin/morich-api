@@ -115,7 +115,7 @@ function cUser() {
         var sql = "UPDATE users set user_username = '"+uname+"', user_password = '"+password+"', status = 2, update_date = NOW() WHERE user_email = '"+email+"'";
           
         con.query(sql, function(err,data){
-            con.release(); //24Jun18
+            //con.release(); //24Jun18
             if(err)
               return res.status(500).json({statusCode:500,message: err.code});
 
@@ -124,7 +124,7 @@ function cUser() {
             VALUES ('"+email+"','"+invitedBy+"','2','2', NOW())";
 
             con.query(sql2, function(err2,data2){
-              con.release(); //24Jun18
+              //con.release(); //24Jun18
               if(err2)
                 return res.status(500).json({statusCode:500,message: err2.code});
               
