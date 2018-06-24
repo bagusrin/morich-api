@@ -299,6 +299,40 @@ function cChat() {
       });
     });
   };
+
+  this.getConversationId = function (req, res, next) {
+
+    var sender = req.query.sender;
+    var receiver = req.query.receiver;
+
+    if (empty(sender)) return res.status(500).json({ statusCode: 500, message: "Parameter sender is required" });
+
+    if (empty(receiver)) return res.status(500).json({ statusCode: 500, message: "Parameter receiver is required" });
+
+    connection.acquire(function (err, con) {
+      if (err) throw err;
+
+      var sql = "SELECT ConversationID FROM conversations WHERE (UserID_One = '" + sender + "' AND  UserID_Two = '" + receiver + "') OR (UserID_Two = '" + sender + "' AND  UserID_One = '" + receiver + "') LIMIT 1  ";
+      console.log(sql);
+
+      con.query(sql, function (err, data) {
+        con.release();
+        if (err) return res.status(500).json({ statusCode: 500, message: err.code });
+
+        if (data.length < 1) {
+          res.status(404).json({ statusCode: 404, message: "Data not found" });
+        } else {
+          var dt = [];
+
+          dt.push({
+            "conversationId": data[0].ConversationID
+          });
+
+          return res.status(200).json({ statusCode: 200, success: true, data: dt[0] });
+        }
+      });
+    });
+  };
 }
 module.exports = new cChat();
 //# sourceMappingURL=chat.js.map
