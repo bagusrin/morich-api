@@ -121,7 +121,7 @@ function cUser() {
 
             var sql2 = "INSERT INTO conversations (UserID_One, UserID_Two, UserOneStatus, UserTwoStatus, \
             TransactTime) \
-            VALUES ('"+email+"','"+invitedBy+"','2','2', NOW())";
+            VALUES ('"+userEmail+"','"+inviterEmail+"','2','2', NOW())";
 
             con.query(sql2, function(err2,data2){
               //con.release(); //24Jun18
