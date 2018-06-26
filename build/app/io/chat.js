@@ -26,6 +26,7 @@ module.exports.io = function (app, io, http, socket) {
 		axios.post(cfg.localhost + 'chat/send', data).then(function (response) {
 
 			if (response.data.success) {
+				var replyId = response.data.data.replyId;
 				var transactTime = response.data.data.transactTime;
 				axios.get(cfg.localhost + 'chat/list?email=' + data.sender).then(response => {
 
@@ -38,6 +39,7 @@ module.exports.io = function (app, io, http, socket) {
 							if (response.data.success) {
 								//console.log(response.data);
 								var dt = {
+									replyId: replyId,
 									email: response.data.data.email,
 									firstName: response.data.data.firstName,
 									lastName: response.data.data.lastName,
