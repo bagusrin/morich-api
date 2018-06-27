@@ -7,8 +7,6 @@ module.exports = {
     app.route('/chat/send').post(chat.send);
     app.route('/chat/user-info').get(chat.getUserInfo);
     app.route('/chat/conversation/id').get(chat.getConversationId);
-   /* app.route('/chat/detail/:id').get(chat.detail);
-    app.route('/chat/post').post(chat.post);
-    app.route('/chat/delete').post(chat.delete);*/
+    app.route('/chat/list/search').get(chat.listSearch);
   }
 };
