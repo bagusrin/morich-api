@@ -9,5 +9,6 @@ module.exports = {
     app.route('/video/admin/post').post(video.post);
     app.route('/video/admin/update').post(video.update);
     app.route('/video/admin/delete').post(video.delete);
+    app.route('/video/admin/publish').post(video.publish);
   }
 };

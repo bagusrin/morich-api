@@ -412,6 +412,91 @@ function cUser() {
       });
     });
   };
+
+  this.userList = function (req, res, next) {
+    connection.acquire(function (err, con) {
+      if (err) throw err;
+
+      var sql = 'SELECT *, user_id as id, user_invited_by as invited_id, (select count(user_id) from users WHERE user_invited_by = id) as total_invited, (select user_email FROM users WHERE user_id = invited_id) as inviter_email, \
+            (select count(user_id) from users WHERE user_invited_by = id AND status <> "0") as member_joined, FIND_IN_SET( user_point, (SELECT GROUP_CONCAT( user_point ORDER BY user_point DESC ) FROM users )) \
+            AS rank FROM users';
+
+      //console.log(sql);
+      con.query(sql, function (err, data) {
+        con.release();
+        if (err) return res.status(500).json({ statusCode: 500, message: err.code });
+
+        var dt = [];
+        for (var i = 0; i < data.length; i++) {
+          var pp = data[i].user_photo ? cfg.photoProfileUrl + '' + data[i].user_photo : null;
+
+          var fullName = data[i].user_firstname + ' ' + data[i].user_lastname;
+
+          var splitName = fullName.trim().split(" ");
+
+          if (splitName.length > 1) {
+            var initialName = splitName[0].charAt(0) + '' + splitName[1].charAt(0);
+          } else {
+            var initialName = splitName[0].charAt(0);
+          }
+
+          initialName = initialName.toUpperCase();
+
+          dt.push({
+            "userId": data[i].user_id,
+            "email": data[i].user_email,
+            "firstName": data[i].user_firstname,
+            "lastName": data[i].user_lastname,
+            "initialName": initialName,
+            "photoUrl": pp,
+            "mobileNumber": data[i].user_mobile_number,
+            "phoneNumber": data[i].user_phone_number,
+            "line": data[i].user_line,
+            "whatsapp": data[i].user_whatsapp,
+            "facebook": data[i].user_facebook,
+            "instagram": data[i].user_instagram,
+            "wechat": data[i].user_wechat,
+            "country": data[i].user_country,
+            "address1": data[i].user_address1,
+            "address2": data[i].user_address2,
+            "language": data[i].user_language,
+            "ranking": data[i].rank,
+            "url": "https://morichworldwide.com/" + data[i].user_username,
+            "totalInvited": data[i].total_invited,
+            "memberJoined": data[i].member_joined,
+            "emailInviter": data[i].inviter_email,
+            "status": data[i].status,
+            "inviterId": data[i].user_invited_by
+          });
+        }
+        return res.status(200).json({ statusCode: 200, success: true, data: dt });
+      });
+    });
+  };
+
+  this.activated = function (req, res, next) {
+
+    var id = req.body.userId;
+    var inviterId = req.body.inviterId;
+
+    connection.acquire(function (err, con) {
+      if (err) throw err;
+
+      var sql = "UPDATE users set status = 1 \
+      ,update_date = NOW() WHERE user_id = '" + id + "' ";
+
+      con.query(sql, function (err, data) {
+
+        if (err) return res.status(500).json({ statusCode: 500, message: err.code });
+
+        if (data.affectedRows == 0) return res.status(500).json({ statusCode: 500, message: "either 'email' or 'invitedBy' wrong" });
+
+        userModel.updatePoint(inviterId, 3, res, function (result) {
+          return res.status(200).json({ statusCode: 200, success: true });
+        });
+      });
+    });
+  };
 }
 module.exports = new cUser();
 //# sourceMappingURL=user.js.map

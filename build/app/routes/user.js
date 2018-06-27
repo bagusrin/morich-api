@@ -23,6 +23,8 @@ module.exports = {
     app.route('/user/statistic').get(user.userStatisticByEmail);
     app.route('/user/uploadphoto').post(user.uploadAction, user.userUploadPhoto);
     app.route('/user/submission').post(user.userSubmission);
+    app.route('/user/list').get(user.userList);
+    app.route('/user/activated').post(user.activated);
   }
 };
 //# sourceMappingURL=user.js.map

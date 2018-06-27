@@ -310,6 +310,36 @@ function cVideoAdmin() {
     
   };
 
+  this.publish = function(req,res,next) {
+    var videoId = req.body.videoId;
+
+    connection.acquire(function(err,con){
+      if (err) throw err;
+
+      var sql = "UPDATE videos_admin SET status = 1 \
+      ,update_date = NOW() WHERE video_id = '"+videoId+"'";
+
+      //console.log(sql);
+
+        
+
+      con.query(sql, function(err,data){
+        con.release();
+        if(err)
+            return res.status(500).json({statusCode:500,message: err.code});
+
+        if(data.affectedRows == 0)
+          return res.status(500).json({statusCode:500,message: "Failed to publish video. Check your parameter."}); 
+
+        return res.status(200).json({
+                                statusCode:200,
+                                success:true
+                            });
+ 
+      });
+    });
+  };
+
   this.delete = function(req,res,next) {
     var videoId = req.body.videoId;
 
