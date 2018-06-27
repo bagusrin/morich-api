@@ -59,8 +59,9 @@ function cGeneral() {
           var dt = [];
 
           dt.push({
-            "androidVersion": data[0].android_version,
-            "iosVersion": data[0].ios_version
+            "versionCode": data[0].version_code,
+            "buildVersion": data[0].build_version,
+            "isMaintenance": data[0].is_maintenance == 0 ? false : true
           });
 
           return res.status(200).json({ statusCode: 200, success: true, data: dt[0] });
