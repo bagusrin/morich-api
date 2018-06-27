@@ -46,18 +46,18 @@ function cUser() {
         phone = req.body.phoneNumber,
         status = 0;
 
-    userModel.checkEmailExist(email,res,function(result){  
+    connection.acquire(function(err,con){
+      if (err) throw err;
 
-      userModel.getUserIdByEmail(invitedBy,res,function(result){
+      userModel.checkEmailExist(con,email,res,function(result){  
 
-        var userId = result.userId;
+        userModel.getUserIdByEmail(con,invitedBy,res,function(result){
 
-        userModel.getReferalCodeByEmail(invitedBy,res,function(result){
+          var userId = result.userId;
 
-          var referalCode = result.referalCode;
+          userModel.getReferalCodeByEmail(con,invitedBy,res,function(result){
 
-          connection.acquire(function(err,con){
-            if (err) throw err;
+            var referalCode = result.referalCode;
 
             var sql = "INSERT INTO users (user_email,user_firstname,user_lastname,user_mobile_number,user_invited_by,user_referal_code,status,post_date) \
                       VALUES ('"+email+"', '"+name+"', '', '"+phone+"', '"+userId+"', '"+referalCode+"', '"+status+"', NOW())";
@@ -70,9 +70,10 @@ function cUser() {
                 emailModel.sendEmailRegister(email,referalCode)
                 return res.status(200).json({statusCode:200,success:true,data:{"userId":data.insertId}});
             });
-          });
-        });      
+          });      
+        });
       });
+
     });
   };
 
@@ -89,33 +90,32 @@ function cUser() {
     if(req.body.password != req.body.retypePassword)
       return res.status(500).json({statusCode:500,message: "Password doesn't match"});
 
-    userModel.checkUserReferalCode(email,invitedBy,res,function(result){
-      //console.log(result);
+    
+    connection.acquire(function(err,con){
 
-      var userName = result.userName;
-      var userEmail = result.userEmail;
-      var userId = result.userId;
-      var inviterName = result.inviterName;
-      var inviterEmail = result.inviterEmail;
-      var userIdInvitedBy = result.inviterId;
 
-      var splitName = userName.trim().split(" ");
+      userModel.checkUserReferalCode(con,email,invitedBy,res,function(result){
 
-      if(splitName.length > 1){
-        var uname = splitName[0]+''+userId;
-      }else{
-        var uname = splitName[0]+''+userId;
-      }
+        var userName = result.userName;
+        var userEmail = result.userEmail;
+        var userId = result.userId;
+        var inviterName = result.inviterName;
+        var inviterEmail = result.inviterEmail;
+        var userIdInvitedBy = result.inviterId;
 
-      uname = uname.toLowerCase();  
+        var splitName = userName.trim().split(" ");
 
-      connection.acquire(function(err,con){
-        if (err) throw err;
+        if(splitName.length > 1){
+          var uname = splitName[0]+''+userId;
+        }else{
+          var uname = splitName[0]+''+userId;
+        }
+
+        uname = uname.toLowerCase();  
 
         var sql = "UPDATE users set user_username = '"+uname+"', user_password = '"+password+"', status = 2, update_date = NOW() WHERE user_email = '"+email+"'";
           
         con.query(sql, function(err,data){
-            //con.release(); //24Jun18
             if(err)
               return res.status(500).json({statusCode:500,message: err.code});
 
@@ -124,19 +124,20 @@ function cUser() {
             VALUES ('"+userEmail+"','"+inviterEmail+"','2','2', NOW())";
 
             con.query(sql2, function(err2,data2){
-              //con.release(); //24Jun18
               if(err2)
                 return res.status(500).json({statusCode:500,message: err2.code});
               
-              userModel.updatePoint(userIdInvitedBy,1,res,function(result){
+              userModel.updatePoint(con,userIdInvitedBy,1,res,function(result){
                 emailModel.sendEmailCompleteRegister(userName,userEmail,inviterName,inviterEmail);
                 return res.status(200).json({statusCode:200,success:true,data:{"userId":userId}});
               });
             });
-            
-            
         });
+
+          con.release();
       });
+
+    
     });
   };
 
@@ -263,11 +264,16 @@ function cUser() {
   this.userGetIdByEmail = function(req,res,next) {
       var email = req.query.email;
 
-      userModel.getUserIdByEmail(email,res,function(result){
+      connection.acquire(function(err,con){
+        if (err) throw err;
 
-        var userId = result.userId;
-        return res.status(200).json({statusCode:200,success:true,data:{"userId":userId}});
+        userModel.getUserIdByEmail(con,email,res,function(result){
 
+          var userId = result.userId;
+          return res.status(200).json({statusCode:200,success:true,data:{"userId":userId}});
+
+        });
+        con.release();
       }); 
   };
 
@@ -301,6 +307,7 @@ function cUser() {
             return res.status(200).json({statusCode:200,success:true,data:dt[0]});
           }
       });
+    
     });
   };
 
@@ -340,18 +347,17 @@ function cUser() {
       ,update_date = NOW() WHERE user_email = '"+email+"'";
         
       con.query(sql, function(err,data){
-          con.release();
           
           if(err)
             return res.status(500).json({statusCode:500,message: err.code});
           
-          userModel.getUserIdByEmail(email,res,function(result){
+          userModel.getUserIdByEmail(con,email,res,function(result){
             var userId = result.userId;
             return res.status(200).json({statusCode:200,success:true,data:{"userId":userId}});
           });
       });
 
-      //con.end();
+      con.release();
 
     });
     
@@ -365,25 +371,29 @@ function cUser() {
     var photoProfile = req.file.filename;
     var email = req.body.email;
 
-    userModel.getUserIdByEmail(email,res,function(result){
+    connection.acquire(function(err,con){
+      if (err) throw err;
+
+      userModel.getUserIdByEmail(con,email,res,function(result){
 
         var userId = result.userId;
 
         var sql = "UPDATE users set user_photo = '"+photoProfile+"' \
         ,update_date = NOW() WHERE user_id= '"+userId+"'";
 
-        connection.acquire(function(err,con){
-          if (err) throw err;
-
-          con.query(sql, function(err,data){
-            
-            if(err)
-              return res.status(500).json({statusCode:500,message: err.code});
-            
-            return res.status(200).json({statusCode:200,success:true,data:{"userId":userId,"photoFilename":photoProfile}});
-          });
+        con.query(sql, function(err,data){
+          
+          if(err)
+            return res.status(500).json({statusCode:500,message: err.code});
+          
+          return res.status(200).json({statusCode:200,success:true,data:{"userId":userId,"photoFilename":photoProfile}});
         });
+      });
+
+      con.release();
+
     });
+
   };
 
   this.uploadAction = upload.single('image');
@@ -428,7 +438,7 @@ function cUser() {
                 console.log(sql);
         
       con.query(sql, function(err,data){
-          
+          con.release();
           if(err)
             return res.status(500).json({statusCode:500,message: err.code});
 
@@ -512,7 +522,6 @@ function cUser() {
       ,update_date = NOW() WHERE user_id = '"+id+"' ";
         
       con.query(sql, function(err,data){
-          
           if(err)
             return res.status(500).json({statusCode:500,message: err.code});
 
@@ -523,7 +532,7 @@ function cUser() {
             return res.status(200).json({statusCode:200,success:true});
           });
       });
-    
+      con.release();
     });
   };
 }

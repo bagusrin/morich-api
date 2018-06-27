@@ -11,15 +11,16 @@ function cMember() {
     var page = req.query.page == undefined ? 1 : req.query.page;
     var limit = req.query.limit == undefined ? 20 : req.query.limit;
 
-    userModel.getUserIdByEmail(email, res, function (result) {
+    connection.acquire(function (err, con) {
+      if (err) throw err;
 
-      var userId = result.userId;
+      userModel.getUserIdByEmail(con, email, res, function (result) {
 
-      var offset = (page - 1) * limit;
-      var count = " LIMIT " + offset + "," + limit;
+        var userId = result.userId;
 
-      connection.acquire(function (err, con) {
-        if (err) throw err;
+        var offset = (page - 1) * limit;
+        var count = " LIMIT " + offset + "," + limit;
+
         var sql = 'SELECT * FROM users WHERE user_invited_by = "' + userId + '" AND status = 2 ORDER BY user_id DESC ' + count;
         con.query(sql, function (err, data) {
           con.release();
@@ -74,15 +75,16 @@ function cMember() {
     var page = req.query.page == undefined ? 1 : req.query.page;
     var limit = req.query.limit == undefined ? 20 : req.query.limit;
 
-    userModel.getUserIdByEmail(email, res, function (result) {
+    connection.acquire(function (err, con) {
+      if (err) throw err;
 
-      var userId = result.userId;
+      userModel.getUserIdByEmail(con, email, res, function (result) {
 
-      var offset = (page - 1) * limit;
-      var count = " LIMIT " + offset + "," + limit;
+        var userId = result.userId;
 
-      connection.acquire(function (err, con) {
-        if (err) throw err;
+        var offset = (page - 1) * limit;
+        var count = " LIMIT " + offset + "," + limit;
+
         var sql = 'SELECT * FROM users WHERE user_invited_by = "' + userId + '" AND status = 1 ORDER BY user_id DESC ' + count;
         con.query(sql, function (err, data) {
           con.release();
@@ -135,14 +137,14 @@ function cMember() {
     var email = req.body.email,
         invitedBy = req.body.invitedBy;
 
-    userModel.getUserIdByEmail(invitedBy, res, function (result) {
-      var userId = result.userId;
+    connection.acquire(function (err, con) {
+      if (err) throw err;
 
-      connection.acquire(function (err, con) {
-        if (err) throw err;
+      userModel.getUserIdByEmail(con, invitedBy, res, function (result) {
+        var userId = result.userId;
 
         var sql = "UPDATE users set status = 1 \
-        ,update_date = NOW() WHERE user_email = '" + email + "' AND user_invited_by = '" + userId + "' ";
+          ,update_date = NOW() WHERE user_email = '" + email + "' AND user_invited_by = '" + userId + "' ";
 
         con.query(sql, function (err, data) {
 
@@ -163,15 +165,16 @@ function cMember() {
     var page = req.query.page == undefined ? 1 : req.query.page;
     var limit = req.query.limit == undefined ? 20 : req.query.limit;
 
-    userModel.getUserIdByEmail(email, res, function (result) {
+    connection.acquire(function (err, con) {
+      if (err) throw err;
 
-      var userId = result.userId;
+      userModel.getUserIdByEmail(con, email, res, function (result) {
 
-      var offset = (page - 1) * limit;
-      var count = " LIMIT " + offset + "," + limit;
+        var userId = result.userId;
 
-      connection.acquire(function (err, con) {
-        if (err) throw err;
+        var offset = (page - 1) * limit;
+        var count = " LIMIT " + offset + "," + limit;
+
         var sql = 'SELECT * FROM users WHERE user_invited_by = "' + userId + '" AND status <> 0 ORDER BY user_point DESC ' + count;
         con.query(sql, function (err, data) {
           con.release();
