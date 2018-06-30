@@ -47,6 +47,19 @@ var email = {
 		sgMail.send(msg);
 
 		return sgMail;
+	},
+	sendEmailUserRegisterFromAdmin: function (email, fullName, password) {
+
+		const msg = {
+			to: email,
+			from: { email: 'hello@morichworldwide.com', name: 'MorichWorldWide' },
+			subject: 'Hello ' + fullName,
+			html: '<p><strong>Your account has been successfully registered.</strong></p><p><b>Login Account:</b></p><p>Username: ' + email + '</p><p>Temporary Password: ' + password + '</p>'
+		};
+
+		sgMail.send(msg);
+
+		return sgMail;
 	}
 
 };

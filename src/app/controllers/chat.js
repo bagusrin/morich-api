@@ -322,96 +322,104 @@ function cChat() {
                   ORDER BY TransactTime DESC "+count;
         
         con.query(sql, function(err,data){
-          con.release();
           if(err)
               return res.status(500).json({statusCode:500,message: err.code});
-             
-          //console.log(data);
-          var dt = [];
-          for (var i = 0; i < data.length; i++) {
 
-              var ppSender = (data[i].senderPhoto) ? cfg.photoProfileUrl+''+data[i].senderPhoto : null;
+          var sql2 = "UPDATE replies set Status = 2 WHERE UserID <> '"+requestBy+"' AND ConversationID = '"+conversationId+"'";
+          
+          con.query(sql2, function(err2,data2){
+            if(err2)
+              return res.status(500).json({statusCode:500,message: err2.code});
 
-              var fullNameSender = data[i].senderFirstname+' '+data[i].senderLastname;
+            var dt = [];
+            for (var i = 0; i < data.length; i++) {
 
-              var splitNameSender = fullNameSender.trim().split(" ");
+                var ppSender = (data[i].senderPhoto) ? cfg.photoProfileUrl+''+data[i].senderPhoto : null;
 
-              if(splitNameSender.length > 1){
-                var initialNameSender = splitNameSender[0].charAt(0)+''+splitNameSender[1].charAt(0);
-              }else{
-                var initialNameSender = splitNameSender[0].charAt(0);
-              } 
+                var fullNameSender = data[i].senderFirstname+' '+data[i].senderLastname;
+
+                var splitNameSender = fullNameSender.trim().split(" ");
+
+                if(splitNameSender.length > 1){
+                  var initialNameSender = splitNameSender[0].charAt(0)+''+splitNameSender[1].charAt(0);
+                }else{
+                  var initialNameSender = splitNameSender[0].charAt(0);
+                } 
 
 
-              var ppReceiver = (data[i].receiverPhoto) ? cfg.photoProfileUrl+''+data[i].receiverPhoto : null;
+                var ppReceiver = (data[i].receiverPhoto) ? cfg.photoProfileUrl+''+data[i].receiverPhoto : null;
 
-              var fullNameReceiver = data[i].receiverFirstname+' '+data[0].receiverLastname;
+                var fullNameReceiver = data[i].receiverFirstname+' '+data[0].receiverLastname;
 
-              var splitNameReceiver = fullNameReceiver.trim().split(" ");
+                var splitNameReceiver = fullNameReceiver.trim().split(" ");
 
-              if(splitNameReceiver.length > 1){
-                var initialNameReceiver = splitNameReceiver[0].charAt(0)+''+splitNameReceiver[1].charAt(0);
-              }else{
-                var initialNameReceiver = splitNameReceiver[0].charAt(0);
-              }
+                if(splitNameReceiver.length > 1){
+                  var initialNameReceiver = splitNameReceiver[0].charAt(0)+''+splitNameReceiver[1].charAt(0);
+                }else{
+                  var initialNameReceiver = splitNameReceiver[0].charAt(0);
+                }
 
-              if(data[i].UserID == requestBy){ 
+                if(data[i].UserID == requestBy){ 
 
-                dt.push({
-                  "replyId": data[i].ReplyID,
-                  "conversationId": data[i].ConversationID,
-                  "message": data[i].Reply,
-                  "senderId": data[i].senderId,
-                  "reciverId": data[i].receiverId,
-                  "senderEmail": data[i].UserID,
-                  "senderFirstname": data[i].senderFirstname,
-                  "senderLastname": data[i].senderLastname,
-                  "photoURLSender": ppSender,
-                  "initialNameSender": initialNameSender,
-                  "receiverEmail": data[i].receiver,
-                  "receiverFirstname": data[i].receiverFirstname,
-                  "receiverLastname": data[i].receiverLastname,
-                  "photoURLReceiver": ppReceiver,
-                  "initialNameReceiver": initialNameReceiver,
-                  "transactTime": data[i].TransactTime,
-                  "replyStatus": data[i].Status,
-                  "from": data[i].UserID,
-                  "to": receiver
-                });
-              
-              }else{
+                  dt.push({
+                    "replyId": data[i].ReplyID,
+                    "conversationId": data[i].ConversationID,
+                    "message": data[i].Reply,
+                    "senderId": data[i].senderId,
+                    "reciverId": data[i].receiverId,
+                    "senderEmail": data[i].UserID,
+                    "senderFirstname": data[i].senderFirstname,
+                    "senderLastname": data[i].senderLastname,
+                    "photoURLSender": ppSender,
+                    "initialNameSender": initialNameSender,
+                    "receiverEmail": data[i].receiver,
+                    "receiverFirstname": data[i].receiverFirstname,
+                    "receiverLastname": data[i].receiverLastname,
+                    "photoURLReceiver": ppReceiver,
+                    "initialNameReceiver": initialNameReceiver,
+                    "transactTime": data[i].TransactTime,
+                    "replyStatus": data[i].Status,
+                    "from": data[i].UserID,
+                    "to": receiver
+                  });
+                
+                }else{
 
-                dt.push({
-                  "replyId": data[i].ReplyID,
-                  "conversationId": data[i].ConversationID,
-                  "message": data[i].Reply,
-                  "senderId": data[i].senderId,
-                  "reciverId": data[i].receiverId,
-                  "senderEmail": data[i].UserID,
-                  "senderFirstname": data[i].senderFirstname,
-                  "senderLastname": data[i].senderLastname,
-                  "photoURLSender": ppSender,
-                  "initialNameSender": initialNameSender,
-                  "receiverEmail": data[i].receiver,
-                  "receiverFirstname": data[i].receiverFirstname,
-                  "receiverLastname": data[i].receiverLastname,
-                  "photoURLReceiver": ppReceiver,
-                  "initialNameReceiver": initialNameReceiver,
-                  "transactTime": data[i].TransactTime,
-                  "replyStatus": data[i].Status,
-                  "from": data[i].UserID,
-                  "to": requestBy
-                });
-              }
-          }
+                  dt.push({
+                    "replyId": data[i].ReplyID,
+                    "conversationId": data[i].ConversationID,
+                    "message": data[i].Reply,
+                    "senderId": data[i].senderId,
+                    "reciverId": data[i].receiverId,
+                    "senderEmail": data[i].UserID,
+                    "senderFirstname": data[i].senderFirstname,
+                    "senderLastname": data[i].senderLastname,
+                    "photoURLSender": ppSender,
+                    "initialNameSender": initialNameSender,
+                    "receiverEmail": data[i].receiver,
+                    "receiverFirstname": data[i].receiverFirstname,
+                    "receiverLastname": data[i].receiverLastname,
+                    "photoURLReceiver": ppReceiver,
+                    "initialNameReceiver": initialNameReceiver,
+                    "transactTime": data[i].TransactTime,
+                    "replyStatus": data[i].Status,
+                    "from": data[i].UserID,
+                    "to": requestBy
+                  });
+                }
+            }
 
-          return res.status(200).json({
-                                  statusCode:200,
-                                  success:true,
-                                  data:dt
-                              });
- 
-      });
+            return res.status(200).json({
+                                    statusCode:200,
+                                    success:true,
+                                    data:dt
+                                });
+
+            
+          });
+          
+        con.release();
+        });
     });
   }
 

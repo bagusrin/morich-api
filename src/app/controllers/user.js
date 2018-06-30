@@ -3,6 +3,7 @@ var connection = require('../../../config/db');
 var jwt = require('jsonwebtoken'),
     bcrypt = require('bcrypt'),
     userModel = require('../models/user'),
+    generalModel = require('../models/general'),
     emailModel = require('../models/email'),
     cfg = require('../../../config'),
     empty = require('is-empty');
@@ -533,6 +534,60 @@ function cUser() {
           });
       });
       con.release();
+    });
+  };
+
+  this.userAdminPost = function(req,res,next) {
+
+    if( empty(req.body.firstName) || empty(req.body.lastName) || empty(req.body.mobileNumber) || empty(req.body.email) )
+      return res.status(500).json({statusCode:500,message: "Please check your parameter or value required"}); 
+     
+    var email = req.body.email,
+        firstName = req.body.firstName,
+        lastName = req.body.lastName,
+        mobileNumber = req.body.mobileNumber,
+        password = generalModel.getRandomStr(),
+        passwordEncrypt = bcrypt.hashSync(password, 10);
+    
+    connection.acquire(function(err,con){
+      if (err) throw err;
+
+      userModel.checkEmailExist(con,email,res,function(result){ 
+
+        var sql = "INSERT INTO users (user_email,user_password,user_firstname,user_lastname,user_mobile_number,user_invited_by,post_date) \
+                      VALUES ('"+email+"', '"+passwordEncrypt+"', '"+firstName+"', '"+lastName+"', '"+mobileNumber+"','root',NOW())";
+              
+        con.query(sql, function(err,data){
+            
+            if(err)
+              return res.status(500).json({statusCode:500,message: err.code});
+
+
+            var fullName = firstName+' '+lastName;
+            var splitName = fullName.trim().split(" ");
+
+            if(splitName.length > 1){
+              var uname = splitName[0]+''+data.insertId;
+            }else{
+              var uname = splitName[0]+''+data.insertId;
+            }
+
+            uname = uname.toLowerCase();
+
+            var userId = data.insertId;; 
+            
+            var sql2 = "UPDATE users set user_username = '"+uname+"', status = 1, update_date = NOW() WHERE user_email = '"+email+"'";
+          
+            con.query(sql2, function(err2,data2){
+              if(err2)
+                return res.status(500).json({statusCode:500,message: err2.code});
+
+              emailModel.sendEmailUserRegisterFromAdmin(email,fullName,password);
+              return res.status(200).json({statusCode:200,success:true,data:{"userId":userId}});  
+            });
+        });
+        con.release();
+      })
     });
   };
 }

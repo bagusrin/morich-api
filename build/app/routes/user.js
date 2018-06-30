@@ -25,6 +25,7 @@ module.exports = {
     app.route('/user/submission').post(user.userSubmission);
     app.route('/user/list').get(user.userList);
     app.route('/user/activated').post(user.activated);
+    app.route('/user/admin-post').post(user.userAdminPost);
   }
 };
 //# sourceMappingURL=user.js.map
