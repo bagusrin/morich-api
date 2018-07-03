@@ -147,19 +147,19 @@ function cUser() {
                   statusCode: 200,
                   success: true,
                   data: {
-                    "userId": data[0].user_id,
-                    "email": data[0].user_email,
-                    "firstName": data[0].user_firstname,
-                    "lastName": data[0].user_lastname,
-                    "mobileNumber": data[0].user_mobile_number,
+                    "userId": data3[0].user_id,
+                    "email": data3[0].user_email,
+                    "firstName": data3[0].user_firstname,
+                    "lastName": data3[0].user_lastname,
+                    "mobileNumber": data3[0].user_mobile_number,
                     "photoUrl": pp,
                     "initialName": initialName,
-                    "ranking": data[0].rank,
-                    "url": "http://morichweb.perihal.id/" + data[0].user_username,
-                    "totalInvited": data[0].total_invited,
-                    "memberJoined": data[0].member_joined,
+                    "ranking": data3[0].rank,
+                    "url": "http://morichweb.perihal.id/" + data3[0].user_username,
+                    "totalInvited": data3[0].total_invited,
+                    "memberJoined": data3[0].member_joined,
                     "isActive": isActive,
-                    "emailInviter": data[0].inviter_email
+                    "emailInviter": data3[0].inviter_email
                   }
                 });
               });
