@@ -155,7 +155,7 @@ function cUser() {
                     "photoUrl": pp,
                     "initialName": initialName,
                     "ranking": data3[0].rank,
-                    "url": "http://morichweb.perihal.id/" + data3[0].user_username,
+                    "url": "https://morichworldwide.com/" + data3[0].user_username,
                     "totalInvited": data3[0].total_invited,
                     "memberJoined": data3[0].member_joined,
                     "isActive": isActive,

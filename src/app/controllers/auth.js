@@ -62,7 +62,7 @@ function cAuth() {
                                     "photoUrl": pp,
                                     "initialName": initialName,
                                     "ranking": data[0].rank,
-                                    "url": "http://morichweb.perihal.id/"+data[0].user_username,
+                                    "url": "https://morichworldwide.com/"+data[0].user_username,
                                     "totalInvited": data[0].total_invited,
                                     "memberJoined": data[0].member_joined,
                                     "isActive": isActive,
