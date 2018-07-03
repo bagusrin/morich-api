@@ -27,7 +27,7 @@ var methods = {
 	},
 	getReferalCodeByEmail: function(con,email,res,callback){
 
-		con.query('SELECT user_id FROM users WHERE user_email = "'+email+'" LIMIT 1', function (err, data, fields){
+		con.query('SELECT user_id, user_username FROM users WHERE user_email = "'+email+'" LIMIT 1', function (err, data, fields){
     		if(err)
         		return res.status(500).json({statusCode:500,message: err.code});
 
@@ -36,9 +36,10 @@ var methods = {
         		if(data.length < 1){
           			return res.status(500).json({statusCode:500,message: "Referal code not found"});
         		}else{
-        			var referalCode = email.split("@");
-        			referalCode = referalCode[0];
-          			callback({"referalCode":referalCode+''+data[0].user_id});
+        			//var referalCode = email.split("@");
+        			//referalCode = referalCode[0];
+          			//callback({"referalCode":referalCode+''+data[0].user_id});
+                    callback({"referalCode":data[0].user_username});
           		}
         	}
 
