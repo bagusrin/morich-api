@@ -219,7 +219,7 @@ function cVideoAdmin() {
       var contentMarketing = !empty(req.body.contentMarketing) ? req.body.contentMarketing : '';
       var youtubeId = youtubeLink.split("v=")[1];
       var youtubeIframe = "https://youtube.com/embed/" + youtubeId;
-      var youtubeImg = "https://i.ytimg.com/vi/" + youtubeId + "/maxresdefault.jpg";
+      var youtubeImg = "https://i.ytimg.com/vi/" + youtubeId + "/hqdefault.jpg";
       var type = req.body.type;
       var position = req.body.position == undefined ? 0 : req.body.position;
       var createdBy = !empty(req.body.email) ? req.body.email : "admin";
@@ -259,7 +259,7 @@ function cVideoAdmin() {
       var contentMarketing = !empty(req.body.contentMarketing) ? req.body.contentMarketing : '';
       var youtubeId = youtubeLink.split("v=")[1];
       var youtubeIframe = "https://youtube.com/embed/" + youtubeId;
-      var youtubeImg = "https://i.ytimg.com/vi/" + youtubeId + "/maxresdefault.jpg";
+      var youtubeImg = "https://i.ytimg.com/vi/" + youtubeId + "/hqdefault.jpg";
       var type = req.body.type;
       var position = req.body.position == undefined ? 0 : req.body.position;
 
