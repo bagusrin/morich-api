@@ -121,7 +121,48 @@ function cUser() {
 
             userModel.updatePoint(con, userIdInvitedBy, 1, res, function (result) {
               emailModel.sendEmailCompleteRegister(userName, userEmail, inviterName, inviterEmail);
-              return res.status(200).json({ statusCode: 200, success: true, data: { "userId": userId } });
+
+              var sql = "SELECT *, user_id as id, user_invited_by as invited_id, (select count(user_id) from users WHERE user_invited_by = id) as total_invited, (select user_email FROM users WHERE user_id = invited_id) as inviter_email, \
+                          (select count(user_id) from users WHERE user_invited_by = id AND status <> '0') as member_joined, FIND_IN_SET( user_point, (SELECT GROUP_CONCAT( user_point ORDER BY user_point DESC ) FROM users )) \
+                      AS rank FROM users WHERE user_email = '" + email + "' LIMIT 1";
+
+              con.query(sql3, function (err3, data3) {
+                if (err3) return res.status(500).json({ statusCode: 500, message: err3.code });
+
+                var pp = data3[0].user_photo ? cfg.photoProfileUrl + '' + data3[0].user_photo : null;
+                var fullName = data3[0].user_firstname + ' ' + data3[0].user_lastname;
+
+                var splitName = fullName.trim().split(" ");
+
+                if (splitName.length > 1) {
+                  var initialName = splitName[0].charAt(0) + '' + splitName[1].charAt(0);
+                } else {
+                  var initialName = splitName[0].charAt(0);
+                }
+
+                initialName = initialName.toUpperCase();
+                var isActive = data3[0].status == 1 ? true : false;
+
+                return res.status(200).json({
+                  statusCode: 200,
+                  success: true,
+                  data: {
+                    "userId": data[0].user_id,
+                    "email": data[0].user_email,
+                    "firstName": data[0].user_firstname,
+                    "lastName": data[0].user_lastname,
+                    "mobileNumber": data[0].user_mobile_number,
+                    "photoUrl": pp,
+                    "initialName": initialName,
+                    "ranking": data[0].rank,
+                    "url": "http://morichweb.perihal.id/" + data[0].user_username,
+                    "totalInvited": data[0].total_invited,
+                    "memberJoined": data[0].member_joined,
+                    "isActive": isActive,
+                    "emailInviter": data[0].inviter_email
+                  }
+                });
+              });
             });
           });
         });
