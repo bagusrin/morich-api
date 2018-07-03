@@ -131,7 +131,7 @@ function cUser() {
               userModel.updatePoint(con,userIdInvitedBy,1,res,function(result){
                 emailModel.sendEmailCompleteRegister(userName,userEmail,inviterName,inviterEmail);
 
-                var sql = "SELECT *, user_id as id, user_invited_by as invited_id, (select count(user_id) from users WHERE user_invited_by = id) as total_invited, (select user_email FROM users WHERE user_id = invited_id) as inviter_email, \
+                var sql3 = "SELECT *, user_id as id, user_invited_by as invited_id, (select count(user_id) from users WHERE user_invited_by = id) as total_invited, (select user_email FROM users WHERE user_id = invited_id) as inviter_email, \
                           (select count(user_id) from users WHERE user_invited_by = id AND status <> '0') as member_joined, FIND_IN_SET( user_point, (SELECT GROUP_CONCAT( user_point ORDER BY user_point DESC ) FROM users )) \
                       AS rank FROM users WHERE user_email = '"+email+"' LIMIT 1";
 
