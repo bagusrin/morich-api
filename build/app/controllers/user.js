@@ -536,7 +536,7 @@ function cUser() {
 
         if (data.affectedRows == 0) return res.status(500).json({ statusCode: 500, message: "either 'email' or 'invitedBy' wrong" });
 
-        userModel.updatePoint(inviterId, 3, res, function (result) {
+        userModel.updatePoint(con, inviterId, 3, res, function (result) {
           return res.status(200).json({ statusCode: 200, success: true });
         });
       });
