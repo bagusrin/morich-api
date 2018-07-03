@@ -61,6 +61,19 @@ var email = {
 		
 		return sgMail;
 	},
+	sendEmailContactUs: function(email,name,message) {
+		
+	    const msg = {
+	    	to: 'hello@morichworldwide.com',
+	        from: {email: email,name: 'MorichWorldWide | '+name},
+	        subject: 'Message from '+name,
+	        html: '<p>'+message+'</p>',
+	    };
+
+	    sgMail.send(msg);
+		
+		return sgMail;
+	},
 
 };
 

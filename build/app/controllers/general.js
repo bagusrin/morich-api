@@ -1,4 +1,6 @@
 var connection = require('../../../config/db');
+var emailModel = require('../models/email');
+var empty = require('is-empty');
 
 function cGeneral() {
   this.countryList = function (req, res, next) {
@@ -68,6 +70,14 @@ function cGeneral() {
         }
       });
     });
+  };
+
+  this.contactUs = function (req, res, next) {
+    console.log(req.body);
+    if (empty(req.body.email) || empty(req.body.name) || empty(req.body.message)) return res.status(500).json({ statusCode: 500, message: "Please check your parameter or value required" });
+
+    emailModel.sendEmailContactUs(req.body.email, req.body.name, req.body.message);
+    return res.status(200).json({ statusCode: 200, success: true });
   };
 }
 module.exports = new cGeneral();

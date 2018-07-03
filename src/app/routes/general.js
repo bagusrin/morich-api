@@ -5,5 +5,6 @@ module.exports = {
   	app.route('/language/list').get(general.languageList);
     app.route('/country/list').get(general.countryList);
     app.route('/apps/config').get(general.appsVersion);
+    app.route('/contactus').post(general.contactUs);
   }
 };
