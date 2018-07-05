@@ -5,11 +5,13 @@ var jwt = require('jsonwebtoken'),
     crypto = require('crypto'),
     userModel = require('../models/user'),
     emailModel = require('../models/email');
-cfg = require('../../../config');
+cfg = require('../../../config'), empty = require('is-empty');
 
 function cAuth() {
 
   this.login = function (req, res, next) {
+    if (empty(req.body.email) || empty(req.body.password)) return res.status(500).json({ statusCode: 500, message: "Please check your parameter or value required" });
+
     connection.acquire(function (err, con) {
       if (err) throw err;
 
@@ -72,6 +74,7 @@ function cAuth() {
   };
 
   this.forgotPassword = function (req, res, next) {
+    if (empty(req.body.email)) return res.status(500).json({ statusCode: 500, message: "Please check your parameter or value required" });
     connection.acquire(function (err, con) {
       if (err) throw err;
 
@@ -120,6 +123,7 @@ function cAuth() {
   };
 
   this.passwordResetPost = function (req, res, next) {
+    if (empty(req.body.token) || empty(req.body.password) || empty(req.body.retypePassword)) return res.status(500).json({ statusCode: 500, message: "Please check your parameter or value required" });
     connection.acquire(function (err, con) {
       if (err) throw err;
 
