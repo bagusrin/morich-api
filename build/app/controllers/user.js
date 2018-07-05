@@ -141,7 +141,25 @@ function cUser() {
                 }
 
                 initialName = initialName.toUpperCase();
-                var isActive = data3[0].status == 1 ? true : false;
+                //var isActive = (data3[0].status == 1) ? true : false;
+
+                var statusAccount = "";
+
+                if (data3[0].status == 0) {
+                  statusAccount = "not active";
+                }
+
+                if (data3[0].status == 1) {
+                  statusAccount = "regular";
+                }
+
+                if (data3[0].status == 2) {
+                  statusAccount = "potential";
+                }
+
+                if (data3[0].status == 3) {
+                  statusAccount = "premium";
+                }
 
                 return res.status(200).json({
                   statusCode: 200,
@@ -158,7 +176,8 @@ function cUser() {
                     "url": "https://morichworldwide.com/" + data3[0].user_username,
                     "totalInvited": data3[0].total_invited,
                     "memberJoined": data3[0].member_joined,
-                    "isActive": isActive,
+                    //"isActive": isActive,
+                    "accountStatus": statusAccount,
                     "emailInviter": data3[0].inviter_email
                   }
                 });
@@ -580,7 +599,7 @@ function cUser() {
 
           var userId = data.insertId;;
 
-          var sql2 = "UPDATE users set user_username = '" + uname + "', status = 1, update_date = NOW() WHERE user_email = '" + email + "'";
+          var sql2 = "UPDATE users set user_username = '" + uname + "', status = 3, update_date = NOW() WHERE user_email = '" + email + "'";
 
           con.query(sql2, function (err2, data2) {
             if (err2) return res.status(500).json({ statusCode: 500, message: err2.code });
