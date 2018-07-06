@@ -41,7 +41,7 @@ var email = {
 			to: email,
 			from: { email: 'hello@morichworldwide.com', name: 'MorichWorldWide' },
 			subject: 'Reset your password!!!',
-			html: '<p>To reset your password, please click or copy paste this link https://morich.web/password-reset/' + token + ' on your browser. '
+			html: '<p>To reset your password, please click or copy paste this link https://morichworldwide/password-reset/' + token + ' on your browser. '
 		};
 
 		sgMail.send(msg);

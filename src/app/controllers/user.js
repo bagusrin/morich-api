@@ -278,7 +278,7 @@ function cUser() {
                 "totalInvited": data[0].total_invited,
                 "memberJoined": data[0].member_joined,
                 "emailInviter": data[0].inviter_email,
-                "accountStatus": statusAccount,
+                "accountStatus": statusAccount
               });
 
               return res.status(200).json({statusCode:200,success:true,data:dt[0]});
