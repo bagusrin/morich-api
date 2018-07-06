@@ -237,6 +237,24 @@ function cUser() {
 
               initialName = initialName.toUpperCase();
 
+              var statusAccount = "";
+
+              if(data[0].status == 0){
+                statusAccount = "not active";
+              }
+
+              if(data[0].status == 1){
+                statusAccount = "regular";
+              }
+
+              if(data[0].status == 2){
+                statusAccount = "potential";
+              }
+
+              if(data[0].status == 3){
+                statusAccount = "premium";
+              }
+
               dt.push({
                 "userId": data[0].user_id,
                 "email": data[0].user_email,
@@ -259,7 +277,8 @@ function cUser() {
                 "url": "https://morichworldwide.com/"+data[0].user_username,
                 "totalInvited": data[0].total_invited,
                 "memberJoined": data[0].member_joined,
-                "emailInviter": data[0].inviter_email
+                "emailInviter": data[0].inviter_email,
+                "accountStatus": statusAccount,
               });
 
               return res.status(200).json({statusCode:200,success:true,data:dt[0]});
