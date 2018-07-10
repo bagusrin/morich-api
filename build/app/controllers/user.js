@@ -501,9 +501,13 @@ function cUser() {
     connection.acquire(function (err, con) {
       if (err) throw err;
 
-      var sql = 'SELECT *, user_id as id, user_invited_by as invited_id, (select count(user_id) from users WHERE user_invited_by = id) as total_invited, (select user_email FROM users WHERE user_id = invited_id) as inviter_email, \
-            (select count(user_id) from users WHERE user_invited_by = id AND status <> "0") as member_joined, FIND_IN_SET( user_point, (SELECT GROUP_CONCAT( user_point ORDER BY user_point DESC ) FROM users )) \
-            AS rank FROM users';
+      var sql = 'SELECT u.*, s.*, u.user_id as userID, u.post_date as postDate, s.post_date as submit_app_date, u.user_id as id, \
+          u.user_invited_by as invited_id, \
+          (select count(user_id) from users WHERE user_invited_by = id) as total_invited, \
+          (select user_email FROM users WHERE user_id = invited_id) as inviter_email, \
+          (select count(user_id) from users WHERE user_invited_by = id AND status <> "0") as member_joined, \
+          FIND_IN_SET( user_point, (SELECT GROUP_CONCAT( user_point ORDER BY user_point DESC ) FROM users )) \
+          AS rank FROM users u LEFT JOIN application_submission s ON u.user_id = s.user_id';
 
       //console.log(sql);
       con.query(sql, function (err, data) {
@@ -526,8 +530,44 @@ function cUser() {
 
           initialName = initialName.toUpperCase();
 
+          var statusAccount = "";
+
+          if (data[i].status == 0) {
+            statusAccount = "not active";
+          }
+
+          if (data[i].status == 1) {
+            statusAccount = "regular";
+          }
+
+          if (data[i].status == 2) {
+            statusAccount = "potential";
+          }
+
+          if (data[i].status == 3) {
+            statusAccount = "premium";
+          }
+
+          var app = [];
+          if (!empty(data[i].user_id)) {
+            app = {
+              "city": data[i].city,
+              "age": data[i].age,
+              "occupation": data[i].current_occupation,
+              "isExperienceInMobileBusiness": data[i].is_experience_mobile_business,
+              "targetMobileBusiness180Days": data[i].target_mobile_business_180_days,
+              "reason": data[i].reason,
+              "urgencyLevel": data[i].urgency_level,
+              "seriousLevel": data[i].serious_level,
+              "capitalInvestment": data[i].capital_investment,
+              "readyToJoin": data[i].ready_to_join,
+              "isAvailableContactToMobile": data[i].is_available_contact_to_mobile,
+              "submitAppDate": data[i].submit_app_date
+            };
+          }
+
           dt.push({
-            "userId": data[i].user_id,
+            "userId": data[i].userID,
             "email": data[i].user_email,
             "firstName": data[i].user_firstname,
             "lastName": data[i].user_lastname,
@@ -549,8 +589,21 @@ function cUser() {
             "totalInvited": data[i].total_invited,
             "memberJoined": data[i].member_joined,
             "emailInviter": data[i].inviter_email,
-            "status": data[i].status,
-            "inviterId": data[i].user_invited_by
+            "accountStatus": statusAccount,
+            "inviterId": data[i].user_invited_by,
+            "postDate": data[i].postDate,
+            "city": data[i].city,
+            "age": data[i].age,
+            "occupation": data[i].current_occupation,
+            "isExperienceInMobileBusiness": data[i].is_experience_mobile_business,
+            "targetMobileBusiness180Days": data[i].target_mobile_business_180_days,
+            "reason": data[i].reason,
+            "urgencyLevel": data[i].urgency_level,
+            "seriousLevel": data[i].serious_level,
+            "capitalInvestment": data[i].capital_investment,
+            "readyToJoin": data[i].ready_to_join,
+            "isAvailableContactToMobile": data[i].is_available_contact_to_mobile,
+            "submitAppDate": data[i].submit_app_date
           });
         }
         return res.status(200).json({ statusCode: 200, success: true, data: dt });
@@ -566,7 +619,7 @@ function cUser() {
     connection.acquire(function (err, con) {
       if (err) throw err;
 
-      var sql = "UPDATE users set status = 1 \
+      var sql = "UPDATE users set status = '" + req.body.status + "' \
       ,update_date = NOW() WHERE user_id = '" + id + "' ";
 
       con.query(sql, function (err, data) {
