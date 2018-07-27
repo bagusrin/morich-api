@@ -4,7 +4,7 @@ var jwt = require('jsonwebtoken'),
     bcrypt = require('bcrypt'),
     crypto = require('crypto'),
     userModel = require('../models/user'),
-    emailModel = require('../models/email');
+    emailModel = require('../models/email'),
     cfg = require('../../../config'),
     empty = require('is-empty');
  
