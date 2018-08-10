@@ -162,7 +162,7 @@ function cUser() {
                   }
 
                   if(data3[0].status == 1){
-                    statusAccount = "regular";
+                    statusAccount = "business";
                   }
 
                   if(data3[0].status == 2){
@@ -170,7 +170,7 @@ function cUser() {
                   }
 
                   if(data3[0].status == 3){
-                    statusAccount = "premium";
+                    statusAccount = "product";
                   }
 
                   return res.status(200).json({
@@ -246,7 +246,7 @@ function cUser() {
               }
 
               if(data[0].status == 1){
-                statusAccount = "regular";
+                statusAccount = "business";
               }
 
               if(data[0].status == 2){
@@ -254,7 +254,7 @@ function cUser() {
               }
 
               if(data[0].status == 3){
-                statusAccount = "premium";
+                statusAccount = "product";
               }
 
               dt.push({
@@ -572,7 +572,7 @@ function cUser() {
               }
 
               if(data[i].status == 1){
-                statusAccount = "regular";
+                statusAccount = "business";
               }
 
               if(data[i].status == 2){
@@ -580,7 +580,7 @@ function cUser() {
               }
 
               if(data[i].status == 3){
-                statusAccount = "premium";
+                statusAccount = "product";
               }
 
               var app = [];

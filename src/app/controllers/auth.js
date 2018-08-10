@@ -60,7 +60,7 @@ function cAuth() {
           }
 
           if(data[0].status == 1){
-            statusAccount = "regular";
+            statusAccount = "business";
           }
 
           if(data[0].status == 2){
@@ -68,7 +68,7 @@ function cAuth() {
           }
 
           if(data[0].status == 3){
-            statusAccount = "premium";
+            statusAccount = "product";
           }
           
           return res.status(200).json({
