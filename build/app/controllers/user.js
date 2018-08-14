@@ -688,6 +688,30 @@ function cUser() {
       });
     });
   };
+
+  this.userChangePassword = function (req, res, next) {
+
+    if (empty(req.body.email) || empty(req.body.password) || empty(req.body.retypePassword)) return res.status(500).json({ statusCode: 500, message: "Please check your parameter or value required" });
+
+    var email = req.body.email,
+        password = bcrypt.hashSync(req.body.password, 10),
+        retypePassword = req.body.retypePassword;
+
+    if (req.body.password != req.body.retypePassword) return res.status(500).json({ statusCode: 500, message: "Password doesn't match" });
+
+    connection.acquire(function (err, con) {
+
+      var sql = "UPDATE users set user_password = '" + password + "', update_date = NOW() WHERE user_email = '" + email + "'";
+
+      con.query(sql, function (err, data) {
+        con.release();
+        if (err) return res.status(500).json({ statusCode: 500, message: err.code });
+
+        return res.status(200).json({ statusCode: 200, success: true });
+      });
+    });
+  };
 }
+
 module.exports = new cUser();
 //# sourceMappingURL=user.js.map
