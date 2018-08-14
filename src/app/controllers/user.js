@@ -45,6 +45,8 @@ function cUser() {
         email = req.body.email,
         name = req.body.fullName,
         phone = req.body.phoneNumber,
+        oriPassword = generalModel.getRandomStr(),
+        password = bcrypt.hashSync(oriPassword, 10),
         status = 0;
 
     connection.acquire(function(err,con){
@@ -60,15 +62,15 @@ function cUser() {
 
             var referalCode = result.referalCode;
 
-            var sql = "INSERT INTO users (user_email,user_firstname,user_lastname,user_mobile_number,user_invited_by,user_referal_code,status,post_date) \
-                      VALUES ('"+email+"', '"+name+"', '', '"+phone+"', '"+userId+"', '"+referalCode+"', '"+status+"', NOW())";
+            var sql = "INSERT INTO users (user_email,user_password,user_firstname,user_lastname,user_mobile_number,user_invited_by,user_referal_code,status,post_date) \
+                      VALUES ('"+email+"','"+password+"', '"+name+"', '', '"+phone+"', '"+userId+"', '"+referalCode+"', '"+status+"', NOW())";
               
             con.query(sql, function(err,data){
                 
                 if(err)
                   return res.status(500).json({statusCode:500,message: err.code});
                 
-                emailModel.sendEmailRegister(email,referalCode)
+                emailModel.sendEmailRegister(email,referalCode,oriPassword)
                 return res.status(200).json({statusCode:200,success:true,data:{"userId":data.insertId}});
             });
           });      

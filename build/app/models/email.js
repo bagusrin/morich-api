@@ -7,15 +7,16 @@ sgMail.setApiKey(cfg.apikey_sendgrid);
 
 var email = {
 
-	sendEmailRegister: function (to, code) {
+	sendEmailRegister: function (to, code, password) {
 
 		const msg = {
 			to: to,
 			//from: 'hello@pixrom.com',
 			from: { email: 'hello@morichworldwide.com', name: 'MorichWorldWide' },
-			subject: 'Complete Your Registration!!',
+			//subject: 'Complete Your Registration!!',
+			subject: 'Your Registration has been success!!',
 			//text: 'and easy to do anywhere, even with Node.js',
-			html: '<p><strong>Thank you for registering in Morich.</strong></p><p>To complete your registration, please enter this code <b>' + code + '</b> in the field on Morich Mobile App (Android/IOS). '
+			html: '<p><strong>Thank you for registering in Morich.</strong></p><p>To login in app, please enter <b>' + to + '</b> as your username and <b>' + password + '</b> as your password.'
 		};
 
 		sgMail.send(msg);
