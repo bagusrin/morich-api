@@ -78,6 +78,7 @@ function cAuth() {
             "lastName": data[0].user_lastname,
             "mobileNumber": data[0].user_mobile_number,
             "photoUrl": pp,
+            "language": data[0].user_language,
             "initialName": initialName,
             "ranking": data[0].rank,
             "url": "https://morichworldwide.com/" + data[0].user_username,
