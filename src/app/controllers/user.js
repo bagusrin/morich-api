@@ -489,10 +489,10 @@ function cUser() {
     var userId = req.body.userId,
         fullName = req.body.fullName,
         email = req.body.email,
-        phoneNumber = req.body.phoneNumber,
-        mobileNumber = req.body.mobileNumber,
+        hpWa = req.body.hpWa,
         city = req.body.city,
         age = req.body.age,
+        languages = req.body.languages,
         currentOccupation = req.body.currentOccupation,
         isExperienceInMobileBusiness = req.body.isExperienceInMobileBusiness,
         targetMobileBusiness180Days = req.body.targetMobileBusiness180Days,
@@ -503,10 +503,10 @@ function cUser() {
         readyToJoin = req.body.readyToJoin,
         isAvailableContactToMobile = req.body.isAvailableContactToMobile;
 
-    if( empty(userId) || empty(fullName) || empty(email) || empty(mobileNumber) || empty(mobileNumber) 
-      || empty(mobileNumber) || empty(mobileNumber) || empty(mobileNumber) || empty(mobileNumber) || 
-      empty(mobileNumber) || empty(mobileNumber) || empty(mobileNumber) || empty(mobileNumber) || 
-      empty(mobileNumber) || empty(mobileNumber) ){
+    if( empty(userId) || empty(fullName) || empty(email) || empty(hpWa) 
+      || empty(city) || empty(age) || empty(languages) || empty(currentOccupation) || 
+      empty(isExperienceInMobileBusiness) || empty(targetMobileBusiness180Days) || empty(reason) || empty(urgencyLevel) || 
+      empty(seriousLevel) || empty(capitalInvestment) || empty(readyToJoin) || empty(isAvailableContactToMobile) ){
       return res.status(500).json({statusCode:500,message: "Please check your parameter or value required"});  
     }
 
@@ -514,10 +514,10 @@ function cUser() {
     connection.acquire(function(err,con){
       if (err) throw err;
 
-      var sql = "INSERT INTO application_submission (user_id,fullname,email,phone_number,mobile_number,city,age,\
+      var sql = "INSERT INTO application_submission (user_id,fullname,email,hp_wa,languages,city,age,\
                 current_occupation, is_experience_mobile_business, target_mobile_business_180_days,\
                 reason,urgency_level,serious_level,capital_investment,ready_to_join,is_available_contact_to_mobile,post_date)\
-                VALUES ('"+userId+"', '"+fullName+"', '"+email+"', '"+phoneNumber+"', '"+mobileNumber+"', '"+city+"', '"+age+"', \
+                VALUES ('"+userId+"', '"+fullName+"', '"+email+"', '"+hpWa+"', '"+languages+"', '"+city+"', '"+age+"', \
                 '"+currentOccupation+"', '"+isExperienceInMobileBusiness+"', '"+targetMobileBusiness180Days+"', '"+reason+"', '"+urgencyLevel+"', '"+seriousLevel+"', '"+capitalInvestment+"', \
                 '"+readyToJoin+"', '"+isAvailableContactToMobile+"', NOW())";
 
