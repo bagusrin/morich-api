@@ -121,6 +121,20 @@ var methods = {
 		});
      	
 	},
+    updatePointByEmail: function(con,email,point,res,callback){
+
+        var sql = "update users set user_point = user_point+"+point+", update_date = NOW() WHERE user_email = '"+email+"'";
+    
+        con.query(sql, function (err, data){
+            if(err)
+                return res.status(500).json({statusCode:500,message: err.code});
+
+            if(callback){
+                callback(true);
+            }
+        });
+        
+    },
 	test: function(){
 		return 'bcd';
 	}

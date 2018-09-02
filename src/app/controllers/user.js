@@ -8,6 +8,7 @@ var jwt = require('jsonwebtoken'),
     cfg = require('../../../config'),
     empty = require('is-empty');
 
+const axios = require('axios');
 var multer = require('multer');
 
 var storage = multer.diskStorage({
@@ -67,11 +68,38 @@ function cUser() {
               
             con.query(sql, function(err,data){
                 
+              if(err)
+                return res.status(500).json({statusCode:500,message: err.code});
+
+              var splitName = name.trim().split(" ");
+              if(splitName.length > 1){
+                var uname = splitName[0]+''+data.insertId;
+              }else{
+                var uname = splitName[0]+''+data.insertId;
+              }
+
+              uname = uname.toLowerCase();
+
+              var sql3 = "UPDATE users set user_username = '"+uname+"', status = 2, update_date = NOW() WHERE user_email = '"+email+"'";
+
+              con.query(sql3, function(err3,data3){
                 if(err)
-                  return res.status(500).json({statusCode:500,message: err.code});
-                
-                emailModel.sendEmailRegister(email,referalCode,oriPassword)
-                return res.status(200).json({statusCode:200,success:true,data:{"userId":data.insertId}});
+                  return res.status(500).json({statusCode:500,message: err3.code});
+
+                var sql2 = "INSERT INTO conversations (UserID_One, UserID_Two, UserOneStatus, UserTwoStatus, \
+                          TransactTime) \
+                          VALUES ('"+email+"','"+invitedBy+"','2','2', NOW())";
+
+                con.query(sql2, function(err2,data2){
+                  if(err2)
+                    return res.status(500).json({statusCode:500,message: err2.code});
+
+                  userModel.updatePointByEmail(con,invitedBy,1,res,function(result){
+                    emailModel.sendEmailRegister(email,referalCode,oriPassword)
+                    return res.status(200).json({statusCode:200,success:true,data:{"userId":data.insertId}});
+                  });
+                });
+              });                
             });
           });      
         });
