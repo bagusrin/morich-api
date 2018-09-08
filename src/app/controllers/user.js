@@ -45,6 +45,31 @@ function cUser() {
     var invitedBy = req.body.invitedBy,
         email = req.body.email,
         name = req.body.fullName,
+        phone = req.body.phoneNumber
+
+    connection.acquire(function(err,con){
+      if (err) throw err;
+
+      userModel.checkEmailExist(con,email,res,function(result){  
+
+        emailModel.sendEmailRegister(email,name,invitedBy);
+        return res.status(200).json({statusCode:200,success:true});
+        
+      });
+
+      con.release();
+
+    });
+  };
+
+  this.userRegisterBackup = function(req,res,next) {
+
+    if( empty(req.body.invitedBy) || empty(req.body.email) || empty(req.body.fullName) || empty(req.body.phoneNumber) )
+      return res.status(500).json({statusCode:500,message: "Please check your parameter or value required"}); 
+    
+    var invitedBy = req.body.invitedBy,
+        email = req.body.email,
+        name = req.body.fullName,
         phone = req.body.phoneNumber,
         oriPassword = generalModel.getRandomStr(),
         password = bcrypt.hashSync(oriPassword, 10),
@@ -514,6 +539,37 @@ function cUser() {
 
   this.userSubmission = function(req,res,next) {
     
+    var referralEmail = req.body.referralEmail,
+        fullName = req.body.fullName,
+        email = req.body.email,
+        hpWa = req.body.hpWa,
+        city = req.body.city,
+        age = req.body.age,
+        languages = req.body.languages,
+        currentOccupation = req.body.currentOccupation,
+        isExperienceInMobileBusiness = req.body.isExperienceInMobileBusiness,
+        targetMobileBusiness180Days = req.body.targetMobileBusiness180Days,
+        reason = req.body.reason,
+        urgencyLevel = req.body.urgencyLevel,
+        seriousLevel = req.body.seriousLevel,
+        capitalInvestment = req.body.capitalInvestment,
+        readyToJoin = req.body.readyToJoin,
+        isAvailableContactToMobile = req.body.isAvailableContactToMobile;
+
+    if( empty(referralEmail) || empty(fullName) || empty(email) || empty(hpWa) 
+      || empty(city) || empty(age) || empty(languages) || empty(currentOccupation) || 
+      empty(isExperienceInMobileBusiness) || empty(targetMobileBusiness180Days) || empty(reason) || empty(urgencyLevel) || 
+      empty(seriousLevel) || empty(capitalInvestment) || empty(readyToJoin) || empty(isAvailableContactToMobile) ){
+      return res.status(500).json({statusCode:500,message: "Please check your parameter or value required"});  
+    }
+
+    emailModel.sendEmailSubmission(req.body);
+    return res.status(200).json({statusCode:200,success:true});
+
+  };
+
+  this.userSubmissionBackup = function(req,res,next) {
+    
     var userId = req.body.userId,
         fullName = req.body.fullName,
         email = req.body.email,
@@ -562,6 +618,121 @@ function cUser() {
   };
 
   this.userList = function(req,res,next) {
+     connection.acquire(function(err,con){
+        if (err) throw err;
+
+          var sql = 'SELECT u.*, s.*, u.user_id as userID, u.post_date as postDate, s.post_date as submit_app_date, u.user_id as id, \
+          u.user_invited_by as invited_id, \
+          (select count(user_id) from users WHERE user_invited_by = id) as total_invited, \
+          (select user_email FROM users WHERE user_id = invited_id) as inviter_email, \
+          (select count(user_id) from users WHERE user_invited_by = id AND status <> "0") as member_joined, \
+          FIND_IN_SET( user_point, (SELECT GROUP_CONCAT( user_point ORDER BY user_point DESC ) FROM users )) \
+          AS rank FROM users u LEFT JOIN application_submission s ON u.user_email = s.email'
+          
+          //console.log(sql);
+          con.query(sql, function(err,data){
+            con.release();
+            if(err)
+                return res.status(500).json({statusCode:500,message: err.code});
+            
+            var dt = [];
+            for (var i = 0; i < data.length; i++) {
+              var pp = (data[i].user_photo) ? cfg.photoProfileUrl+''+data[i].user_photo : null;
+
+              var fullName = data[i].user_firstname+' '+data[i].user_lastname;
+
+              var splitName = fullName.trim().split(" ");
+
+              if(splitName.length > 1){
+                var initialName = splitName[0].charAt(0)+''+splitName[1].charAt(0);
+              }else{
+                var initialName = splitName[0].charAt(0);
+              }
+
+              initialName = initialName.toUpperCase();
+
+              var statusAccount = "";
+
+              if(data[i].status == 0){
+                statusAccount = "not active";
+              }
+
+              if(data[i].status == 1){
+                statusAccount = "regular";
+              }
+
+              if(data[i].status == 2){
+                statusAccount = "potential";
+              }
+
+              if(data[i].status == 3){
+                statusAccount = "premium";
+              }
+
+              var app = [];
+              if(!empty(data[i].user_id)){
+                app = {
+                  "city": data[i].city,
+                  "age": data[i].age,
+                  "occupation": data[i].current_occupation,
+                  "isExperienceInMobileBusiness": data[i].is_experience_mobile_business,
+                  "targetMobileBusiness180Days": data[i].target_mobile_business_180_days,
+                  "reason": data[i].reason,
+                  "urgencyLevel": data[i].urgency_level,
+                  "seriousLevel": data[i].serious_level,
+                  "capitalInvestment": data[i].capital_investment,
+                  "readyToJoin": data[i].ready_to_join,
+                  "isAvailableContactToMobile": data[i].is_available_contact_to_mobile,
+                  "submitAppDate": data[i].submit_app_date
+                }
+              }
+
+              dt.push({
+                "userId": data[i].userID,
+                "email": data[i].user_email,
+                "firstName": data[i].user_firstname,
+                "lastName": data[i].user_lastname,
+                "initialName": initialName,
+                "photoUrl": pp,
+                "mobileNumber": data[i].user_mobile_number,
+                "phoneNumber": data[i].user_phone_number,
+                "line": data[i].user_line,
+                "whatsapp": data[i].user_whatsapp,
+                "facebook": data[i].user_facebook,
+                "instagram": data[i].user_instagram,
+                "wechat": data[i].user_wechat,
+                "country": data[i].user_country,
+                "address1": data[i].user_address1,
+                "address2": data[i].user_address2,
+                "language": data[i].user_language,
+                "ranking": data[i].rank,
+                "url": "https://morichworldwide.com/"+data[i].user_username,
+                "totalInvited": data[i].total_invited,
+                "memberJoined": data[i].member_joined,
+                "emailInviter": data[i].inviter_email,
+                "accountStatus": statusAccount,
+                "inviterId": data[i].user_invited_by,
+                "postDate": data[i].postDate,
+                "city": data[i].city,
+                "age": data[i].age,
+                "occupation": data[i].current_occupation,
+                "isExperienceInMobileBusiness": data[i].is_experience_mobile_business,
+                "targetMobileBusiness180Days": data[i].target_mobile_business_180_days,
+                "reason": data[i].reason,
+                "urgencyLevel": data[i].urgency_level,
+                "seriousLevel": data[i].serious_level,
+                "capitalInvestment": data[i].capital_investment,
+                "readyToJoin": data[i].ready_to_join,
+                "isAvailableContactToMobile": data[i].is_available_contact_to_mobile,
+                "submitAppDate": data[i].submit_app_date
+              });
+            }
+            return res.status(200).json({statusCode:200,success:true,data:dt});
+          });
+      });
+  };
+
+  this.userListBackup = function(req,res,next) {
      connection.acquire(function(err,con){
         if (err) throw err;
 
@@ -704,6 +875,91 @@ function cUser() {
   };
 
   this.userAdminPost = function(req,res,next) {
+
+    console.log(req.body);
+
+    if( empty(req.body.firstName) || empty(req.body.lastName) || empty(req.body.mobileNumber) || empty(req.body.email) )
+      return res.status(500).json({statusCode:500,message: "Please check your parameter or value required"}); 
+     
+    var email = req.body.email,
+        firstName = req.body.firstName,
+        lastName = req.body.lastName,
+        mobileNumber = req.body.mobileNumber,
+        referralEmail = req.body.referralEmail,
+        statusAccount = req.body.status,
+        password = generalModel.getRandomStr(),
+        passwordEncrypt = bcrypt.hashSync(password, 10);
+
+    if(empty(referralEmail)){
+      referralEmail = "root";
+    }
+    
+    connection.acquire(function(err,con){
+      if (err) throw err;
+
+      userModel.checkEmailExist(con,email,res,function(result){
+
+        userModel.getUserIdByEmail(con,referralEmail,res,function(result){
+
+          var userIdReferral = result.userId; 
+          console.log(userIdReferral);
+
+          var sql = "INSERT INTO users (user_email,user_password,user_firstname,user_lastname,user_mobile_number,user_invited_by,post_date) \
+                        VALUES ('"+email+"', '"+passwordEncrypt+"', '"+firstName+"', '"+lastName+"', '"+mobileNumber+"','"+userIdReferral+"',NOW())";
+                
+          con.query(sql, function(err,data){
+              
+              if(err)
+                return res.status(500).json({statusCode:500,message: err.code});
+
+
+              var fullName = firstName+' '+lastName;
+              var splitName = fullName.trim().split(" ");
+
+              if(splitName.length > 1){
+                var uname = splitName[0]+''+data.insertId;
+              }else{
+                var uname = splitName[0]+''+data.insertId;
+              }
+
+              uname = uname.toLowerCase();
+
+              var userId = data.insertId;; 
+              
+              var sql2 = "UPDATE users set user_username = '"+uname+"', status = '"+statusAccount+"', update_date = NOW() WHERE user_email = '"+email+"'";
+            
+              con.query(sql2, function(err2,data2){
+                if(err2)
+                  return res.status(500).json({statusCode:500,message: err2.code});
+
+                if(referralEmail != 'root'){
+                  var sql2 = "INSERT INTO conversations (UserID_One, UserID_Two, UserOneStatus, UserTwoStatus, \
+                          TransactTime) \
+                          VALUES ('"+email+"','"+referralEmail+"','2','2', NOW())";
+
+                  con.query(sql2, function(err2,data2){
+                    if(err2)
+                      return res.status(500).json({statusCode:500,message: err2.code});
+
+                      userModel.updatePointByEmail(con,referralEmail,1,res,function(result){
+                        emailModel.sendEmailUserRegisterFromAdmin(email,fullName,password);
+                        return res.status(200).json({statusCode:200,success:true,data:{"userId":userId}});
+                      });
+                  });
+                }else{
+                  emailModel.sendEmailUserRegisterFromAdmin(email,fullName,password);
+                  return res.status(200).json({statusCode:200,success:true,data:{"userId":userId}});
+                }
+  
+              });
+          });
+        });
+      });
+      con.release();
+    });
+  };
+
+  this.userAdminPostBackup = function(req,res,next) {
 
     if( empty(req.body.firstName) || empty(req.body.lastName) || empty(req.body.mobileNumber) || empty(req.body.email) )
       return res.status(500).json({statusCode:500,message: "Please check your parameter or value required"}); 

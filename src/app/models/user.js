@@ -9,21 +9,26 @@ var methods = {
 		return bcrypt.compareSync(password, hash_password);
 	},
 	getUserIdByEmail: function(con,email,res,callback){
+        console.log(email);
 
-		con.query('SELECT user_id FROM users WHERE user_email = "'+email+'" LIMIT 1', function (err, data, fields){
-    		if(err)
-        		return res.status(500).json({statusCode:500,message: err.code});
+        if(email == "root"){
+            callback({"userId":"root"});    
+        }else{
+            con.query('SELECT user_id FROM users WHERE user_email = "'+email+'" LIMIT 1', function (err, data, fields){
+                if(err)
+                    return res.status(500).json({statusCode:500,message: err.code});
 
-        	if(callback){
+                if(callback){
 
-        		if(data.length < 1){
-          			return res.status(500).json({statusCode:500,message: "Either data user or data inviter not found"});
-        		}else{
-          			callback({"userId":data[0].user_id});
-          		}
-        	}
+                    if(data.length < 1){
+                        return res.status(500).json({statusCode:500,message: "Either data user or data inviter not found"});
+                    }else{
+                        callback({"userId":data[0].user_id});
+                    }
+                }
 
-		});
+            });
+        }
 	},
 	getReferalCodeByEmail: function(con,email,res,callback){
 

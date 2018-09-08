@@ -7,7 +7,50 @@ sgMail.setApiKey(cfg.apikey_sendgrid);
 
 var email = {
 
-	sendEmailRegister: function (to, code, password) {
+	sendEmailRegister: function (to, toName, invitedBy) {
+
+		const msg = {
+			to: to,
+			from: { email: 'hello@morichworldwide.com', name: 'MorichWorldWide' },
+			subject: 'Your Registration has been success!!',
+			html: '<p><strong>Hello <b>' + toName + '</b>, Thank you for registering in Morich.</strong></p><p>Please download this app on https://play.google.com/store/apps/details?id=com.morich.app</p> Your referral email: <b>' + invitedBy + '</b>.'
+		};
+
+		sgMail.send(msg);
+
+		return sgMail;
+	},
+	sendEmailSubmission: function (dt) {
+
+		var html = '<p><b>Name:</b> ' + dt.fullName + '</p> \
+					<p><b>Email:</b> ' + dt.email + '</p> \
+					<p><b>Whatsapp:</b> ' + dt.hpWa + '</p> \
+					<p><b>Languages:</b> ' + dt.languages + '</p> \
+					<p><b>City:</b> ' + dt.city + '</p> \
+					<p><b>Age:</b> ' + dt.age + '</p> \
+					<p><b>Current Occupation:</b> ' + dt.currentOccupation + '</p> \
+					<p><b>Experience in Mobile Business:</b> ' + dt.isExperienceInMobileBusiness + '</p> \
+					<p><b>Target Mobile Business 180 Days:</b> ' + dt.targetMobileBusiness180Days + '</p> \
+					<p><b>Reason:</b> ' + dt.reason + '</p> \
+					<p><b>Urgency Level:</b> ' + dt.urgencyLevel + '</p> \
+					<p><b>Serious Level:</b> ' + dt.seriousLevel + '</p> \
+					<p><b>Capital Investments:</b> ' + dt.capitalInvestment + '</p> \
+					<p><b>Ready to Join:</b> ' + dt.readyToJoin + '</p> \
+					<p><b>Available Contact to Mobile:</b> ' + dt.isAvailableContactToMobile + '</p>';
+
+		const msg = {
+			to: dt.referralEmail,
+			from: { email: 'hello@morichworldwide.com', name: 'MorichWorldWide' },
+			subject: 'Submission Application',
+			html: html
+		};
+
+		sgMail.send(msg);
+
+		return sgMail;
+		console.log(dt.referralEmail);
+	},
+	sendEmailRegisterBackup: function (to, code, password) {
 
 		const msg = {
 			to: to,
