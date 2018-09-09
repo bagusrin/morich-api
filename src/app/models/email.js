@@ -13,7 +13,7 @@ var email = {
 	    	to: to,
 	        from: {email: 'hello@morichworldwide.com',name: 'MorichWorldWide'},
 			subject: 'Your Registration has been success!!',
-	        html: '<p><strong>Hello <b>'+toName+'</b>, Thank you for registering in Morich.</strong></p><p>Please download this app on https://play.google.com/store/apps/details?id=com.morich.app</p> Your referral email: <b>'+invitedBy+'</b>.',
+	        html: '<p><strong>Hello <b>'+toName+'</b>, Thank you for registering in Morich.</strong></p><p>Please download this app on https://play.google.com/store/apps/details?id=com.morich.app</p> Your referral: <b>'+invitedBy+'</b>.',
 	    };
 
 	    sgMail.send(msg);
