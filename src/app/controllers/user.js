@@ -92,8 +92,10 @@ function cUser() {
             /*var sql = "INSERT INTO users (user_email,user_password,user_firstname,user_lastname,user_mobile_number,user_invited_by,user_referal_code,status,post_date) \
                       VALUES ('"+email+"','"+password+"', '"+name+"', '', '"+phone+"', '"+userId+"', '"+referalCode+"', '"+status+"', NOW())";*/
 
-            var sql = "INSERT INTO users (user_email,,user_firstname,user_lastname,user_mobile_number,user_invited_by,user_referal_code,status,post_date) \
+            var sql = "INSERT INTO users (user_email,user_firstname,user_lastname,user_mobile_number,user_invited_by,user_referal_code,status,post_date) \
                       VALUES ('"+email+"', '"+name+"', '', '"+phone+"', '"+userId+"', '"+referalCode+"', '"+status+"', NOW())";
+
+                      console.log(sql);
               
             con.query(sql, function(err,data){
                 
