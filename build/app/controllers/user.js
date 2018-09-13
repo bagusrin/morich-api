@@ -61,9 +61,10 @@ function cUser() {
 
   this.userRegister = function (req, res, next) {
 
-    if (empty(req.body.invitedBy) || empty(req.body.email) || empty(req.body.fullName) || empty(req.body.phoneNumber)) return res.status(500).json({ statusCode: 500, message: "Please check your parameter or value required" });
+    if (empty(req.body.inviterEmail) || empty(req.body.email) || empty(req.body.fullName) || empty(req.body.phoneNumber)) return res.status(500).json({ statusCode: 500, message: "Please check your parameter or value required" });
 
-    var invitedBy = req.body.invitedBy,
+    var inviterUsername = req.body.inviterUsername,
+        inviterEmail = req.body.inviterEmail,
         email = req.body.email,
         name = req.body.fullName,
         phone = req.body.phoneNumber,
@@ -76,11 +77,11 @@ function cUser() {
 
       userModel.checkEmailExist(con, email, res, function (result) {
 
-        userModel.getUserIdByEmail(con, invitedBy, res, function (result) {
+        userModel.getUserIdByEmail(con, inviterEmail, res, function (result) {
 
           var userId = result.userId;
 
-          userModel.getReferalCodeByEmail(con, invitedBy, res, function (result) {
+          userModel.getReferalCodeByEmail(con, inviterEmail, res, function (result) {
 
             var referalCode = result.referalCode;
 
@@ -107,14 +108,14 @@ function cUser() {
 
                 var sql2 = "INSERT INTO conversations (UserID_One, UserID_Two, UserOneStatus, UserTwoStatus, \
                           TransactTime) \
-                          VALUES ('" + email + "','" + invitedBy + "','2','2', NOW())";
+                          VALUES ('" + email + "','" + inviterEmail + "','2','2', NOW())";
 
                 con.query(sql2, function (err2, data2) {
                   if (err2) return res.status(500).json({ statusCode: 500, message: err2.code });
 
-                  userModel.updatePointByEmail(con, invitedBy, 1, res, function (result) {
+                  userModel.updatePointByEmail(con, inviterEmail, 1, res, function (result) {
                     //emailModel.sendEmailRegister(email,referalCode,oriPassword)
-                    emailModel.sendEmailRegister(email, name, invitedBy);
+                    emailModel.sendEmailRegister(email, name, inviterUsername);
                     return res.status(200).json({ statusCode: 200, success: true, data: { "userId": data.insertId } });
                   });
                 });
