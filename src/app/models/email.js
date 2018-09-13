@@ -20,6 +20,25 @@ var email = {
 		
 		return sgMail;
 	},
+	sendTmpPassword: function(to,password,status) {
+
+		if(status == "1"){
+			var acc = "regular";
+		}else{
+			var acc = "premium";
+		}
+		
+	    const msg = {
+	    	to: to,
+	        from: {email: 'hello@morichworldwide.com',name: 'MorichWorldWide'},
+			subject: 'Your Temporary Password!!',
+	        html: '<p>Your account has been changed become to <b>'+acc+'</b>. This is your temporary password: <b>'+password+'</b>.',
+	    };
+
+	    sgMail.send(msg);
+		
+		return sgMail;
+	},
 	sendEmailSubmission: function(dt) {
 
 		var html = '<p><b>Name:</b> '+dt.fullName+'</p> \

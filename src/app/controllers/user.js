@@ -89,8 +89,11 @@ function cUser() {
 
             var referalCode = result.referalCode;
 
-            var sql = "INSERT INTO users (user_email,user_password,user_firstname,user_lastname,user_mobile_number,user_invited_by,user_referal_code,status,post_date) \
-                      VALUES ('"+email+"','"+password+"', '"+name+"', '', '"+phone+"', '"+userId+"', '"+referalCode+"', '"+status+"', NOW())";
+            /*var sql = "INSERT INTO users (user_email,user_password,user_firstname,user_lastname,user_mobile_number,user_invited_by,user_referal_code,status,post_date) \
+                      VALUES ('"+email+"','"+password+"', '"+name+"', '', '"+phone+"', '"+userId+"', '"+referalCode+"', '"+status+"', NOW())";*/
+
+            var sql = "INSERT INTO users (user_email,,user_firstname,user_lastname,user_mobile_number,user_invited_by,user_referal_code,status,post_date) \
+                      VALUES ('"+email+"', '"+name+"', '', '"+phone+"', '"+userId+"', '"+referalCode+"', '"+status+"', NOW())";
               
             con.query(sql, function(err,data){
                 
@@ -691,6 +694,7 @@ function cUser() {
 
               dt.push({
                 "userId": data[i].userID,
+                "password": empty(data[i].user_password) ? "false" : "true",
                 "email": data[i].user_email,
                 "firstName": data[i].user_firstname,
                 "lastName": data[i].user_lastname,
@@ -852,14 +856,39 @@ function cUser() {
   this.activated = function(req,res,next) {
      
     var id = req.body.userId;
+    var email = req.body.email;
     var inviterId = req.body.inviterId;
+    var isPassword = req.body.isPassword;
+    var status = req.body.status;
+
+    var point = "";
+
+    if(req.body.status == "1"){
+      point = 2;
+    }else{
+      point = 3;
+    }
+
+    console.log(req.body);
+
+
+    var sqlNew = "UPDATE users set status = '"+req.body.status+"' \
+      , update_date = NOW() WHERE user_id = '"+id+"' ";
+    var oriPassword = generalModel.getRandomStr();
+    
+    if(isPassword == "false"){
+      var password = bcrypt.hashSync(oriPassword, 10);
+      var sqlNew = "UPDATE users set status = '"+req.body.status+"' \
+      ,user_password = '"+password+"', update_date = NOW() WHERE user_id = '"+id+"' ";
+    }
 
 
     connection.acquire(function(err,con){
       if (err) throw err;
 
-      var sql = "UPDATE users set status = '"+req.body.status+"' \
-      ,update_date = NOW() WHERE user_id = '"+id+"' ";
+      var sql = sqlNew;
+
+      console.log(sql);
         
       con.query(sql, function(err,data){
           if(err)
@@ -868,7 +897,12 @@ function cUser() {
           if(data.affectedRows == 0)
             return res.status(500).json({statusCode:500,message: "either 'email' or 'invitedBy' wrong"});
 
-          userModel.updatePoint(con,inviterId,3,res,function(result){
+          userModel.updatePoint(con,inviterId,point,res,function(result){
+            
+            if(isPassword == "false"){
+              emailModel.sendTmpPassword(email,oriPassword,status);
+            }
+
             return res.status(200).json({statusCode:200,success:true});
           });
       });
@@ -894,6 +928,14 @@ function cUser() {
 
     if(empty(referralEmail)){
       referralEmail = "root";
+    }
+
+    var point = "";
+
+    if(statusAccount == "1"){
+      point = 2;
+    }else{
+      point = 3;
     }
     
     connection.acquire(function(err,con){
@@ -943,7 +985,7 @@ function cUser() {
                     if(err2)
                       return res.status(500).json({statusCode:500,message: err2.code});
 
-                      userModel.updatePointByEmail(con,referralEmail,1,res,function(result){
+                      userModel.updatePointByEmail(con,referralEmail,point,res,function(result){
                         emailModel.sendEmailUserRegisterFromAdmin(email,fullName,password);
                         return res.status(200).json({statusCode:200,success:true,data:{"userId":userId}});
                       });
