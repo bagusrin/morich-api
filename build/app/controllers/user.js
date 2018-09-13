@@ -37,7 +37,7 @@ var upload = multer({ storage: storage });
 
 function cUser() {
 
-  this.userRegister = function (req, res, next) {
+  this.userRegisterBackup = function (req, res, next) {
 
     if (empty(req.body.invitedBy) || empty(req.body.email) || empty(req.body.fullName) || empty(req.body.phoneNumber)) return res.status(500).json({ statusCode: 500, message: "Please check your parameter or value required" });
 
@@ -59,7 +59,7 @@ function cUser() {
     });
   };
 
-  this.userRegisterBackup = function (req, res, next) {
+  this.userRegister = function (req, res, next) {
 
     if (empty(req.body.invitedBy) || empty(req.body.email) || empty(req.body.fullName) || empty(req.body.phoneNumber)) return res.status(500).json({ statusCode: 500, message: "Please check your parameter or value required" });
 
@@ -113,7 +113,8 @@ function cUser() {
                   if (err2) return res.status(500).json({ statusCode: 500, message: err2.code });
 
                   userModel.updatePointByEmail(con, invitedBy, 1, res, function (result) {
-                    emailModel.sendEmailRegister(email, referalCode, oriPassword);
+                    //emailModel.sendEmailRegister(email,referalCode,oriPassword)
+                    emailModel.sendEmailRegister(email, name, invitedBy);
                     return res.status(200).json({ statusCode: 200, success: true, data: { "userId": data.insertId } });
                   });
                 });
