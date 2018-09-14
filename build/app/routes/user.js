@@ -15,8 +15,6 @@ var upload = multer({ storage: storage });
 module.exports = {
   configure: function (app) {
     app.route('/user/register').post(user.userRegister);
-    app.route('/user/registerBackup').post(user.userRegisterBackup);
-    app.route('/user/join').post(user.userJoin);
     app.route('/user/update').post(user.userUpdate);
     app.route('/user/detail/:id').get(user.userDetail);
     app.route('/user/username/:username').get(user.userDetailByUsername);
@@ -24,7 +22,6 @@ module.exports = {
     app.route('/user/statistic').get(user.userStatisticByEmail);
     app.route('/user/uploadphoto').post(user.uploadAction, user.userUploadPhoto);
     app.route('/user/submission').post(user.userSubmission);
-    app.route('/user/submissionBackup').post(user.userSubmissionBackup);
     app.route('/user/list').get(user.userList);
     app.route('/user/activated').post(user.activated);
     app.route('/user/admin-post').post(user.userAdminPost);

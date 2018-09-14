@@ -20,19 +20,19 @@ var email = {
 
 		return sgMail;
 	},
-	sendTmpPassword: function (to, password, status) {
+	sendTmpPassword: function (to, password, status, username) {
 
 		if (status == "1") {
-			var acc = "regular";
+			var acc = "member";
 		} else {
-			var acc = "premium";
+			var acc = "prospek";
 		}
 
 		const msg = {
 			to: to,
 			from: { email: 'hello@morichworldwide.com', name: 'MorichWorldWide' },
 			subject: 'Your Temporary Password!!',
-			html: '<p>Your account has been changed become to <b>' + acc + '</b>. This is your temporary password: <b>' + password + '</b>.'
+			html: '<p>Your account has been changed become to <b>' + acc + '</b>. Your username: <b>' + username + '</b> and this is your temporary password: <b>' + password + '</b>.'
 		};
 
 		sgMail.send(msg);
@@ -111,13 +111,13 @@ var email = {
 
 		return sgMail;
 	},
-	sendEmailUserRegisterFromAdmin: function (email, fullName, password) {
+	sendEmailUserRegisterFromAdmin: function (email, fullName, password, username) {
 
 		const msg = {
 			to: email,
 			from: { email: 'hello@morichworldwide.com', name: 'MorichWorldWide' },
 			subject: 'Hello ' + fullName,
-			html: '<p><strong>Your account has been successfully registered.</strong></p><p><b>Login Account:</b></p><p>Username: ' + email + '</p><p>Temporary Password: ' + password + '</p>'
+			html: '<p><strong>Your account has been successfully registered.</strong></p><p>Your username: <b>' + username + '</b></p><p><b>Login Account:</b></p><p>Username: ' + email + '</p><p>Temporary Password: ' + password + '</p>'
 		};
 
 		sgMail.send(msg);

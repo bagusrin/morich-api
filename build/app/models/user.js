@@ -60,6 +60,20 @@ var methods = {
             }
         });
     },
+    checkUsernameExist: function (con, username, res, callback) {
+
+        con.query('SELECT user_username FROM users WHERE user_username = "' + username + '" LIMIT 1', function (err, data, fields) {
+            if (err) return res.status(500).json({ statusCode: 500, message: err.code });
+
+            if (callback) {
+                if (data.length > 0) {
+                    return res.status(500).json({ statusCode: 500, message: "Username has been registered" });
+                } else {
+                    callback(true);
+                }
+            }
+        });
+    },
     checkUserReferalCode: function (con, email, referalCode, res, callback) {
 
         var sql = "SELECT user_id, user_email, user_firstname, user_lastname, user_invited_by FROM users WHERE user_email = '" + email + "' AND user_referal_code = '" + referalCode + "' LIMIT 1";
