@@ -77,7 +77,7 @@ function cUser() {
                 if (err2) return res.status(500).json({ statusCode: 500, message: err2.code });
 
                 userModel.updatePointByEmail(con, inviterEmail, 1, res, function (result) {
-                  emailModel.sendEmailRegister(email, name, inviterUsername);
+                  emailModel.sendEmailRegister(email, firstName, inviterUsername);
                   return res.status(200).json({ statusCode: 200, success: true, data: { "userId": data.insertId } });
                 });
               });
