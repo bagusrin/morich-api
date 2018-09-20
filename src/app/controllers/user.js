@@ -39,7 +39,7 @@ function cUser() {
 
   this.userRegister = function(req,res,next) {
 
-    if( empty(req.body.inviterEmail) || empty(req.body.email) || empty(req.body.fullName) || empty(req.body.phoneNumber) )
+    if( empty(req.body.inviterEmail) || empty(req.body.email) || empty(req.body.firstName) || empty(req.body.phoneNumber) )
       return res.status(500).json({statusCode:500,message: "Please check your parameter or value required"}); 
     
     var inviterUsername = req.body.inviterUsername,
