@@ -45,7 +45,8 @@ function cUser() {
     var inviterUsername = req.body.inviterUsername,
         inviterEmail = req.body.inviterEmail,
         email = req.body.email,
-        name = req.body.fullName,
+        firstName = req.body.firstName,
+        lastName = req.body.lastName,
         phone = req.body.phoneNumber,
         status = 2;
 
@@ -63,7 +64,7 @@ function cUser() {
             var referalCode = result.referalCode;
 
             var sql = "INSERT INTO users (user_email,user_firstname,user_lastname,user_mobile_number,user_invited_by,user_referal_code,status,post_date) \
-                      VALUES ('"+email+"', '"+name+"', '', '"+phone+"', '"+userId+"', '"+referalCode+"', '"+status+"', NOW())";
+                      VALUES ('"+email+"', '"+firstName+"','"+lastName+"', '"+phone+"', '"+userId+"', '"+referalCode+"', '"+status+"', NOW())";
 
               
             con.query(sql, function(err,data){
