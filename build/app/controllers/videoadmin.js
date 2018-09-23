@@ -387,9 +387,9 @@ function cVideoAdmin() {
             "youtubeImg": data[i].video_youtube_image,
             "title": data[i].video_title,
             "description": data[i].video_desc,
-            "contentMarketing": data[i].video_marketing,
+            //"contentMarketing": data[i].video_marketing,
             "type": data[i].video_type,
-            "position": data[i].video_position,
+            //"position": data[i].video_position,
             "postDate": data[i].post_date
           });
         }
@@ -523,9 +523,9 @@ function cVideoAdmin() {
             "youtubeImg": data[0].video_youtube_image,
             "title": data[0].video_title,
             "description": data[0].video_desc,
-            "contentMarketing": data[0].video_marketing,
+            //"contentMarketing": data[0].video_marketing,
             "type": data[0].video_type,
-            "position": data[0].video_position,
+            //"position": data[0].video_position,
             "postDate": data[0].post_date
           });
 
@@ -545,7 +545,7 @@ function cVideoAdmin() {
       var youtubeLink = req.body.youtubeLink;
       var title = req.body.title;
       var desc = req.body.desc;
-      var contentMarketing = !empty(req.body.contentMarketing) ? req.body.contentMarketing : '';
+      var contentMarketing = '';
       var youtubeId = youtubeLink.split("v=")[1];
       var youtubeIframe = "https://youtube.com/embed/" + youtubeId;
       var youtubeImg = "https://i.ytimg.com/vi/" + youtubeId + "/hqdefault.jpg";
