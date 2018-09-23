@@ -98,7 +98,7 @@ function cVideoAdmin() {
     connection.acquire(function(err,con){
       if (err) throw err;
 
-        var sql = "SELECT * from videos_admin WHERE status = 1 AND video_position <> 0 ORDER BY video_id DESC "+count
+        var sql = "SELECT * from videos_admin WHERE status = 1 AND video_position <> 0 ORDER BY video_position ASC "+count
         
         con.query(sql, function(err,data){
           con.release();
@@ -404,19 +404,24 @@ function cVideoAdmin() {
     if(!empty(show)){
 
       if(show == "all"){
-        search += "";  
+        search += " AND status <> 2";
+        search += " AND video_position = 0";  
       }else{
-        search += " AND status = 1";    
+        search += " AND status = 1";
+        search += " AND video_position = 0";    
       }
       
     }else{
-      search += " AND status = 1";  
+      if(empty(type)){
+        search += " AND status = 1";
+        search += " AND video_position = 0";
+      }  
     }
 
     connection.acquire(function(err,con){
       if (err) throw err;
 
-        var sql = "SELECT * from videos_learning WHERE video_position = 0 "+search+" ORDER BY video_id DESC "+count
+        var sql = "SELECT * from videos_learning WHERE 1 "+search+" ORDER BY video_id DESC "+count
         
         con.query(sql, function(err,data){
           con.release();
@@ -463,7 +468,7 @@ function cVideoAdmin() {
     connection.acquire(function(err,con){
       if (err) throw err;
 
-        var sql = "SELECT * from videos_learning WHERE status = 1 AND video_position <> 0 ORDER BY video_id DESC "+count
+        var sql = "SELECT * from videos_learning WHERE status = 1 AND video_position <> 0 ORDER BY video_position ASC "+count
         
         con.query(sql, function(err,data){
           con.release();
