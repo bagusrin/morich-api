@@ -31,18 +31,25 @@ function cVideoAdmin() {
     if (!empty(show)) {
 
       if (show == "all") {
-        search += "";
+        search += " AND status <> 2";
+        search += " AND video_position = 0";
       } else {
         search += " AND status = 1";
+        search += " AND video_position = 0";
       }
     } else {
-      search += " AND status = 1";
+      if (empty(type)) {
+        search += " AND status = 1";
+        search += " AND video_position = 0";
+      }
     }
 
     connection.acquire(function (err, con) {
       if (err) throw err;
 
-      var sql = "SELECT * from videos_admin WHERE video_position = 0 " + search + " ORDER BY video_id DESC " + count;
+      var sql = "SELECT * from videos_admin WHERE 1 " + search + " ORDER BY video_id DESC " + count;
+
+      //console.log(sql);
 
       con.query(sql, function (err, data) {
         con.release();

@@ -101,7 +101,7 @@ function cUser() {
         if (err) throw err;
 
           var sql = 'SELECT *, user_id as id, user_invited_by as invited_id, (select count(user_id) from users WHERE user_invited_by = id) as total_invited, (select user_email FROM users WHERE user_id = invited_id) as inviter_email, \
-            (select count(user_id) from users WHERE user_invited_by = id AND status <> "0") as member_joined, FIND_IN_SET( user_point, (SELECT GROUP_CONCAT( user_point ORDER BY user_point DESC ) FROM users )) \
+            (select count(user_id) from users WHERE user_invited_by = id AND status = "1") as member_joined, (select count(user_id) from users WHERE user_invited_by = id AND status = "2") as member_prospect, FIND_IN_SET( user_point, (SELECT GROUP_CONCAT( user_point ORDER BY user_point DESC ) FROM users )) \
             AS rank FROM users WHERE user_id='+req.params.id+' LIMIT 1'
           
           //console.log(sql);
@@ -166,6 +166,7 @@ function cUser() {
                 "url": "https://morichworldwide.com/"+data[0].user_username,
                 "totalInvited": data[0].total_invited,
                 "memberJoined": data[0].member_joined,
+                "memberProspect": data[0].member_prospect,
                 "emailInviter": empty(data[0].inviter_email) ? 'root' : data[0].inviter_email,
                 "accountStatus": statusAccount
               });
@@ -181,7 +182,7 @@ function cUser() {
         if (err) throw err;
 
           var sql = 'SELECT *, user_id as id, user_invited_by as invited_id, (select count(user_id) from users WHERE user_invited_by = id) as total_invited, (select user_email FROM users WHERE user_id = invited_id) as inviter_email, \
-            (select count(user_id) from users WHERE user_invited_by = id AND status <> "0") as member_joined, FIND_IN_SET( user_point, (SELECT GROUP_CONCAT( user_point ORDER BY user_point DESC ) FROM users )) \
+            (select count(user_id) from users WHERE user_invited_by = id AND status = "1") as member_joined, (select count(user_id) from users WHERE user_invited_by = id AND status = "2") as member_prospect, FIND_IN_SET( user_point, (SELECT GROUP_CONCAT( user_point ORDER BY user_point DESC ) FROM users )) \
             AS rank FROM users WHERE user_username="'+req.params.username+'" LIMIT 1'
           
           console.log(sql);
@@ -246,6 +247,7 @@ function cUser() {
                 "url": "https://morichworldwide.com/"+data[0].user_username,
                 "totalInvited": data[0].total_invited,
                 "memberJoined": data[0].member_joined,
+                "memberProspect": data[0].member_prospect,
                 "emailInviter": empty(data[0].inviter_email) ? 'root' : data[0].inviter_email,
                 "accountStatus": statusAccount
               });
@@ -281,7 +283,7 @@ function cUser() {
     connection.acquire(function(err,con){
       if (err) throw err;
         con.query('SELECT user_id as id, (select count(user_id) from users WHERE user_invited_by = id) as total_invited, \
-          (select count(user_id) from users WHERE user_invited_by = id AND status <> 0) as member_joined, FIND_IN_SET( user_point, (SELECT GROUP_CONCAT( user_point ORDER BY user_point DESC ) FROM users )) \
+          (select count(user_id) from users WHERE user_invited_by = id AND status = 1) as member_joined, (select count(user_id) from users WHERE user_invited_by = id AND status = "2") as member_prospect, FIND_IN_SET( user_point, (SELECT GROUP_CONCAT( user_point ORDER BY user_point DESC ) FROM users )) \
           AS rank FROM users WHERE user_email="'+req.query.email+'" LIMIT 1', function(err,data){
           con.release();
           if(err)
@@ -296,7 +298,8 @@ function cUser() {
             dt.push({
               "ranking": data[0].rank,
               "totalInvited": data[0].total_invited,
-              "memberJoined": data[0].member_joined
+              "memberJoined": data[0].member_joined,
+              "memberProspect": data[0].member_prospect
             });
 
             return res.status(200).json({statusCode:200,success:true,data:dt[0]});
@@ -433,7 +436,7 @@ function cUser() {
           u.user_invited_by as invited_id, \
           (select count(user_id) from users WHERE user_invited_by = id) as total_invited, \
           (select user_email FROM users WHERE user_id = invited_id) as inviter_email, \
-          (select count(user_id) from users WHERE user_invited_by = id AND status <> "0") as member_joined, \
+          (select count(user_id) from users WHERE user_invited_by = id AND status = "1") as member_joined, (select count(user_id) from users WHERE user_invited_by = id AND status = "2") as member_prospect, \
           FIND_IN_SET( user_point, (SELECT GROUP_CONCAT( user_point ORDER BY user_point DESC ) FROM users )) \
           AS rank FROM users u LEFT JOIN application_submission s ON u.user_email = s.email'
           
@@ -515,6 +518,7 @@ function cUser() {
                 "url": "https://morichworldwide.com/"+data[i].user_username,
                 "totalInvited": data[i].total_invited,
                 "memberJoined": data[i].member_joined,
+                "memberProspect": data[i].member_prospect,
                 "emailInviter": data[i].inviter_email,
                 "accountStatus": statusAccount,
                 "inviterId": data[i].user_invited_by,

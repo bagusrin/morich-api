@@ -9,11 +9,16 @@ var email = {
 
 	sendEmailRegister: function (to, toName, invitedBy) {
 
+		var html = "<p>HANYA SELANGKAH LAGI…Anda akan menemukan RAHASIA bagaimana setiap orang termasuk Anda bisa menjadi KAYA & SUKSES lewat Mobile Business yang paling dicari-cari orang saat ini meski Anda Gaptek & Ga’ punya pengalaman sama sekali.</p> \
+		<p>Segera KLIK Link Download Aplikasi Mobile di bawah ini:</p><p>https://play.google.com/store/apps/details?id=com.morich.app</p> \
+		Setelah itu ketik Username di bawah ini: \
+		" + invitedBy;
+
 		const msg = {
 			to: to,
 			from: { email: 'hello@morichworldwide.com', name: 'MorichWorldWide' },
-			subject: 'Your Registration has been success!!',
-			html: '<p><strong>Hello <b>' + toName + '</b>, Thank you for registering in Morich.</strong></p><p>Please download this app on https://play.google.com/store/apps/details?id=com.morich.app</p> Your referral: <b>' + invitedBy + '</b>.'
+			subject: 'Download MORICH Apps Sekarang...!!! Rahasia menjadi “YOUNG & RICH”',
+			html: html
 		};
 
 		sgMail.send(msg);
@@ -41,7 +46,10 @@ var email = {
 	},
 	sendEmailSubmission: function (dt) {
 
-		var html = '<p><b>Name:</b> ' + dt.fullName + '</p> \
+		var html = '<p>Selamat...!!!</p> \
+					<p>Inilah calon Lisensi JMobile Jeunesse Anda.</p><br><br> \
+					<p>Segera follow up...!!!</p><br> \
+					<p><b>Name:</b> ' + dt.fullName + '</p> \
 					<p><b>Email:</b> ' + dt.email + '</p> \
 					<p><b>Whatsapp:</b> ' + dt.hpWa + '</p> \
 					<p><b>Languages:</b> ' + dt.languages + '</p> \
@@ -60,7 +68,7 @@ var email = {
 		const msg = {
 			to: dt.referralEmail,
 			from: { email: 'hello@morichworldwide.com', name: 'MorichWorldWide' },
-			subject: 'Submission Application',
+			subject: 'Calon Partner Lisensi JMobile',
 			html: html
 		};
 
