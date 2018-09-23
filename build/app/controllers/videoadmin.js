@@ -354,7 +354,6 @@ function cVideoAdmin() {
     var limit = req.query.limit == undefined ? 20 : req.query.limit;
     var type = req.query.type;
     var email = req.query.email;
-    var show = req.query.show;
 
     var offset = (page - 1) * limit;
     var count = " LIMIT " + offset + "," + limit;
@@ -369,26 +368,10 @@ function cVideoAdmin() {
       search += " AND created_by = '" + email + "'";
     }
 
-    if (!empty(show)) {
-
-      if (show == "all") {
-        search += " AND status <> 2";
-        search += " AND video_position = 0";
-      } else {
-        search += " AND status = 1";
-        search += " AND video_position = 0";
-      }
-    } else {
-      if (empty(type)) {
-        search += " AND status = 1";
-        search += " AND video_position = 0";
-      }
-    }
-
     connection.acquire(function (err, con) {
       if (err) throw err;
 
-      var sql = "SELECT * from videos_learning WHERE 1 " + search + " ORDER BY video_id DESC " + count;
+      var sql = "SELECT * from videos_learning WHERE status = 1 " + search + " ORDER BY video_id DESC " + count;
 
       con.query(sql, function (err, data) {
         con.release();
@@ -567,7 +550,7 @@ function cVideoAdmin() {
       var youtubeIframe = "https://youtube.com/embed/" + youtubeId;
       var youtubeImg = "https://i.ytimg.com/vi/" + youtubeId + "/hqdefault.jpg";
       var type = req.body.type;
-      var position = req.body.position == undefined ? 0 : req.body.position;
+      var position = 0;
       var createdBy = !empty(req.body.email) ? req.body.email : "admin";
       var status = !empty(req.body.email) ? 0 : 1;
 
@@ -607,7 +590,7 @@ function cVideoAdmin() {
       var youtubeIframe = "https://youtube.com/embed/" + youtubeId;
       var youtubeImg = "https://i.ytimg.com/vi/" + youtubeId + "/hqdefault.jpg";
       var type = req.body.type;
-      var position = req.body.position == undefined ? 0 : req.body.position;
+      var position = 0;
 
       connection.acquire(function (err, con) {
         if (err) throw err;
