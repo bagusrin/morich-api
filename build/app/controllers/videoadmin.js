@@ -220,6 +220,9 @@ function cVideoAdmin() {
   this.post = function (req, res, next) {
 
     try {
+
+      if (empty(req.body.youtubeLink) || empty(req.body.title)) return res.status(500).json({ statusCode: 500, message: "Please check your parameter or value required" });
+
       var youtubeLink = req.body.youtubeLink;
       var title = req.body.title;
       var desc = req.body.desc;
@@ -259,6 +262,9 @@ function cVideoAdmin() {
 
   this.update = function (req, res, next) {
     try {
+
+      if (empty(req.body.youtubeLink) || empty(req.body.title) || empty(req.body.videoId)) return res.status(500).json({ statusCode: 500, message: "Please check your parameter or value required" });
+
       var videoId = req.body.videoId;
       var youtubeLink = req.body.youtubeLink;
       var title = req.body.title;
@@ -542,6 +548,9 @@ function cVideoAdmin() {
   this.vpost = function (req, res, next) {
 
     try {
+
+      if (empty(req.body.youtubeLink) || empty(req.body.title)) return res.status(500).json({ statusCode: 500, message: "Please check your parameter or value required" });
+
       var youtubeLink = req.body.youtubeLink;
       var title = req.body.title;
       var desc = req.body.desc;
@@ -581,6 +590,9 @@ function cVideoAdmin() {
 
   this.vupdate = function (req, res, next) {
     try {
+
+      if (empty(req.body.youtubeLink) || empty(req.body.title) || empty(req.body.videoId)) return res.status(500).json({ statusCode: 500, message: "Please check your parameter or value required" });
+
       var videoId = req.body.videoId;
       var youtubeLink = req.body.youtubeLink;
       var title = req.body.title;
