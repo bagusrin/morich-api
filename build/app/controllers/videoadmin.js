@@ -20,12 +20,21 @@ function cVideoAdmin() {
 
     var search = "";
 
-    if (!empty(type)) {
+    if (!empty(type) && !empty(email)) {
       search += " AND video_type = '" + type + "'";
+      search += " AND (created_by = '" + email + "' OR created_by = 'admin') ";
+      search += " AND status = 1";
     }
 
-    if (!empty(email)) {
+    if (!empty(type) && empty(email)) {
+      search += " AND video_type = '" + type + "'";
+      search += " AND created_by = 'admin'";
+      search += " AND status = 1";
+    }
+
+    if (empty(type) && !empty(email)) {
       search += " AND created_by = '" + email + "'";
+      search += " AND status = 1";
     }
 
     if (!empty(show)) {
@@ -33,15 +42,12 @@ function cVideoAdmin() {
       if (show == "all") {
         search += " AND status <> 2";
         search += " AND video_position = 0";
-      } else {
-        search += " AND status = 1";
-        search += " AND video_position = 0";
       }
-    } else {
-      if (empty(type)) {
-        search += " AND status = 1";
-        search += " AND video_position = 0";
-      }
+    }
+
+    if (empty(type) && empty(email) && empty(show)) {
+      search += " AND status = 1";
+      search += " AND video_position = 0";
     }
 
     connection.acquire(function (err, con) {
@@ -49,7 +55,7 @@ function cVideoAdmin() {
 
       var sql = "SELECT * from videos_admin WHERE 1 " + search + " ORDER BY video_id DESC " + count;
 
-      //console.log(sql);
+      console.log(sql);
 
       con.query(sql, function (err, data) {
         con.release();
