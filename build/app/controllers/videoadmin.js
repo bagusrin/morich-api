@@ -14,6 +14,7 @@ function cVideoAdmin() {
     var type = req.query.type;
     var email = req.query.email;
     var show = req.query.show;
+    var by = req.query.by;
 
     var offset = (page - 1) * limit;
     var count = " LIMIT " + offset + "," + limit;
@@ -45,7 +46,15 @@ function cVideoAdmin() {
       }
     }
 
-    if (empty(type) && empty(email) && empty(show)) {
+    if (!empty(by)) {
+
+      if (by == "admin") {
+        search += " AND status = 1";
+        search += " AND created_by = 'admin'";
+      }
+    }
+
+    if (empty(type) && empty(email) && empty(show) && empty(by)) {
       search += " AND status = 1";
       search += " AND video_position = 0";
     }
