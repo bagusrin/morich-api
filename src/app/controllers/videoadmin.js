@@ -248,7 +248,7 @@ function cVideoAdmin() {
       var title = req.body.title;
       var desc = req.body.desc;
       var contentMarketing = (!empty(req.body.contentMarketing)) ? req.body.contentMarketing : '';
-      var youtubeId = youtubeLink.split("v=")[1];
+      var youtubeId = youtubeLink.split("youtu.be/")[1];
       var youtubeIframe = "https://youtube.com/embed/"+youtubeId;
       var youtubeImg = "https://i.ytimg.com/vi/"+youtubeId+"/hqdefault.jpg";
       var type = req.body.type;
@@ -297,7 +297,7 @@ function cVideoAdmin() {
       var title = req.body.title;
       var desc = req.body.desc;
       var contentMarketing = (!empty(req.body.contentMarketing)) ? req.body.contentMarketing : '';
-      var youtubeId = youtubeLink.split("v=")[1];
+      var youtubeId = youtubeLink.split("youtu.be/")[1];
       var youtubeIframe = "https://youtube.com/embed/"+youtubeId;
       var youtubeImg = "https://i.ytimg.com/vi/"+youtubeId+"/hqdefault.jpg";
       var type = req.body.type;
@@ -608,7 +608,7 @@ function cVideoAdmin() {
       var title = req.body.title;
       var desc = req.body.desc;
       var contentMarketing = '';
-      var youtubeId = youtubeLink.split("v=")[1];
+      var youtubeId = youtubeLink.split("youtu.be/")[1];
       var youtubeIframe = "https://youtube.com/embed/"+youtubeId;
       var youtubeImg = "https://i.ytimg.com/vi/"+youtubeId+"/hqdefault.jpg";
       var type = req.body.type;
@@ -657,7 +657,7 @@ function cVideoAdmin() {
       var title = req.body.title;
       var desc = req.body.desc;
       var contentMarketing = (!empty(req.body.contentMarketing)) ? req.body.contentMarketing : '';
-      var youtubeId = youtubeLink.split("v=")[1];
+      var youtubeId = youtubeLink.split("youtu.be/")[1];
       var youtubeIframe = "https://youtube.com/embed/"+youtubeId;
       var youtubeImg = "https://i.ytimg.com/vi/"+youtubeId+"/hqdefault.jpg";
       var type = req.body.type;
