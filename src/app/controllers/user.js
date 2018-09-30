@@ -185,7 +185,7 @@ function cUser() {
             (select count(user_id) from users WHERE user_invited_by = id AND status = "1") as member_joined, (select count(user_id) from users WHERE user_invited_by = id AND status = "2") as member_prospect, FIND_IN_SET( user_point, (SELECT GROUP_CONCAT( user_point ORDER BY user_point DESC ) FROM users )) \
             AS rank FROM users WHERE user_username="'+req.params.username+'" LIMIT 1'
           
-          console.log(sql);
+          //console.log(sql);
           con.query(sql, function(err,data){
             con.release();
             if(err)
@@ -578,7 +578,7 @@ function cUser() {
 
         var sql = sqlNew;
 
-        console.log(sql);
+        //console.log(sql);
           
         con.query(sql, function(err,data){
             if(err)
@@ -603,9 +603,9 @@ function cUser() {
 
   this.userAdminPost = function(req,res,next) {
 
-    console.log(req.body);
+    //console.log(req.body);
 
-    if( empty(req.body.firstName) || empty(req.body.lastName) || empty(req.body.mobileNumber) || empty(req.body.email) )
+    if( empty(req.body.firstName) || empty(req.body.mobileNumber) || empty(req.body.email) )
       return res.status(500).json({statusCode:500,message: "Please check your parameter or value required"}); 
      
     var email = req.body.email,
@@ -640,7 +640,7 @@ function cUser() {
           userModel.getUserIdByEmail(con,referralEmail,res,function(result){
 
             var userIdReferral = result.userId; 
-            console.log(userIdReferral);
+            //console.log(userIdReferral);
 
             var sql = "INSERT INTO users (user_email,user_password,user_firstname,user_lastname,user_mobile_number,user_invited_by,post_date) \
                           VALUES ('"+email+"', '"+passwordEncrypt+"', '"+firstName+"', '"+lastName+"', '"+mobileNumber+"','"+userIdReferral+"',NOW())";
@@ -689,6 +689,78 @@ function cUser() {
     });
   };
 
+  this.userAdminUpdate = function(req,res,next) {
+
+    //console.log(req.body);
+
+    if( empty(req.body.firstName) || empty(req.body.mobileNumber) || empty(req.body.email) )
+      return res.status(500).json({statusCode:500,message: "Please check your parameter or value required"}); 
+     
+    var email = req.body.email,
+        userId = req.body.userId,
+        username = req.body.username,
+        firstName = req.body.firstName,
+        lastName = req.body.lastName,
+        mobileNumber = req.body.mobileNumber,
+        referralEmail = req.body.referralEmail,
+        oldReferralEmail = req.body.oldReferralEmail,
+        oldUsername = req.body.oldUsername;
+
+    if(empty(referralEmail)){
+      referralEmail = "root";
+    }
+    
+    connection.acquire(function(err,con){
+      if (err) throw err;
+
+      userModel.checkUsernameCompareExist(con,username,oldUsername,res,function(result){
+
+        userModel.getUserIdByEmail(con,referralEmail,res,function(result){
+
+          var userIdReferral = result.userId; 
+
+          var fullName = firstName+' '+lastName;
+          
+          var sql = "UPDATE users set user_username = '"+username+"', user_firstname = '"+firstName+"', user_lastname = '"+lastName+"', \
+          user_mobile_number = '"+mobileNumber+"', user_invited_by = '"+userIdReferral+"', update_date = NOW() WHERE user_id = '"+userId+"'";
+
+          //console.log(sql);
+        
+          con.query(sql, function(err,data){
+            if(err)
+              return res.status(500).json({statusCode:500,message: err.code});
+
+            if(referralEmail != 'root'){
+
+              if(referralEmail != oldReferralEmail){
+                var sql2 = "INSERT INTO conversations (UserID_One, UserID_Two, UserOneStatus, UserTwoStatus, \
+                      TransactTime) \
+                      VALUES ('"+email+"','"+referralEmail+"','2','2', NOW())";
+
+                con.query(sql2, function(err2,data2){
+                  if(err2)
+                    return res.status(500).json({statusCode:500,message: err2.code});
+
+                  return res.status(200).json({statusCode:200,success:true,data:{"userId":userId}});
+                });
+              
+              }else{
+                return res.status(200).json({statusCode:200,success:true,data:{"userId":userId}});  
+              }
+              
+            }else{
+              return res.status(200).json({statusCode:200,success:true,data:{"userId":userId}});
+            }
+
+          });
+          
+        });
+      });
+      
+      con.release();
+    });
+  };
+
 
   this.userChangePassword = function(req,res,next) {
 
@@ -712,6 +784,31 @@ function cUser() {
           return res.status(500).json({statusCode:500,message: err.code});
 
           return res.status(200).json({statusCode:200,success:true}); 
+      });
+    });
+  };
+
+  this.delete = function(req,res,next) {
+    var userId = req.body.userId;
+
+    connection.acquire(function(err,con){
+      if (err) throw err;
+
+      var sql = "DELETE FROM users WHERE user_id = '"+userId+"'";
+
+      con.query(sql, function(err,data){
+        con.release();
+        if(err)
+            return res.status(500).json({statusCode:500,message: err.code});
+
+        if(data.affectedRows == 0)
+          return res.status(500).json({statusCode:500,message: "Failed to delete data. Check your parameter."}); 
+
+        return res.status(200).json({
+                                statusCode:200,
+                                success:true
+                            });
+ 
       });
     });
   };
