@@ -438,7 +438,7 @@ function cUser() {
           (select user_email FROM users WHERE user_id = invited_id) as inviter_email, \
           (select count(user_id) from users WHERE user_invited_by = id AND status = "1") as member_joined, (select count(user_id) from users WHERE user_invited_by = id AND status = "2") as member_prospect, \
           FIND_IN_SET( user_point, (SELECT GROUP_CONCAT( user_point ORDER BY user_point DESC ) FROM users )) \
-          AS rank FROM users u LEFT JOIN application_submission s ON u.user_email = s.email'
+          AS rank FROM users u LEFT JOIN application_submission s ON u.user_email = s.email WHERE u.user_email <> "hello@pixrom.com"';
           
           //console.log(sql);
           con.query(sql, function(err,data){
