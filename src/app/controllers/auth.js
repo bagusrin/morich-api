@@ -32,6 +32,9 @@ function cAuth() {
           if(data.length < 1)
             return res.status(500).json({statusCode:500, message: 'Authentication failed. Invalid user or password.' });
 
+          if(empty(data[0].user_password))
+            return res.status(500).json({statusCode:500, message: 'Authentication failed. Invalid user or password.' });
+
           if (!userModel.comparePassword(password,data[0].user_password)) {
                 return res.status(500).json({statusCode:500, message: 'Authentication failed. Invalid user or password.' });
           }
@@ -130,7 +133,7 @@ function cAuth() {
 
         var token = req.params.token;
 
-        console.log(token);
+        //console.log(token);
 
         var sql = "SELECT * FROM users WHERE user_token = '"+token+"' LIMIT 1";
 
@@ -162,7 +165,7 @@ function cAuth() {
 
           var sql = "UPDATE users SET user_password = '"+password+"', update_date = NOW() WHERE user_token = '"+token+"'";
 
-          console.log(sql);
+          //console.log(sql);
 
           con.query(sql, function(err,data){
             con.release();

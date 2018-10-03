@@ -64,7 +64,7 @@ function cVideoAdmin() {
 
       var sql = "SELECT * from videos_admin WHERE 1 " + search + " ORDER BY video_id DESC " + count;
 
-      console.log(sql);
+      //console.log(sql);
 
       con.query(sql, function (err, data) {
         con.release();
@@ -257,7 +257,7 @@ function cVideoAdmin() {
           ,video_youtube_image,video_title,video_desc,video_marketing,video_type,video_position,created_by,status,post_date) \
           VALUES ('" + youtubeId + "','" + youtubeLink + "','" + youtubeIframe + "','" + youtubeImg + "','" + title + "', '" + desc + "','" + contentMarketing + "','" + type + "','" + position + "','" + createdBy + "', '" + status + "', NOW())";
 
-        console.log(sql);
+        //console.log(sql);
 
         con.query(sql, function (err, data) {
           con.release();
@@ -585,7 +585,7 @@ function cVideoAdmin() {
           ,video_youtube_image,video_title,video_desc,video_marketing,video_type,video_position,created_by,status,post_date) \
           VALUES ('" + youtubeId + "','" + youtubeLink + "','" + youtubeIframe + "','" + youtubeImg + "','" + title + "', '" + desc + "','" + contentMarketing + "','" + type + "','" + position + "','" + createdBy + "', '" + status + "', NOW())";
 
-        console.log(sql);
+        //console.log(sql);
 
         con.query(sql, function (err, data) {
           con.release();
